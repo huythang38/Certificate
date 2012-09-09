@@ -1,3 +1,7 @@
+/*
+ * huythang38
+ */
+
 package server.gui;
 
 import java.awt.EventQueue;
@@ -5,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.rmi.RemoteException;
@@ -32,6 +37,7 @@ import javax.swing.text.NumberFormatter;
 
 import server.config.Config;
 import server.config.ContainerCenterLocationUI;
+import server.event.UIEvent;
 
 @SuppressWarnings("serial")
 public class ServerUI extends JFrame {
@@ -161,7 +167,16 @@ public class ServerUI extends JFrame {
 				if (check) {
 					config.updateConfigFile(txtUser.getText(),
 							pwdPass.getText(), port);
+					try {
 
+						   Runtime.getRuntime().exec("java server.gui.ServerUI");
+
+						   System.exit(0);
+
+						} catch (IOException ex) {
+
+						}
+//					System.exit(0);
 				}
 			}
 		});

@@ -1,52 +1,56 @@
+/*
+ * huythang38
+ */
+
 package client.gui;
 
+import java.awt.CardLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
+import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JButton;
-
-import server.config.ContainerCenterLocationUI;
 import javax.swing.border.TitledBorder;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 
-import java.awt.CardLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.text.DecimalFormat;
-
-import javax.swing.JFormattedTextField;
-
 import client.Client;
+import client.RUN;
 import client.config.Config;
+import client.config.ContainerCenterLocationUI;
+import client.event.LoginConfigEvent;
 
 @SuppressWarnings("serial")
 public class LoginConfig extends JFrame {
 
-	private JPanel contentPane;
-	private JPanel panel;
-	private JPanel panelLogin;
-	private JPanel panelConfig;
+	public JPanel contentPane;
+	public JPanel panel;
+	public JPanel panelLogin;
+	public JPanel panelConfig;
 
-	private CardLayout cl;
-	private JTextField txtUsername;
-	private JPasswordField pwdPassword;
-	private JTextField txtPath;
-	private JFormattedTextField frmtdtxtfldPort;
+	public CardLayout cl;
+	public JTextField txtUsername;
+	public JPasswordField pwdPassword;
+	public JTextField txtPath;
+	public JFormattedTextField frmtdtxtfldPort;
 
-	private JButton btnLogin;
-	private JButton btnConfigConnect;
-	private JButton btnBackToLogin;
-	private JButton btnConfig;
+	public JButton btnLogin;
+	public JButton btnConfigConnect;
+	public JButton btnBackToLogin;
+	public JButton btnConfig;
 
 	public LoginConfigEvent events;
 	public Client client;
@@ -87,8 +91,6 @@ public class LoginConfig extends JFrame {
 	 * Create the frame.
 	 */
 	public LoginConfig() {
-		events = new LoginConfigEvent();
-		config = new Config();
 		setTitle("Login");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,7 +100,10 @@ public class LoginConfig extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
+			
+		events = new LoginConfigEvent(client);
+		config = new Config();
+		
 		JLabel lblImage = new JLabel("image");
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -136,11 +141,13 @@ public class LoginConfig extends JFrame {
 
 		btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
 				boolean check = events.checkLogin(txtUsername.getText(),
 						pwdPassword.getText());
 				if (check) {
-					System.exit(0);
+					//delete form LoginConfig
+					removeNotify();
 				}
 			}
 		});
@@ -201,13 +208,24 @@ public class LoginConfig extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				int port = Integer.parseInt(frmtdtxtfldPort.getText());
 				boolean check = events.configAction(txtPath.getText(), port);
-				if (check) {
-					config.updateConfigFile(txtPath.getText(), port);
+				//back to Login panel
+				if (check){
+					removeNotify();
+					//disconnect anh test new connect
+					RUN.connectServer.stopConnect();
+					RUN runPro = new RUN();
+					runPro.Connect();
+					JOptionPane.showMessageDialog(new JFrame(), "successful connection");
+					cl.show(panel, "login");
 				}
 			}
 		});
 		btnConfig.setBounds(166, 210, 142, 35);
 		panelConfig.add(btnConfig);
 
+	}
+	
+	public void setClient(Client values){
+		client = values;
 	}
 }

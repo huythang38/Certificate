@@ -1,3 +1,7 @@
+/*
+ * huythang38
+ */
+
 package client.config;
 
 import java.awt.Toolkit;

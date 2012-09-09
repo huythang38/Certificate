@@ -1,3 +1,7 @@
+/*
+ * huythang38
+ */
+
 package client.config;
 
 import java.io.FileInputStream;
@@ -52,7 +56,7 @@ public class Config {
 			config.store(writeFile, null);
 			writeFile.close();
 			JOptionPane.showMessageDialog(new JFrame(),
-					"update config succeeded!");
+					"update config succeeded! \nAnd test connect to Server");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			JOptionPane.showMessageDialog(new JFrame(), "don't update config!");

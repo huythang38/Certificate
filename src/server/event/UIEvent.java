@@ -1,4 +1,8 @@
-package server.gui;
+/*
+ * huythang38
+ */
+
+package server.event;
 
 import java.awt.AWTException;
 import java.awt.MenuItem;
@@ -15,6 +19,8 @@ import java.net.ServerSocket;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+
+import server.gui.ServerUI;
 
 public class UIEvent {
 	private SystemTray tray;
