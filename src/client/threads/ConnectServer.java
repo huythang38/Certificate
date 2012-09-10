@@ -48,6 +48,7 @@ public class ConnectServer implements Runnable {
 	
 	//stop Connect to Server
 	public void stopConnect(){
+		client.disConnectServer();
 		stopConnect = false;
 	}
 }

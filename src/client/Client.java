@@ -39,6 +39,11 @@ public class Client {
 		}
 		return check;
 	}
+	
+	public void disConnectServer(){
+		conn = null;
+	}
+	
 	//checkAccount
 	@SuppressWarnings("rawtypes")
 	public Vector checkAccount(String username, String password){

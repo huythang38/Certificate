@@ -8,6 +8,8 @@ import java.awt.CardLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 
 import javax.swing.JButton;
@@ -55,7 +57,7 @@ public class LoginConfig extends JFrame {
 	public LoginConfigEvent events;
 	public Client client;
 	public Config config;
-
+	
 	/**
 	 * Launch the application.
 	 */
@@ -100,10 +102,10 @@ public class LoginConfig extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-			
+
 		events = new LoginConfigEvent(client);
 		config = new Config();
-		
+
 		JLabel lblImage = new JLabel("image");
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -132,11 +134,38 @@ public class LoginConfig extends JFrame {
 
 		txtUsername = new JTextField();
 		txtUsername.setBounds(124, 47, 170, 30);
+		txtUsername.addKeyListener(new KeyAdapter() {
+			@SuppressWarnings("deprecation")
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode() == 10) {
+					boolean check = events.checkLogin(txtUsername.getText(),
+							pwdPassword.getText());
+					if (check) {
+						// delete form LoginConfig
+						removeNotify();
+					}
+				}
+			}
+		});
 		panelLogin.add(txtUsername);
-		txtUsername.setColumns(10);
 
 		pwdPassword = new JPasswordField();
 		pwdPassword.setBounds(124, 119, 170, 30);
+		pwdPassword.addKeyListener(new KeyAdapter() {
+			@SuppressWarnings("deprecation")
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode() == 10) {
+					boolean check = events.checkLogin(txtUsername.getText(),
+							pwdPassword.getText());
+					if (check) {
+						// delete form LoginConfig
+						removeNotify();
+					}
+				}
+			}
+		});
 		panelLogin.add(pwdPassword);
 
 		btnLogin = new JButton("Login");
@@ -146,7 +175,7 @@ public class LoginConfig extends JFrame {
 				boolean check = events.checkLogin(txtUsername.getText(),
 						pwdPassword.getText());
 				if (check) {
-					//delete form LoginConfig
+					// delete form LoginConfig
 					removeNotify();
 				}
 			}
@@ -159,8 +188,10 @@ public class LoginConfig extends JFrame {
 		btnConfigConnect = new JButton("Config Connect!");
 		btnConfigConnect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				btnBackToLogin.setEnabled(true);
 				setTitle("Config Conect");
 				cl.show(panel, "config");
+				
 			}
 		});
 		btnConfigConnect.setBounds(166, 210, 142, 35);
@@ -208,24 +239,20 @@ public class LoginConfig extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				int port = Integer.parseInt(frmtdtxtfldPort.getText());
 				boolean check = events.configAction(txtPath.getText(), port);
-				//back to Login panel
-				if (check){
-					removeNotify();
-					//disconnect anh test new connect
-					RUN.connectServer.stopConnect();
-					RUN runPro = new RUN();
-					runPro.Connect();
-					JOptionPane.showMessageDialog(new JFrame(), "successful connection");
-					cl.show(panel, "login");
+				// back to Login panel
+				if (check) {
+					//remove LoginConfig Frame
+//					removeNotify();
+					// disconnect anh test new connect
+					RUN.disconnect();
+					RUN runPro = new RUN(true);
+					runPro.showLoadConnect();
+					runPro.Connect();					
 				}
 			}
 		});
 		btnConfig.setBounds(166, 210, 142, 35);
 		panelConfig.add(btnConfig);
 
-	}
-	
-	public void setClient(Client values){
-		client = values;
 	}
 }
