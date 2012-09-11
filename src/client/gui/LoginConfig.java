@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -28,10 +29,11 @@ import javax.swing.border.TitledBorder;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 
+import client.Client;
 import client.RUN;
 import client.config.Config;
+import client.config.ContainerCenterLocationUI;
 import client.event.LoginConfigEvent;
-import extend_lib.ContainerCenterLocationUI;
 
 @SuppressWarnings("serial")
 public class LoginConfig extends JFrame {
@@ -53,6 +55,7 @@ public class LoginConfig extends JFrame {
 	public JButton btnConfig;
 
 	public LoginConfigEvent events;
+	public Client client;
 	public Config config;
 	
 	/**
@@ -100,7 +103,7 @@ public class LoginConfig extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		events = new LoginConfigEvent();
+		events = new LoginConfigEvent(client);
 		config = new Config();
 
 		JLabel lblImage = new JLabel("image");
