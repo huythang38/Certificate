@@ -9,18 +9,15 @@ import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import client.Client;
 import client.RUN;
 import client.config.Config;
 import client.gui.NavFrame;
 
 public class LoginConfigEvent {
-	public Client client;
 	public Config config;
 
-	public LoginConfigEvent(Client values) {
+	public LoginConfigEvent() {
 		config = new Config();
-		client = values;
 	}
 
 	public boolean configAction(String path, int port) {

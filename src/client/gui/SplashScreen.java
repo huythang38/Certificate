@@ -13,7 +13,7 @@ import javax.swing.JWindow;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import client.config.ContainerCenterLocationUI;
+import extend_lib.ContainerCenterLocationUI;
 
 @SuppressWarnings("serial")
 public class SplashScreen extends JWindow {

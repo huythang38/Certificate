@@ -18,7 +18,7 @@ import client.gui.LoginConfig;
 import client.gui.SplashScreen;
 import client.threads.ConnectServer;
 import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaSilverMoonLookAndFeel;
+//import de.javasoft.plaf.synthetica.SyntheticaSilverMoonLookAndFeel;
 ;
 
 public class RUN {
@@ -59,7 +59,7 @@ public class RUN {
 //
 		try 
 	    {
-	      UIManager.setLookAndFeel(new SyntheticaSilverMoonLookAndFeel());
+//	      UIManager.setLookAndFeel(new SyntheticaSilverMoonLookAndFeel());
 	      UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
 	    } 
 	    catch (Exception e) 
@@ -87,8 +87,10 @@ public class RUN {
 		isSpScreen = true;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void showLoadConnect(){
 		loadingImage = new LoadingImage();
+		loginConfig.disable();
 	}
 	
 	public void Connect() {
@@ -105,6 +107,7 @@ public class RUN {
 	}
 
 	class RemindTaskCheckConnect extends TimerTask {
+		@SuppressWarnings("deprecation")
 		public void run() {
 			// true show frame LoginConfig with login panel
 			if (connectServer.isConnect()) {
@@ -125,6 +128,7 @@ public class RUN {
 					}
 					loginConfig.setTitle("Login");
 					loginConfig.cl.show(loginConfig.panel, "login");
+					loginConfig.enable();
 				}
 					
 				// true show frame LoginConfig with config panel when connect
@@ -158,7 +162,7 @@ public class RUN {
 									"Connection failed!Please check the internet connection \n" +
 									"or install connection settings!");
 				}
-				
+				loginConfig.enable();
 				
 				// waiting for connection
 			} else {

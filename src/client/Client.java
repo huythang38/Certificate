@@ -9,6 +9,9 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.Vector;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import server.actionDatabase.IDatabase;
 
 public class Client {
@@ -51,23 +54,20 @@ public class Client {
 		try {
 			data = conn.checkAccount(username, password);
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			int check = JOptionPane.showConfirmDialog(new JFrame(), "Disconnected! Would you like to reconnect?"
+					, "Error", JOptionPane.YES_NO_OPTION);
+			
+			//reconnect
+			if (check == 0){
+				RUN.disconnect();
+				RUN runPro = new RUN(true);
+				runPro.showLoadConnect();
+				runPro.Connect();		
+			}else{
+				System.exit(0);
+			}
 		}
 		return data;
 	}
 	
-	
-//	@SuppressWarnings("rawtypes")
-//	public static void main(String[] args) {
-//		Client client = new Client("196.168.62.88", 7777);
-//		Vector data = client.checkAccount("thang", "thang");
-//		
-//		if (data.isEmpty()){
-//			System.out.println("tai khoan sai");
-//		}
-//		else if (data.get(1).equals(1)){
-//			System.out.println("dang nhap thanh cong");
-//		}
-//	}
 }

@@ -1,21 +1,20 @@
 package client.gui;
 
-import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
-import client.config.ContainerCenterLocationUI;
+import extend_lib.ContainerCenterLocationUI;
 
-import java.awt.Font;
-import java.awt.Color;
-
-public class LoadingImage extends JFrame {
+@SuppressWarnings("serial")
+public class LoadingImage extends JDialog {
 
 	private JPanel contentPane;
 
@@ -39,7 +38,6 @@ public class LoadingImage extends JFrame {
 	 * Create the frame.
 	 */
 	public LoadingImage() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 220, 220);
 		new ContainerCenterLocationUI(this);
 		contentPane = new JPanel();
@@ -57,7 +55,7 @@ public class LoadingImage extends JFrame {
 		lblConnecting.setHorizontalAlignment(SwingConstants.CENTER);
 		lblConnecting.setBounds(45, 135, 128, 29);
 		contentPane.add(lblConnecting);
-		
 		setVisible(true);
+		setResizable(false);
 	}
 }
