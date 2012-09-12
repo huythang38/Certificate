@@ -93,7 +93,7 @@ public class LoginConfig extends JFrame {
 		setTitle("Login");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 350, 410);
+		setBounds(0, 0, 357, 410);
 		new ContainerCenterLocationUI(this);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -106,11 +106,11 @@ public class LoginConfig extends JFrame {
 		JLabel lblImage = new JLabel("image");
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		lblImage.setBounds(0, 5, 346, 92);
+		lblImage.setBounds(2, 2, 344, 92);
 		contentPane.add(lblImage);
 
 		panel = new JPanel();
-		panel.setBounds(12, 109, 324, 260);
+		panel.setBounds(13, 109, 324, 260);
 		contentPane.add(panel);
 		panel.setLayout(new CardLayout(0, 0));
 

@@ -38,6 +38,7 @@ public class LoadingImage extends JDialog {
 	 * Create the frame.
 	 */
 	public LoadingImage() {
+		setForeground(Color.BLACK);
 		setBounds(0, 0, 220, 220);
 		new ContainerCenterLocationUI(this);
 		contentPane = new JPanel();
@@ -49,8 +50,8 @@ public class LoadingImage extends JDialog {
 		lblImageconnect.setBounds(62, 27, 90, 90);
 		contentPane.add(lblImageconnect);
 		
-		JLabel lblConnecting = new JLabel("Connecting...");
-		lblConnecting.setForeground(Color.WHITE);
+		JLabel lblConnecting = new JLabel(new ImageIcon("lib/images/loading2.gif"));
+		lblConnecting.setForeground(Color.BLACK);
 		lblConnecting.setFont(new Font("Bitstream Charter", Font.BOLD, 14));
 		lblConnecting.setHorizontalAlignment(SwingConstants.CENTER);
 		lblConnecting.setBounds(45, 135, 128, 29);

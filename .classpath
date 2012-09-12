@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/syntheticaSilverMoon.jar"/>
 	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/synthetica.jar"/>
 	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/syntheticaBlackEye.jar"/>
+	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/JTattoo.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

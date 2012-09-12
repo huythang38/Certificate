@@ -14,6 +14,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.rmi.RemoteException;
 import java.text.DecimalFormat;
+import java.text.ParseException;
 
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
@@ -35,11 +36,10 @@ import javax.swing.border.TitledBorder;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 
-import extend_lib.ContainerCenterLocationUI;
-
 import server.Server;
 import server.config.Config;
 import server.event.UIEvent;
+import extend_lib.ContainerCenterLocationUI;
 
 @SuppressWarnings("serial")
 public class ServerUI extends JFrame {
@@ -59,21 +59,18 @@ public class ServerUI extends JFrame {
 
 	/**
 	 * Launch the application.
+	 * 
+	 * @throws ParseException
+	 * @throws UnsupportedLookAndFeelException
 	 */
 	public static void main(String[] args) {
 		// LookAndFeel
 		try {
-			for (UIManager.LookAndFeelInfo info : UIManager
-					.getInstalledLookAndFeels()) {
-				if ("Nimbus".equals(info.getName())) {
-					UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		} catch (ClassNotFoundException ex) {
-		} catch (InstantiationException ex) {
-		} catch (IllegalAccessException ex) {
-		} catch (UnsupportedLookAndFeelException ex) {
+			// UIManager.setLookAndFeel("com.jtattoo.plaf.texture.TextureLookAndFeel");
+			UIManager
+					.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
 		EventQueue.invokeLater(new Runnable() {
@@ -103,7 +100,7 @@ public class ServerUI extends JFrame {
 			}
 		});
 		setTitle("Server");
-		setBounds(100, 100, 350, 500);
+		setBounds(100, 100, 357, 500);
 		setResizable(false);
 		new ContainerCenterLocationUI(this);
 		getContentPane().setLayout(null);
@@ -171,14 +168,14 @@ public class ServerUI extends JFrame {
 							pwdPass.getText(), port);
 					try {
 
-						   Runtime.getRuntime().exec("java server.gui.ServerUI");
+						Runtime.getRuntime().exec("java server.gui.ServerUI");
 
-						   System.exit(0);
+						System.exit(0);
 
-						} catch (IOException ex) {
+					} catch (IOException ex) {
 
-						}
-//					System.exit(0);
+					}
+					// System.exit(0);
 				}
 			}
 		});
