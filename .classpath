@@ -3,9 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_05"/>
 	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/mysql-connector-java-5.1.18-bin.jar"/>
-	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/syntheticaSilverMoon.jar"/>
-	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/synthetica.jar"/>
-	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/syntheticaBlackEye.jar"/>
 	<classpathentry kind="lib" path="/home/huythang38/workspace/Certificate/lib/JTattoo.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
