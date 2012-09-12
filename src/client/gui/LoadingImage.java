@@ -39,6 +39,7 @@ public class LoadingImage extends JDialog {
 	 */
 	public LoadingImage() {
 		setForeground(Color.BLACK);
+		setTitle("Loading...");
 		setBounds(0, 0, 220, 220);
 		new ContainerCenterLocationUI(this);
 		contentPane = new JPanel();

@@ -27,7 +27,7 @@ public class UIEvent {
 	private TrayIcon trayIcon;
 
 	public UIEvent() {
-		trayIcon = new TrayIcon((new ImageIcon("images/bulb.gif")).getImage());
+		trayIcon = new TrayIcon((new ImageIcon("lib/images/logoTray.png")).getImage());
 		PopupMenu popupMenu = new PopupMenu();
 
 		// item show server

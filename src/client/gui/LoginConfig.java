@@ -32,6 +32,7 @@ import client.RUN;
 import client.config.Config;
 import client.event.LoginConfigEvent;
 import extend_lib.ContainerCenterLocationUI;
+import extend_lib.LogoContainer;
 
 @SuppressWarnings("serial")
 public class LoginConfig extends JFrame {
@@ -91,6 +92,7 @@ public class LoginConfig extends JFrame {
 	 */
 	public LoginConfig() {
 		setTitle("Login");
+		new LogoContainer(this);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 357, 410);

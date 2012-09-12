@@ -40,6 +40,7 @@ import server.Server;
 import server.config.Config;
 import server.event.UIEvent;
 import extend_lib.ContainerCenterLocationUI;
+import extend_lib.LogoContainer;
 
 @SuppressWarnings("serial")
 public class ServerUI extends JFrame {
@@ -100,6 +101,7 @@ public class ServerUI extends JFrame {
 			}
 		});
 		setTitle("Server");
+		new LogoContainer(this);
 		setBounds(100, 100, 357, 500);
 		setResizable(false);
 		new ContainerCenterLocationUI(this);
