@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Class-Path: lib/synthetica.jar lib/syntheticaBlackEye.jar lib/syntheticaSilverMoon.jar
+Class-Path: lib/JTattoo.jar
 Main-Class: client.RUN
 
