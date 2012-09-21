@@ -62,7 +62,6 @@ DROP TABLE IF EXISTS `certificate`.`courses` ;
 CREATE  TABLE IF NOT EXISTS `certificate`.`courses` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(50) NULL DEFAULT NULL ,
-  `year` DATE NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -78,6 +77,7 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`class` (
   `name` VARCHAR(50) NULL DEFAULT NULL ,
   `size` INT(11) NULL DEFAULT NULL ,
   `courses_id` INT(11) NOT NULL ,
+  `year` DATE NULL DEFAULT NULL ,
   PRIMARY KEY (`id`, `courses_id`) ,
   CONSTRAINT `fk_class_courses1`
     FOREIGN KEY (`courses_id` )
@@ -99,6 +99,8 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`students` (
   `address` VARCHAR(100) NULL DEFAULT NULL ,
   `birthday` DATETIME NULL DEFAULT NULL ,
   `gender` INT(11) NULL DEFAULT NULL ,
+  `email` VARCHAR(45) NULL ,
+  `phone_number` INT(11) NULL ,
   `candidates_id` INT(11) NOT NULL ,
   `class_id` INT(11) NOT NULL ,
   `accounts_id` INT(11) NOT NULL ,
