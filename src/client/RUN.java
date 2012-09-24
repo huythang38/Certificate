@@ -76,10 +76,18 @@ public class RUN {
 	public void Connect() {
 		// Connect to server (run Thread)
 		connectServer = new ConnectServer();
-
+//		cconnectServer.setName("TESTThread");
+//		cconnectServer.setDaemon(true);
+//		cconnectServer.start();
 		// Timer used to refesh status when check Connect to Server
 		timerCheckConnect = new Timer();
 		timerCheckConnect.schedule(new RemindTaskCheckConnect(), 1000);
+//		try{
+//			cconnectServer.stop();
+//		} catch (Exception ex) {
+//			
+//		}
+		
 	}
 
 	public static void disconnect() {

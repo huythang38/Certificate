@@ -9,12 +9,13 @@ import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import client.RUN;
+import client.action.Login;
 import client.config.Config;
 import client.gui.NavFrame;
 
 public class LoginConfigEvent {
 	public Config config;
+	public Login login = new Login();
 
 	public LoginConfigEvent() {
 		config = new Config();
@@ -48,7 +49,7 @@ public class LoginConfigEvent {
 					"not leave any field empty!");
 		} else {
 			@SuppressWarnings("rawtypes")
-			Vector dataLogin = RUN.connectServer.client.checkAccount(userName,
+			Vector dataLogin = login.checkAccount(userName,
 					passWord);
 
 			// login failed

@@ -6,10 +6,14 @@ package client.gui;
 
 import java.awt.CardLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.text.DecimalFormat;
 
 import javax.swing.JButton;
@@ -52,6 +56,8 @@ public class LoginConfig extends JFrame {
 	public JButton btnConfigConnect;
 	public JButton btnBackToLogin;
 	public JButton btnConfig;
+	
+	JLabel lblForgotPass;
 
 	public LoginConfigEvent events;
 	public Config config;
@@ -195,6 +201,28 @@ public class LoginConfig extends JFrame {
 		});
 		btnConfigConnect.setBounds(166, 210, 142, 35);
 		panelLogin.add(btnConfigConnect);
+		
+		lblForgotPass = new JLabel("Forgot password?");
+		lblForgotPass.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblForgotPass.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseExited(MouseEvent e) {
+				lblForgotPass.setFont(new Font("Dialog", Font.BOLD, 12));
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				new FogotPassDialog();
+			}
+		});
+		lblForgotPass.addMouseMotionListener(new MouseMotionAdapter() {
+			@Override
+			public void mouseMoved(MouseEvent e) {
+				lblForgotPass.setFont(new Font("Dialog", Font.ITALIC, 12));
+			}
+		});
+		
+		lblForgotPass.setBounds(124, 161, 147, 15);
+		panelLogin.add(lblForgotPass);
 
 		panelConfig = new JPanel();
 		panel.add(panelConfig, "config");

@@ -14,10 +14,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -45,7 +42,7 @@ public class Server {
 			}
 
 			Naming.rebind("rmi://" + dc.getHostAddress() + ":" + port
-					+ "/Certificate", run);
+					+ "/certificate", run);
 			JOptionPane.showMessageDialog(new JFrame(),
 					"start server successfully!");
 
@@ -68,7 +65,7 @@ public class Server {
 
 	public void closeServer() throws RemoteException {
 		try {
-			Naming.unbind("rmi://localhost:" + port + "/Certificate");
+			Naming.unbind("rmi://localhost:" + port + "/certificate");
 			UnicastRemoteObject.unexportObject(run, true);
 			 disConnectDatabase();
 			JOptionPane.showMessageDialog(new JFrame(),
@@ -106,7 +103,7 @@ public class Server {
 		}
 		try {
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/Certificate", userData,
+					"jdbc:mysql://localhost:3306/certificate", userData,
 					passData);
 			System.out.println("Connect Database succeeded!");
 		} catch (SQLException ex) {
@@ -129,24 +126,5 @@ public class Server {
 	public int getPort() {
 		return port;
 	}
-
-//Action
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public Vector<?> checkAccount(String username, String password) {
-		// TODO Auto-generated method stub
-		Vector data = new Vector();
-		try {
-			Statement stmt = conn.createStatement();
-			String sql = "select * from Accounts where AC_User = '" + username
-					+ "' and AC_Pass = '" + password + "'";
-			ResultSet rst = stmt.executeQuery(sql);
-			rst.next();
-			data.addElement(rst.getString("AC_User"));
-			data.addElement(rst.getInt("AC_Status"));
-			data.addElement(rst.getInt("AC_Permission"));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-		}
-		return data;
-	}
+	
 }

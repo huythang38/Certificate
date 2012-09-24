@@ -8,20 +8,19 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Vector;
 
-import server.Server;
+import server.event.Login;
 
 @SuppressWarnings("serial")
 public class Excutable extends UnicastRemoteObject implements IDatabase {
-	public Server server;
+	public Login login = new Login();
 
 	public Excutable() throws RemoteException {
-		server = new Server();
 	}
 
 	@Override
 	public Vector<?> checkAccount(String username, String password)
 			throws RemoteException {
-		return server.checkAccount(username, password);
+		return login.checkAccount(username, password);
 	}
 
 	@Override

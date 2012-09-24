@@ -12,11 +12,12 @@ public class ConnectServer implements Runnable {
 	public Config config;
 	public boolean checkConnect;
 	public boolean nextAction;
-	public boolean stopConnect = true;
+	public static boolean stopConnect = true;
 	public LoginConfigEvent events;
 
 	public ConnectServer(){
 		Thread tConnectServer = new Thread(this);
+		tConnectServer.setName("ConnectServer");
 		tConnectServer.start();
 	}
 	
