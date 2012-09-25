@@ -1,0 +1,8 @@
+#Mon Sep 24 15:38:49 ICT 2012
+PASS=cuncon
+USER=root
+PORT=7777
+SMTP=smtp.gmail.com
+PORT_SMTP=587
+USER_SMTP=eprojectsem2@gmail.com
+PASS_SMTP=certificate

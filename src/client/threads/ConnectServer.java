@@ -18,6 +18,7 @@ public class ConnectServer implements Runnable {
 	public ConnectServer(){
 		Thread tConnectServer = new Thread(this);
 		tConnectServer.setName("ConnectServer");
+		tConnectServer.setPriority(2);
 		tConnectServer.start();
 	}
 	

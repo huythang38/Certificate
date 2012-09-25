@@ -7,17 +7,23 @@ package client.event;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import client.action.ForgotPass;
+import extend_lib.ValidateEmail;
+
 public class FogotPassEvent {
-	public void generateEmail(String value){
-		if (value.matches("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@"+
-                   "[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"))
-		{
+
+	public void generateEmail(String value) {
+
+		if (ValidateEmail.isEmail(value)) {
 			
-			
-			System.out.println("ok");
-		}else{
-			JOptionPane.showMessageDialog(new JFrame(), "Validate email fail !");
+			ForgotPass forgotPass = new ForgotPass(value);
+			forgotPass.setName("sendMail");
+			forgotPass.start();
+
+		} else {
+			JOptionPane.showMessageDialog(new JFrame(),
+					"Validate email fail! Please check again!");
 		}
 	}
-	
+
 }

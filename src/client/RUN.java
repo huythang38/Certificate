@@ -67,10 +67,8 @@ public class RUN {
 		isSpScreen = true;
 	}
 
-	@SuppressWarnings("deprecation")
 	public void showLoadConnect() {
 		loadingImage = new LoadingImage();
-		loginConfig.disable();
 	}
 
 	public void Connect() {
@@ -95,7 +93,6 @@ public class RUN {
 	}
 
 	class RemindTaskCheckConnect extends TimerTask {
-		@SuppressWarnings("deprecation")
 		public void run() {
 			// true show frame LoginConfig with login panel
 			if (connectServer.isConnect()) {
@@ -116,7 +113,8 @@ public class RUN {
 					}
 					loginConfig.setTitle("Login");
 					loginConfig.cl.show(loginConfig.panel, "login");
-					loginConfig.enable();
+//					loginConfig.enable();
+					loadingImage.disposeDialog();
 				}
 
 				// true show frame LoginConfig with config panel when connect
@@ -146,7 +144,8 @@ public class RUN {
 							"Connection failed!Please check the internet connection \n"
 									+ "or install connection settings!");
 				}
-				loginConfig.enable();
+//				loginConfig.enable();
+				loadingImage.disposeDialog();
 
 				// waiting for connection
 			} else {

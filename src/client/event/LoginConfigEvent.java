@@ -59,7 +59,7 @@ public class LoginConfigEvent {
 				check = false;
 			}
 			// successful login
-			else if (dataLogin.get(1).equals(1)) {
+			else if (dataLogin.get(2).equals(1)) {
 				check = true;
 				// call Navigator Frame
 				NavFrame navFrame = new NavFrame();

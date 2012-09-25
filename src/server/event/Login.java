@@ -1,3 +1,6 @@
+/*
+ * huythang38
+ */
 package server.event;
 
 import java.sql.ResultSet;

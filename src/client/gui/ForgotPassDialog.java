@@ -15,16 +15,21 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import client.action.ForgotPass;
 import client.event.FogotPassEvent;
 
 import extend_lib.ContainerCenterLocationUI;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Timer;
+import java.util.TimerTask;
 
 @SuppressWarnings("serial")
-public class FogotPassDialog extends JDialog {
+public class ForgotPassDialog extends JDialog {
 	JTextField txtEmail;
 	FogotPassEvent event;
+	public Timer timer;
+	
 	private final JPanel contentPanel = new JPanel();
 
 	/**
@@ -32,7 +37,7 @@ public class FogotPassDialog extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			FogotPassDialog dialog = new FogotPassDialog();
+			ForgotPassDialog dialog = new ForgotPassDialog();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -43,12 +48,13 @@ public class FogotPassDialog extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public FogotPassDialog() {
+	public ForgotPassDialog() {
+		setResizable(false);
 		{
 			event = new FogotPassEvent();
-			
+
 		}
-		
+
 		{
 			setTitle("Forgot Password!");
 			setBounds(100, 100, 350, 179);
@@ -57,7 +63,6 @@ public class FogotPassDialog extends JDialog {
 			contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 			getContentPane().add(contentPanel, BorderLayout.CENTER);
 			contentPanel.setLayout(null);
-			
 			setModal(true);
 		}
 
@@ -68,13 +73,13 @@ public class FogotPassDialog extends JDialog {
 			lblNewLabel.setBounds(12, 23, 291, 15);
 			contentPanel.add(lblNewLabel);
 		}
-		
+
 		txtEmail = new JTextField();
 		{
 			txtEmail.setBounds(32, 50, 271, 21);
 			contentPanel.add(txtEmail);
 		}
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Ex: example@gmail.com");
 		lblNewLabel_1.setBounds(42, 84, 237, 17);
 		contentPanel.add(lblNewLabel_1);
@@ -88,13 +93,18 @@ public class FogotPassDialog extends JDialog {
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						event.generateEmail(txtEmail.getText().trim());
+						
+						timer = new Timer();
+						timer.schedule(new RemindTask(), 1000);
+						
 					}
 				});
+			
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
 			}
-			
+
 			{
 				JButton cancelButton = new JButton("Cancel");
 				cancelButton.addActionListener(new ActionListener() {
@@ -107,7 +117,20 @@ public class FogotPassDialog extends JDialog {
 			}
 		}
 
-		
 		setVisible(true);
+	}
+	
+	
+	class RemindTask extends TimerTask {
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			if (ForgotPass.complete) {
+				dispose();
+				ForgotPass.complete = false;
+			} else {
+				timer.schedule(new RemindTask(), 500);
+			}
+		}
 	}
 }

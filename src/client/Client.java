@@ -12,31 +12,31 @@ import server.actionDatabase.IDatabase;
 
 public class Client {
 	public static IDatabase conn;
-	
+	public static boolean checkConnect;
 	//
 	public Client() {	}
 
 	// connect to server
 	public boolean connectServer(String path, int port){
-		boolean check = false;
+		checkConnect = false;
 		try {
 			conn = (IDatabase) Naming.lookup("rmi://" + path + ":" + port
 					+ "/certificate");
-			check = true;
+			checkConnect = true;
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			check = false;
+			checkConnect = false;
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			check = false;
+			checkConnect = false;
 		} catch (NotBoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			check = false;
+			checkConnect = false;
 		}
-		return check;
+		return checkConnect;
 	}
 	
 	public void disConnectServer(){

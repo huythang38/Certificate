@@ -211,7 +211,7 @@ public class LoginConfig extends JFrame {
 			}
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new FogotPassDialog();
+				new ForgotPassDialog();
 			}
 		});
 		lblForgotPass.addMouseMotionListener(new MouseMotionAdapter() {

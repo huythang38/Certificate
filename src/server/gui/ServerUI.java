@@ -44,13 +44,14 @@ import extend_lib.LogoContainer;
 
 @SuppressWarnings("serial")
 public class ServerUI extends JFrame {
-	private JTextField txtUser;
-	private JPasswordField pwdPass;
-	private JFormattedTextField frmtdtxtfldPort;
-	private JButton btnUpdateConfig;
-	private JButton btnConfig;
-	private JButton btnStart;
-	private JButton btnClose;
+	public JTextField txtUser;
+	public JPasswordField pwdPass;
+	public JFormattedTextField frmtdtxtfldPort;
+	public JButton btnUpdateConfig;
+	public JButton btnConfig;
+	public JButton btnStart;
+	public JButton btnClose;
+	public JMenuItem mntmMailServer;
 
 	public UIEvent events;
 	//
@@ -166,7 +167,7 @@ public class ServerUI extends JFrame {
 				boolean check = events.btnUpdateConfigAction(txtUser.getText(),
 						pwdPass.getText(), port);
 				if (check) {
-					config.updateConfigFile(txtUser.getText(),
+					config.updateConfigDATA(txtUser.getText(),
 							pwdPass.getText(), port);
 					try {
 
@@ -263,6 +264,17 @@ public class ServerUI extends JFrame {
 		JSeparator separator = new JSeparator();
 		mnFile.add(separator);
 		mnFile.add(mntmExit);
+		
+		JMenu mnSetting = new JMenu("Settings");
+		menuBar.add(mnSetting);
+		
+		mntmMailServer = new JMenuItem("Mail Server...");
+		mntmMailServer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new ConfigMailServer();
+			}
+		});
+		mnSetting.add(mntmMailServer);
 		// end draw menu
 	}
 
