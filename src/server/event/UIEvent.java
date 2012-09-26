@@ -91,7 +91,7 @@ public class UIEvent {
 	}
 
 	// config
-	@SuppressWarnings("unused")
+	@SuppressWarnings({ "unused", "resource" })
 	public boolean btnUpdateConfigAction(String user, String pass, int port) {
 		boolean check;
 		if (user.equals("") | pass.equals("")) {

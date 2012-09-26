@@ -60,7 +60,7 @@ public class ConfigMailServer extends JDialog {
 		
 		setResizable(false);
 		setTitle("Configure Mail Server");
-		setBounds(100, 100, 401, 277);
+		setBounds(100, 100, 390, 277);
 		new ContainerCenterLocationUI(this);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));

@@ -9,7 +9,6 @@ import java.util.TimerTask;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
 
 import client.config.Config;
 import client.event.LoginConfigEvent;
@@ -26,6 +25,7 @@ public class RUN {
 	public static LoginConfig loginConfig;
 	public Timer timerCheckConnect;
 	public static ConnectServer connectServer;
+	public Thread threadLoading;
 
 	public boolean isLastConnect;
 	public boolean isSpScreen;
@@ -41,12 +41,24 @@ public class RUN {
 	// Look and Feel
 	public void LAF() {
 		try {
-			// UIManager.setLookAndFeel("com.jtattoo.plaf.texture.TextureLookAndFeel");
-			UIManager
-					.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+            javax.swing.UIManager.LookAndFeelInfo[] installedLookAndFeels=javax.swing.UIManager.getInstalledLookAndFeels();
+            for (int idx=0; idx<installedLookAndFeels.length; idx++)
+            {
+                if ("Windows".equals(installedLookAndFeels[idx].getName())) {
+                    javax.swing.UIManager.setLookAndFeel(installedLookAndFeels[idx].getClassName());
+                    break;
+                }else if("GTK+".equals(installedLookAndFeels[idx].getName())){
+                	javax.swing.UIManager.setLookAndFeel(installedLookAndFeels[idx].getClassName());
+                    break;
+                }else{
+                	javax.swing.UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+        } catch (InstantiationException ex) {
+        } catch (IllegalAccessException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        }
 	}
 
 	// RUN
@@ -69,14 +81,15 @@ public class RUN {
 
 	public void showLoadConnect() {
 		loadingImage = new LoadingImage();
+		threadLoading = new Thread(loadingImage);
+		threadLoading.setName("LOadingImage");
+		threadLoading.start();
 	}
 
 	public void Connect() {
 		// Connect to server (run Thread)
 		connectServer = new ConnectServer();
-//		cconnectServer.setName("TESTThread");
-//		cconnectServer.setDaemon(true);
-//		cconnectServer.start();
+
 		// Timer used to refesh status when check Connect to Server
 		timerCheckConnect = new Timer();
 		timerCheckConnect.schedule(new RemindTaskCheckConnect(), 1000);
@@ -93,6 +106,7 @@ public class RUN {
 	}
 
 	class RemindTaskCheckConnect extends TimerTask {
+		@SuppressWarnings("deprecation")
 		public void run() {
 			// true show frame LoginConfig with login panel
 			if (connectServer.isConnect()) {
@@ -105,7 +119,8 @@ public class RUN {
 					loginConfig.cl.show(loginConfig.panel, "login");
 					loginConfig.setVisible(true);
 				} else {
-					loadingImage.removeNotify();
+					threadLoading.stop();
+					loadingImage.disposeDialog();
 
 					if (isLastConnect) {
 						JOptionPane.showMessageDialog(new JFrame(),
@@ -113,8 +128,6 @@ public class RUN {
 					}
 					loginConfig.setTitle("Login");
 					loginConfig.cl.show(loginConfig.panel, "login");
-//					loginConfig.enable();
-					loadingImage.disposeDialog();
 				}
 
 				// true show frame LoginConfig with config panel when connect
@@ -135,7 +148,8 @@ public class RUN {
 									+ "or install connection settings!");
 
 				} else {
-					loadingImage.removeNotify();
+					threadLoading.stop();
+					loadingImage.disposeDialog();
 
 					loginConfig.setTitle("Config Conect");
 					loginConfig.cl.show(loginConfig.panel, "config");
@@ -144,8 +158,6 @@ public class RUN {
 							"Connection failed!Please check the internet connection \n"
 									+ "or install connection settings!");
 				}
-//				loginConfig.enable();
-				loadingImage.disposeDialog();
 
 				// waiting for connection
 			} else {

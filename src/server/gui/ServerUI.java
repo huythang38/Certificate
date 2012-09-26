@@ -29,7 +29,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
@@ -68,12 +67,26 @@ public class ServerUI extends JFrame {
 	public static void main(String[] args) {
 		// LookAndFeel
 		try {
-			// UIManager.setLookAndFeel("com.jtattoo.plaf.texture.TextureLookAndFeel");
-			UIManager
-					.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+            javax.swing.UIManager.LookAndFeelInfo[] installedLookAndFeels=javax.swing.UIManager.getInstalledLookAndFeels();
+            for (int idx=0; idx<installedLookAndFeels.length; idx++)
+            {
+                if ("Windows".equals(installedLookAndFeels[idx].getName())) {
+                    javax.swing.UIManager.setLookAndFeel(installedLookAndFeels[idx].getClassName());
+                    break;
+                }else if("GTK+".equals(installedLookAndFeels[idx].getName())){
+                	javax.swing.UIManager.setLookAndFeel(installedLookAndFeels[idx].getClassName());
+                    break;
+                }
+                else{
+                	javax.swing.UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+        } catch (InstantiationException ex) {
+        } catch (IllegalAccessException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        }
+
 
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -94,7 +107,10 @@ public class ServerUI extends JFrame {
 		events = new UIEvent();
 		config = new Config();
 		server = new Server();
-
+		String user = config.getUser();
+		String pass = config.getPass();
+		int port = config.getPort();
+		
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -103,7 +119,7 @@ public class ServerUI extends JFrame {
 		});
 		setTitle("Server");
 		new LogoContainer(this);
-		setBounds(100, 100, 357, 500);
+		setBounds(0, 0, 350, 500);
 		setResizable(false);
 		new ContainerCenterLocationUI(this);
 		getContentPane().setLayout(null);
@@ -112,21 +128,21 @@ public class ServerUI extends JFrame {
 		JLabel lblImage = new JLabel("image");
 		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
-		lblImage.setBounds(6, 6, 334, 116);
+		lblImage.setBounds(5, 6, 334, 116);
 		getContentPane().add(lblImage);
 
-		txtUser = new JTextField(config.getUser());
+		txtUser = new JTextField(user);
 		txtUser.setEnabled(false);
 		txtUser.setBounds(140, 166, 164, 27);
 		getContentPane().add(txtUser);
 		txtUser.setColumns(10);
 
-		pwdPass = new JPasswordField(config.getPass());
+		pwdPass = new JPasswordField(pass);
 		pwdPass.setEnabled(false);
 		pwdPass.setBounds(140, 205, 164, 27);
 		getContentPane().add(pwdPass);
 
-		frmtdtxtfldPort = new JFormattedTextField(config.getPort());
+		frmtdtxtfldPort = new JFormattedTextField(port);
 		frmtdtxtfldPort.setFormatterFactory(new DefaultFormatterFactory(
 				new NumberFormatter(new DecimalFormat("#0"))));
 		frmtdtxtfldPort.setEnabled(false);
@@ -189,7 +205,7 @@ public class ServerUI extends JFrame {
 		JPanel panelControl = new JPanel();
 		panelControl.setBorder(new TitledBorder(null, "Server",
 				TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panelControl.setBounds(10, 345, 330, 83);
+		panelControl.setBounds(8, 345, 328, 83);
 		getContentPane().add(panelControl);
 		panelControl.setLayout(null);
 

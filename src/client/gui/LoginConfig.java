@@ -114,7 +114,7 @@ public class LoginConfig extends JFrame {
 		JLabel lblImage = new JLabel("image");
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		lblImage.setBounds(2, 2, 344, 92);
+		lblImage.setBounds(2, 2, 349, 92);
 		contentPane.add(lblImage);
 
 		panel = new JPanel();

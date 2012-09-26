@@ -13,7 +13,6 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
 
 import client.action.ForgotPass;
 import client.event.FogotPassEvent;
@@ -23,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.border.EtchedBorder;
 
 @SuppressWarnings("serial")
 public class ForgotPassDialog extends JDialog {
@@ -60,7 +60,7 @@ public class ForgotPassDialog extends JDialog {
 			setBounds(100, 100, 350, 179);
 			new ContainerCenterLocationUI(this);
 			getContentPane().setLayout(new BorderLayout());
-			contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+			contentPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 			getContentPane().add(contentPanel, BorderLayout.CENTER);
 			contentPanel.setLayout(null);
 			setModal(true);
@@ -86,6 +86,7 @@ public class ForgotPassDialog extends JDialog {
 
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
