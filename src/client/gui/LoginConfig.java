@@ -37,6 +37,8 @@ import client.config.Config;
 import client.event.LoginConfigEvent;
 import extend_lib.ContainerCenterLocationUI;
 import extend_lib.LogoContainer;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 
 @SuppressWarnings("serial")
 public class LoginConfig extends JFrame {
@@ -56,12 +58,12 @@ public class LoginConfig extends JFrame {
 	public JButton btnConfigConnect;
 	public JButton btnBackToLogin;
 	public JButton btnConfig;
-	
+
 	JLabel lblForgotPass;
 
 	public LoginConfigEvent events;
 	public Config config;
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -101,28 +103,31 @@ public class LoginConfig extends JFrame {
 		new LogoContainer(this);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, 357, 410);
+		setSize(357, 410);
 		new ContainerCenterLocationUI(this);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 
 		events = new LoginConfigEvent();
 		config = new Config();
+		contentPane.setLayout(new BorderLayout(0, 0));
 
 		JLabel lblImage = new JLabel("image");
+		lblImage.setPreferredSize(new Dimension(0, 105));
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		lblImage.setBounds(2, 2, 349, 92);
-		contentPane.add(lblImage);
+		contentPane.add(lblImage, BorderLayout.NORTH);
 
+		
 		panel = new JPanel();
+		panel.setPreferredSize(new Dimension(0, 280));
 		panel.setBounds(13, 109, 324, 260);
-		contentPane.add(panel);
+		contentPane.add(panel, BorderLayout.SOUTH);
 		panel.setLayout(new CardLayout(0, 0));
 
 		panelLogin = new JPanel();
+		panelLogin.setPreferredSize(new Dimension(0, 100));
 		panel.add(panelLogin, "login");
 		panelLogin.setBorder(new TitledBorder(new TitledBorder(null, "Login",
 				TitledBorder.LEADING, TitledBorder.TOP, null, null), "",
@@ -130,15 +135,15 @@ public class LoginConfig extends JFrame {
 		panelLogin.setLayout(null);
 
 		JLabel lblUsername = new JLabel("UserName");
-		lblUsername.setBounds(30, 49, 101, 25);
+		lblUsername.setBounds(44, 48, 101, 25);
 		panelLogin.add(lblUsername);
 
 		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setBounds(30, 121, 101, 25);
+		lblPassword.setBounds(44, 120, 101, 25);
 		panelLogin.add(lblPassword);
 
 		txtUsername = new JTextField();
-		txtUsername.setBounds(124, 47, 170, 30);
+		txtUsername.setBounds(138, 46, 170, 30);
 		txtUsername.addKeyListener(new KeyAdapter() {
 			@SuppressWarnings("deprecation")
 			@Override
@@ -156,7 +161,7 @@ public class LoginConfig extends JFrame {
 		panelLogin.add(txtUsername);
 
 		pwdPassword = new JPasswordField();
-		pwdPassword.setBounds(124, 119, 170, 30);
+		pwdPassword.setBounds(138, 118, 170, 30);
 		pwdPassword.addKeyListener(new KeyAdapter() {
 			@SuppressWarnings("deprecation")
 			@Override
@@ -185,7 +190,7 @@ public class LoginConfig extends JFrame {
 				}
 			}
 		});
-		btnLogin.setBounds(12, 210, 142, 35);
+		btnLogin.setBounds(26, 209, 142, 35);
 		panelLogin.add(btnLogin);
 
 		cl = (CardLayout) (panel.getLayout());
@@ -196,12 +201,12 @@ public class LoginConfig extends JFrame {
 				btnBackToLogin.setEnabled(true);
 				setTitle("Config Conect");
 				cl.show(panel, "config");
-				
+
 			}
 		});
-		btnConfigConnect.setBounds(166, 210, 142, 35);
+		btnConfigConnect.setBounds(180, 209, 142, 35);
 		panelLogin.add(btnConfigConnect);
-		
+
 		lblForgotPass = new JLabel("Forgot password?");
 		lblForgotPass.setFont(new Font("Dialog", Font.BOLD, 12));
 		lblForgotPass.addMouseListener(new MouseAdapter() {
@@ -209,6 +214,7 @@ public class LoginConfig extends JFrame {
 			public void mouseExited(MouseEvent e) {
 				lblForgotPass.setFont(new Font("Dialog", Font.BOLD, 12));
 			}
+
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				new ForgotPassDialog();
@@ -220,8 +226,8 @@ public class LoginConfig extends JFrame {
 				lblForgotPass.setFont(new Font("Dialog", Font.ITALIC, 12));
 			}
 		});
-		
-		lblForgotPass.setBounds(124, 161, 147, 15);
+
+		lblForgotPass.setBounds(138, 160, 147, 15);
 		panelLogin.add(lblForgotPass);
 
 		panelConfig = new JPanel();
@@ -233,22 +239,22 @@ public class LoginConfig extends JFrame {
 				null));
 
 		JLabel lblURL = new JLabel("Path");
-		lblURL.setBounds(30, 49, 101, 25);
+		lblURL.setBounds(44, 49, 101, 25);
 		panelConfig.add(lblURL);
 
 		JLabel lblPort = new JLabel("Port");
-		lblPort.setBounds(30, 121, 101, 25);
+		lblPort.setBounds(44, 121, 101, 25);
 		panelConfig.add(lblPort);
 
 		txtPath = new JTextField(config.getPath());
 		txtPath.setColumns(10);
-		txtPath.setBounds(124, 47, 170, 30);
+		txtPath.setBounds(138, 47, 170, 30);
 		panelConfig.add(txtPath);
 
 		frmtdtxtfldPort = new JFormattedTextField(config.getPort());
 		frmtdtxtfldPort.setFormatterFactory(new DefaultFormatterFactory(
 				new NumberFormatter(new DecimalFormat("#0"))));
-		frmtdtxtfldPort.setBounds(124, 119, 70, 30);
+		frmtdtxtfldPort.setBounds(138, 119, 70, 30);
 		panelConfig.add(frmtdtxtfldPort);
 
 		btnBackToLogin = new JButton("Back to Login");
@@ -258,7 +264,7 @@ public class LoginConfig extends JFrame {
 				cl.show(panel, "login");
 			}
 		});
-		btnBackToLogin.setBounds(12, 210, 142, 35);
+		btnBackToLogin.setBounds(26, 210, 142, 35);
 		panelConfig.add(btnBackToLogin);
 
 		btnConfig = new JButton("Config");
@@ -268,17 +274,17 @@ public class LoginConfig extends JFrame {
 				boolean check = events.configAction(txtPath.getText(), port);
 				// back to Login panel
 				if (check) {
-					//remove LoginConfig Frame
-//					removeNotify();
+					// remove LoginConfig Frame
+					// removeNotify();
 					// disconnect anh test new connect
 					RUN.disconnect();
 					RUN runPro = new RUN(true);
 					runPro.showLoadConnect();
-					runPro.Connect();					
+					runPro.Connect();
 				}
 			}
 		});
-		btnConfig.setBounds(166, 210, 142, 35);
+		btnConfig.setBounds(180, 210, 142, 35);
 		panelConfig.add(btnConfig);
 
 	}
