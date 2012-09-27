@@ -4,6 +4,9 @@
 
 package server.gui;
 
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +19,7 @@ import java.rmi.RemoteException;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
@@ -53,7 +57,6 @@ public class ServerUI extends JFrame {
 	public JMenuItem mntmMailServer;
 
 	public UIEvent events;
-	//
 	public Config config;
 	public Server server;
 	public static ServerUI frame;
@@ -67,26 +70,29 @@ public class ServerUI extends JFrame {
 	public static void main(String[] args) {
 		// LookAndFeel
 		try {
-            javax.swing.UIManager.LookAndFeelInfo[] installedLookAndFeels=javax.swing.UIManager.getInstalledLookAndFeels();
-            for (int idx=0; idx<installedLookAndFeels.length; idx++)
-            {
-                if ("Windows".equals(installedLookAndFeels[idx].getName())) {
-                    javax.swing.UIManager.setLookAndFeel(installedLookAndFeels[idx].getClassName());
-                    break;
-                }else if("GTK+".equals(installedLookAndFeels[idx].getName())){
-                	javax.swing.UIManager.setLookAndFeel(installedLookAndFeels[idx].getClassName());
-                    break;
-                }
-                else{
-                	javax.swing.UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-        } catch (InstantiationException ex) {
-        } catch (IllegalAccessException ex) {
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-        }
-
+			javax.swing.UIManager.LookAndFeelInfo[] installedLookAndFeels = javax.swing.UIManager
+					.getInstalledLookAndFeels();
+			for (int idx = 0; idx < installedLookAndFeels.length; idx++) {
+				if ("Windows".equals(installedLookAndFeels[idx].getName())) {
+					javax.swing.UIManager
+							.setLookAndFeel(installedLookAndFeels[idx]
+									.getClassName());
+					break;
+				} else if ("GTK+".equals(installedLookAndFeels[idx].getName())) {
+					javax.swing.UIManager
+							.setLookAndFeel(installedLookAndFeels[idx]
+									.getClassName());
+					break;
+				} else {
+					javax.swing.UIManager
+							.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+				}
+			}
+		} catch (ClassNotFoundException ex) {
+		} catch (InstantiationException ex) {
+		} catch (IllegalAccessException ex) {
+		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+		}
 
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -110,7 +116,7 @@ public class ServerUI extends JFrame {
 		String user = config.getUser();
 		String pass = config.getPass();
 		int port = config.getPort();
-		
+
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -119,62 +125,104 @@ public class ServerUI extends JFrame {
 		});
 		setTitle("Server");
 		new LogoContainer(this);
-		setBounds(0, 0, 350, 500);
+//		setBounds(0, 0, 355, 500);
+		setSize(355, 460);
 		setResizable(false);
 		new ContainerCenterLocationUI(this);
-		getContentPane().setLayout(null);
+		getContentPane().setLayout(new BorderLayout(0, 0));
 
 		//
-		JLabel lblImage = new JLabel("image");
+		JLabel lblImage = new JLabel(new ImageIcon("lib/images/logo.png"));
+		lblImage.setPreferredSize(new Dimension(0, 100));
 		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
-		lblImage.setBounds(5, 6, 334, 116);
-		getContentPane().add(lblImage);
+		lblImage.setAlignmentX(Component.CENTER_ALIGNMENT);
+		getContentPane().add(lblImage, BorderLayout.NORTH);
+
+		// draw panel control server
+		JPanel panelControl = new JPanel();
+		panelControl.setPreferredSize(new Dimension(0, 80));
+		panelControl.setAlignmentX(Component.CENTER_ALIGNMENT);
+		panelControl.setBorder(new TitledBorder(null, "Server",
+				TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		getContentPane().add(panelControl, BorderLayout.SOUTH);
+		panelControl.setLayout(null);
+
+		btnStart = new JButton("Start");
+		btnStart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				boolean check = false;
+				check = server.startServer();
+				if (check) {
+					btnStart.setEnabled(false);
+					btnClose.setEnabled(true);
+				}
+			}
+		});
+		btnStart.setBounds(20, 29, 130, 27);
+		panelControl.add(btnStart);
+
+		btnClose = new JButton("Close");
+		btnClose.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					server.closeServer();
+					btnStart.setEnabled(true);
+					btnClose.setEnabled(false);
+				} catch (RemoteException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnClose.setEnabled(false);
+		btnClose.setBounds(200, 29, 130, 27);
+		panelControl.add(btnClose);
+		// end draw panel control server
+		
+		// draw panel config server
+		JPanel panelConfig = new JPanel();
+		getContentPane().add(panelConfig, BorderLayout.CENTER);
+		panelConfig.setPreferredSize(new Dimension(0, 100));
+		panelConfig.setLayout(null);
 
 		txtUser = new JTextField(user);
+		txtUser.setBounds(140, 35, 160, 30);
+		panelConfig.add(txtUser);
 		txtUser.setEnabled(false);
-		txtUser.setBounds(140, 166, 164, 27);
-		getContentPane().add(txtUser);
 		txtUser.setColumns(10);
 
 		pwdPass = new JPasswordField(pass);
+		pwdPass.setBounds(140, 80, 160, 30);
+		panelConfig.add(pwdPass);
 		pwdPass.setEnabled(false);
-		pwdPass.setBounds(140, 205, 164, 27);
-		getContentPane().add(pwdPass);
 
 		frmtdtxtfldPort = new JFormattedTextField(port);
+		frmtdtxtfldPort.setBounds(140, 125, 50, 30);
+		panelConfig.add(frmtdtxtfldPort);
 		frmtdtxtfldPort.setFormatterFactory(new DefaultFormatterFactory(
 				new NumberFormatter(new DecimalFormat("#0"))));
 		frmtdtxtfldPort.setEnabled(false);
-		frmtdtxtfldPort.setBounds(140, 244, 60, 27);
-		getContentPane().add(frmtdtxtfldPort);
 
 		JLabel lblUser = new JLabel("User");
-		lblUser.setBounds(47, 172, 60, 15);
-		getContentPane().add(lblUser);
+		lblUser.setBounds(50, 35, 90, 30);
+		panelConfig.add(lblUser);
 
 		JLabel lblPass = new JLabel("Pass");
-		lblPass.setBounds(47, 211, 60, 15);
-		getContentPane().add(lblPass);
+		lblPass.setBounds(50, 80, 90, 30);
+		panelConfig.add(lblPass);
 
 		JLabel lblPort = new JLabel("Port Server");
-		lblPort.setBounds(47, 250, 81, 15);
-		getContentPane().add(lblPort);
+		lblPort.setBounds(50, 125, 90, 30);
+		panelConfig.add(lblPort);
 
 		btnConfig = new JButton("Config");
-		btnConfig.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				txtUser.setEnabled(true);
-				pwdPass.setEnabled(true);
-				frmtdtxtfldPort.setEnabled(true);
-				btnUpdateConfig.setEnabled(true);
-				btnConfig.setEnabled(false);
-			}
-		});
-		btnConfig.setBounds(47, 297, 100, 27);
-		getContentPane().add(btnConfig);
+		btnConfig.setBounds(60, 180, 110, 30);
+		panelConfig.add(btnConfig);
 
 		btnUpdateConfig = new JButton("Update Config");
+		btnUpdateConfig.setBounds(190, 180, 110, 30);
+		panelConfig.add(btnUpdateConfig);
 		btnUpdateConfig.setEnabled(false);
 		btnUpdateConfig.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
@@ -198,49 +246,17 @@ public class ServerUI extends JFrame {
 				}
 			}
 		});
-		btnUpdateConfig.setBounds(186, 297, 118, 27);
-		getContentPane().add(btnUpdateConfig);
-
-		// draw panel control server
-		JPanel panelControl = new JPanel();
-		panelControl.setBorder(new TitledBorder(null, "Server",
-				TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panelControl.setBounds(8, 345, 328, 83);
-		getContentPane().add(panelControl);
-		panelControl.setLayout(null);
-
-		btnStart = new JButton("Start");
-		btnStart.addActionListener(new ActionListener() {
+		btnConfig.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				boolean check = false;
-				check = server.startServer();
-				if (check) {
-					btnStart.setEnabled(false);
-					btnClose.setEnabled(true);
-				}
+				txtUser.setEnabled(true);
+				pwdPass.setEnabled(true);
+				frmtdtxtfldPort.setEnabled(true);
+				btnUpdateConfig.setEnabled(true);
+				btnConfig.setEnabled(false);
 			}
 		});
-		btnStart.setBounds(19, 29, 130, 27);
-		panelControl.add(btnStart);
 
-		btnClose = new JButton("Close");
-		btnClose.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					server.closeServer();
-					btnStart.setEnabled(true);
-					btnClose.setEnabled(false);
-				} catch (RemoteException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-		});
-		btnClose.setEnabled(false);
-		btnClose.setBounds(182, 29, 130, 27);
-		panelControl.add(btnClose);
-
-		// end draw panel control server
+		// end draw panel config server
 
 		// draw Menu
 		JMenuBar menuBar = new JMenuBar();
@@ -280,10 +296,10 @@ public class ServerUI extends JFrame {
 		JSeparator separator = new JSeparator();
 		mnFile.add(separator);
 		mnFile.add(mntmExit);
-		
+
 		JMenu mnSetting = new JMenu("Settings");
 		menuBar.add(mnSetting);
-		
+
 		mntmMailServer = new JMenuItem("Mail Server...");
 		mntmMailServer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
