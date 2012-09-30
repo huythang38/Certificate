@@ -121,7 +121,7 @@ public class LoginConfig extends JFrame {
 
 		
 		panel = new JPanel();
-		panel.setPreferredSize(new Dimension(0, 280));
+		panel.setPreferredSize(new Dimension(0, 260));
 		panel.setBounds(13, 109, 324, 260);
 		contentPane.add(panel, BorderLayout.SOUTH);
 		panel.setLayout(new CardLayout(0, 0));

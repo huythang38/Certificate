@@ -62,9 +62,10 @@ public class LoginConfigEvent {
 			else if (dataLogin.get(2).equals(1)) {
 				check = true;
 				// call Navigator Frame
-				NavFrame navFrame = new NavFrame();
-				navFrame.setUserName(dataLogin.get(0).toString());
-				navFrame.setPermission(Integer.parseInt(dataLogin.get(2).toString()));
+				int id = Integer.parseInt(dataLogin.get(0).toString());
+				String user_name = dataLogin.get(1).toString();
+				int role = Integer.parseInt(dataLogin.get(3).toString());
+				new NavFrame(id, user_name, role);
 			}
 			// account has been locked
 			else {
