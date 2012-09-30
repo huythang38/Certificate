@@ -27,14 +27,14 @@ public class ForgotPass {
 	String name;
 	public Config config = new Config();
 
-	public ForgotPass() {}
+	public ForgotPass() {
+	}
 
 	public boolean checkEmail(String email) {
 		boolean check = false;
 		try {
 			stmt = Server.conn.createStatement();
-			String sql = "select * from students where email = '" + email
-					+ "'";
+			String sql = "select * from students where email = '" + email + "'";
 			rst = stmt.executeQuery(sql);
 			if (rst.next()) {
 				check = true;
@@ -52,37 +52,31 @@ public class ForgotPass {
 	}
 
 	public void sendPassToMail(String email) {
-		String sql = "select * from accounts where id = '" + accounts_id + "'";
-		try {
-			rst = stmt.executeQuery(sql);
-			rst.next();
-
+		String pass = Server.accountsTable.getUsername(accounts_id);
+		if (!pass.equals("")) {
 			try {
-				sendMail(rst.getString("password"), email);
+				sendMail(pass, email);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
+
 	}
 
 	public void sendMail(String pass, String to) throws Exception {
 		String from = config.getUser_smtp();
-		
+
 		Properties props = System.getProperties();
-		// –
+		// â€“
 		props.put("mail.smtp.host", config.getSmtp());
 		props.put("mail.smtp.port", config.getPort_smtp());
 		props.put("mail.smtp.starttls.enable", "true");
-		
-		final String login = from;// ”nth001@gmail.com”;//usermail
-		final String pwd = config.getPass_smtp();// ”password cua ban o day”;
-		Authenticator pa = null; // default: no authentication
-		
+
+		final String login = from;
+		final String pwd = config.getPass_smtp();
+		Authenticator pa = null;
+
 		if (login != null && pwd != null) { // authentication required?
 			props.put("mail.smtp.auth", "true");
 			pa = new Authenticator() {
@@ -90,28 +84,26 @@ public class ForgotPass {
 					return new PasswordAuthentication(login, pwd);
 				}
 			};
-			
+
 		}// else: no authentication
 		Session session = Session.getInstance(props, pa);
-		// — Create a new message –
+		// â€” Create a new message â€“
 		Message msg = new MimeMessage(session);
-		// — Set the FROM and TO fields –
+		// â€” Set the FROM and TO fields â€“
 		msg.setFrom(new InternetAddress(from));
 		msg.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse(to, false));
 
-		// — Set the subject and body text –
+		// â€” Set the subject and body text â€“
 		msg.setSubject("Certificate Center: Forgot Password!");
-		msg.setText("Dear " + name + ",\n\n" +
-				"\t This is your password: " + pass + "\n\n" +
-				"Thank you,\n" +
-				"Certificate Center!");
-		
-		// — Set some other header information –
+		msg.setText("Dear " + name + ",\n\n" + "\t This is your password: "
+				+ pass + "\n\n" + "Thank you,\n" + "Certificate Center!");
+
+		// â€” Set some other header information â€“
 		msg.setHeader("X-Mailer", "LOTONtechEmail");
 		msg.setSentDate(new Date());
 		msg.saveChanges();
-		// — Send the message –
+		// â€” Send the message â€“
 		Transport.send(msg);
 		System.out.println("Message sent OK.");
 

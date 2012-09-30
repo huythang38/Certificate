@@ -21,6 +21,7 @@ import javax.swing.JOptionPane;
 
 import server.actionDatabase.Excutable;
 import server.config.Config;
+import server.event.read_data.AccountsTable;
 
 public class Server {
 	private static Excutable run;
@@ -29,6 +30,7 @@ public class Server {
 	private String userData;
 	private String passData;
 	public static Connection conn;
+	public static AccountsTable accountsTable;
 
 	public boolean startServer() {
 		try {
@@ -49,6 +51,7 @@ public class Server {
 			// start connect to DataBase
 			readConfigDatabase();
 			connectDatabase();
+			callData();
 			return true;
 		} catch (MalformedURLException ex) {
 			JOptionPane.showMessageDialog(new JFrame(), "not start Server");
@@ -67,7 +70,7 @@ public class Server {
 		try {
 			Naming.unbind("rmi://localhost:" + port + "/certificate");
 			UnicastRemoteObject.unexportObject(run, true);
-			 disConnectDatabase();
+			disConnectDatabase();
 			JOptionPane.showMessageDialog(new JFrame(),
 					"Close server successfully!");
 		} catch (MalformedURLException e) {
@@ -123,8 +126,7 @@ public class Server {
 
 	}
 
-	public int getPort() {
-		return port;
+	public void callData(){
+		accountsTable = new AccountsTable();
 	}
-	
 }

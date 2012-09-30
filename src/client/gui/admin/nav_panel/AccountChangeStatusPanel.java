@@ -16,11 +16,15 @@ import javax.swing.JScrollPane;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.DefaultComboBoxModel;
+
+import client.gui.admin.nav_panel.searchPanel.SearchPanelAccountChangeStatus;
+
 import java.awt.ComponentOrientation;
 
 @SuppressWarnings("serial")
 public class AccountChangeStatusPanel extends JPanel {
 	private JTable tableShow;
+	public static JLabel lblAccountid;
 
 	/**
 	 * Create the panel.
@@ -28,7 +32,7 @@ public class AccountChangeStatusPanel extends JPanel {
 	public AccountChangeStatusPanel() {
 		setLayout(new BorderLayout(0, 0));
 		
-		SearchPanel searchPanel = new SearchPanel();
+		SearchPanelAccountChangeStatus searchPanel = new SearchPanelAccountChangeStatus();
 		add(searchPanel, BorderLayout.NORTH);
 		
 		JSplitPane splitPane = new JSplitPane();
@@ -65,7 +69,7 @@ public class AccountChangeStatusPanel extends JPanel {
 		lblChangeAccountStatus.setBounds(24, 30, 302, 31);
 		panelChangeStatus.add(lblChangeAccountStatus);
 		
-		JLabel lblAccountid = new JLabel("AccountID");
+		lblAccountid = new JLabel("");
 		lblAccountid.setBounds(48, 72, 190, 14);
 		panelChangeStatus.add(lblAccountid);
 		
@@ -88,4 +92,9 @@ public class AccountChangeStatusPanel extends JPanel {
 		splitPane.setDividerLocation(250);
 
 	}
+	
+	public static void loadContent(int index){
+		System.out.println("ok");
+	}
+	
 }
