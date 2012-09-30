@@ -6,7 +6,7 @@ import java.util.Vector;
 import client.Client;
 
 public class ListNameAndAccounts_ID {
-	public Vector data = new Vector<>();
+	public Vector<?> data = new Vector<>();
 
 	public ListNameAndAccounts_ID(int index) {
 		try {
@@ -17,10 +17,11 @@ public class ListNameAndAccounts_ID {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public Vector<String> getListName() {
 		Vector<String> dataListNameStudent = null;
-		dataListNameStudent = (Vector) data.get(1);
-		dataListNameStudent.add(0, "---");
+		dataListNameStudent = (Vector<String>) data.get(1);
+		dataListNameStudent.add(0, "Choice Student...");
 		return dataListNameStudent;
 	}
 	

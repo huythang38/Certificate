@@ -1,8 +1,8 @@
 package client.gui.admin.nav_panel.searchPanel;
 
 import client.event.admin.searchPanel.SearchPanelAccountStatusEvent;
-import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 
+@SuppressWarnings("serial")
 public class SearchPanelAccountChangeStatus extends SearchPanel{
 	public static SearchPanelAccountStatusEvent event = new SearchPanelAccountStatusEvent();
 	

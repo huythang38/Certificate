@@ -22,12 +22,10 @@ public class SearchPanel extends JPanel {
 	public JComboBox cbbxClass;
 	@SuppressWarnings("rawtypes")
 	public JComboBox cbbxStudent;
-	@SuppressWarnings("rawtypes")
-	public DefaultComboBoxModel comboBoxModel;
 	public SearchPanelEvent event;
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public SearchPanel(SearchPanelEvent value){
+	public SearchPanel(SearchPanelEvent value) {
 		event = value;
 		FlowLayout flowLayout = (FlowLayout) getLayout();
 		flowLayout.setVgap(3);
@@ -45,7 +43,11 @@ public class SearchPanel extends JPanel {
 		cbbxCourse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int index = cbbxCourse.getSelectedIndex();
-				cbbxClass.setModel(event.getListNameClassModel(index));
+				if (index != 0) {
+					cbbxClass.setModel(event.getListNameClassModel(index));
+				}else{
+					cbbxClass.setModel(new DefaultComboBoxModel<String>());
+				}
 			}
 		});
 		cbbxCourse.setPreferredSize(new Dimension(150, 20));
@@ -55,7 +57,11 @@ public class SearchPanel extends JPanel {
 		cbbxClass.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int index = cbbxClass.getSelectedIndex();
-				cbbxStudent.setModel(event.getListNameStudentModel(index));
+				if (index != 0) {
+					cbbxStudent.setModel(event.getListNameStudentModel(index));
+				}else{
+					cbbxStudent.setModel(new DefaultComboBoxModel<String>());
+				}
 			}
 		});
 		cbbxClass.setPreferredSize(new Dimension(150, 20));
@@ -64,8 +70,10 @@ public class SearchPanel extends JPanel {
 		cbbxStudent = new JComboBox();
 		cbbxStudent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int index = cbbxClass.getSelectedIndex();
-				event.choiceStudent(index);
+				int index = cbbxStudent.getSelectedIndex();
+				if (index != 0) {
+					event.choiceStudent(index);
+				}
 			}
 		});
 		cbbxStudent.setPreferredSize(new Dimension(150, 20));

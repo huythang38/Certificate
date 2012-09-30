@@ -60,4 +60,55 @@ public class StudentsTable {
 		
 		return nameCollection;
 	}
+	
+	public String getEmail(String email) {
+		String returnValue = null;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()){
+				if ((jrst.getString("email")).equals(email)){
+					returnValue = jrst.getString("email");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnValue;
+	}
+	
+	public int getAccounts_id(String email) {
+		int returnValue = 0;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()){
+				if ((jrst.getString("email")).equals(email)){
+					returnValue = jrst.getInt("accounts_id");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnValue;
+	}
+	
+	public String getName(String email) {
+		String returnValue = null;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()){
+				if ((jrst.getString("email")).equals(email)){
+					returnValue = jrst.getString("name");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnValue;
+	}
 }

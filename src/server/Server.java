@@ -22,6 +22,9 @@ import javax.swing.JOptionPane;
 import server.actionDatabase.Excutable;
 import server.config.Config;
 import server.event.read_data.AccountsTable;
+import server.event.read_data.ClassTable;
+import server.event.read_data.CoursesTable;
+import server.event.read_data.StudentsTable;
 
 public class Server {
 	private static Excutable run;
@@ -31,6 +34,9 @@ public class Server {
 	private String passData;
 	public static Connection conn;
 	public static AccountsTable accountsTable;
+	public static StudentsTable studentsTable;
+	public static CoursesTable coursesTable;
+	public static ClassTable classTable;
 
 	public boolean startServer() {
 		try {
@@ -128,5 +134,8 @@ public class Server {
 
 	public void callData(){
 		accountsTable = new AccountsTable();
+		studentsTable = new StudentsTable();
+		coursesTable = new CoursesTable();
+		classTable = new ClassTable();
 	}
 }

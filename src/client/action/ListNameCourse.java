@@ -14,7 +14,7 @@ public class ListNameCourse {
 		Vector<String> data = null;
 		try {
 			data = Client.conn.getListNameCourse();
-			data.add(0, "---");
+			data.add(0, "Choice Course...");
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

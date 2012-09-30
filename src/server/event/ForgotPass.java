@@ -4,7 +4,6 @@
 package server.event;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 import java.util.Properties;
@@ -32,22 +31,13 @@ public class ForgotPass {
 
 	public boolean checkEmail(String email) {
 		boolean check = false;
-		try {
-			stmt = Server.conn.createStatement();
-			String sql = "select * from students where email = '" + email + "'";
-			rst = stmt.executeQuery(sql);
-			if (rst.next()) {
+			if (Server.studentsTable.getEmail(email) != null) {
 				check = true;
-				accounts_id = rst.getInt("accounts_id");
-				name = rst.getString("name");
+				accounts_id = Server.studentsTable.getAccounts_id(email);
+				name = Server.studentsTable.getName(email);
 			} else {
 				check = false;
 			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		return check;
 	}
 

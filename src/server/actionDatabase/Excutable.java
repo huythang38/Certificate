@@ -8,18 +8,13 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Vector;
 
+import server.Server;
 import server.event.ForgotPass;
 import server.event.Login;
-import server.event.read_data.ClassTable;
-import server.event.read_data.CoursesTable;
-import server.event.read_data.StudentsTable;
 
 @SuppressWarnings("serial")
 public class Excutable extends UnicastRemoteObject implements IDatabase {
 	public Login login = new Login();
-	public CoursesTable coursesTable;
-	public ClassTable classTable;
-	public StudentsTable studentTable;
 
 	public Excutable() throws RemoteException {}
 
@@ -44,8 +39,7 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 	@Override
 	public Vector<String> getListNameCourse() throws RemoteException {
 		// TODO Auto-generated method stub
-		coursesTable = new CoursesTable();
-		return coursesTable.getNameCollection();
+		return Server.coursesTable.getNameCollection();
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -53,9 +47,8 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 	public Vector getListNameAndIDClass(int index) throws RemoteException {
 		// TODO Auto-generated method stub
 		Vector data = new Vector<>();
-		classTable = new ClassTable();
-		data.add(classTable.getIDCollection(index));
-		data.add(classTable.getNameCollection(index));
+		data.add(Server.classTable.getIDCollection(index));
+		data.add(Server.classTable.getNameCollection(index));
 		return data;
 	}
 
@@ -64,9 +57,18 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 	public Vector getListNameAndAccount_idStudent(int index) throws RemoteException {
 		// TODO Auto-generated method stub
 		Vector data = new Vector();
-		studentTable = new StudentsTable();
-		data.add(studentTable.getAccounts_idCollection(index));
-		data.add(studentTable.getNameCollection(index));
+		data.add(Server.studentsTable.getAccounts_idCollection(index));
+		data.add(Server.studentsTable.getNameCollection(index));
+		return data;
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getAccount(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector data = new Vector();
+		data.add(Server.accountsTable.getUsername(id));
+		data.add(Server.accountsTable.getStatus(id));
 		return data;
 	}
 

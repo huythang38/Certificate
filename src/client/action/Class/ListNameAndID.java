@@ -20,7 +20,7 @@ public class ListNameAndID {
 	public Vector<String> getListNameClass() {
 		Vector<String> dataListName = new Vector<>();
 		dataListName = (Vector) data.get(1);
-		dataListName.add(0, "---");
+		dataListName.add(0, "Choice Class...");
 		return dataListName;
 	}
 	

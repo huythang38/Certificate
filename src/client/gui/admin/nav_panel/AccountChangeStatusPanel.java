@@ -23,7 +23,8 @@ import java.awt.ComponentOrientation;
 
 @SuppressWarnings("serial")
 public class AccountChangeStatusPanel extends JPanel {
-	private JTable tableShow;
+	public static JTable tableShow;
+	public static JComboBox<String> cbbxChoiceStatus;
 	public static JLabel lblAccountid;
 
 	/**
@@ -35,24 +36,20 @@ public class AccountChangeStatusPanel extends JPanel {
 		SearchPanelAccountChangeStatus searchPanel = new SearchPanelAccountChangeStatus();
 		add(searchPanel, BorderLayout.NORTH);
 		
-		JSplitPane splitPane = new JSplitPane();
-		splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
-		add(splitPane, BorderLayout.CENTER);
-		
 		JPanel contentPanel = new JPanel();
+		add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setBackground(Color.WHITE);
-		splitPane.setLeftComponent(contentPanel);
-		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 20));
+		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 60));
 		
 		JPanel panelChangeStatus = new JPanel();
-		panelChangeStatus.setPreferredSize(new Dimension(350, 215));
+		panelChangeStatus.setPreferredSize(new Dimension(350, 230));
 		panelChangeStatus.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		contentPanel.add(panelChangeStatus);
 		panelChangeStatus.setLayout(null);
 		
-		JComboBox cbbxChoiceStatus = new JComboBox();
+		cbbxChoiceStatus = new JComboBox<String>();
 		cbbxChoiceStatus.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-		cbbxChoiceStatus.setModel(new DefaultComboBoxModel(new String[] {"enable", "disable"}));
+		cbbxChoiceStatus.setModel(new DefaultComboBoxModel<String>(new String[] {"disable", "enable"}));
 		cbbxChoiceStatus.setBounds(58, 105, 229, 20);
 		panelChangeStatus.add(cbbxChoiceStatus);
 		
@@ -73,28 +70,23 @@ public class AccountChangeStatusPanel extends JPanel {
 		lblAccountid.setBounds(48, 72, 190, 14);
 		panelChangeStatus.add(lblAccountid);
 		
-		JPanel tablePanel = new JPanel();
-		tablePanel.setBorder(new TitledBorder(null, "test", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		splitPane.setRightComponent(tablePanel);
-		tablePanel.setLayout(new BorderLayout(0, 0));
-		
-		JScrollPane scrollPaneTable = new JScrollPane();
-		tablePanel.add(scrollPaneTable, BorderLayout.CENTER);
-		
-		tableShow = new JTable();
-		tableShow.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-			}
-		));
-		scrollPaneTable.setViewportView(tableShow);
-		splitPane.setDividerLocation(250);
+//		JPanel tablePanel = new JPanel();
+//		tablePanel.setBorder(new TitledBorder(null, "test", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+//		splitPane.setRightComponent(tablePanel);
+//		tablePanel.setLayout(new BorderLayout(0, 0));
+//		
+//		JScrollPane scrollPaneTable = new JScrollPane();
+//		tablePanel.add(scrollPaneTable, BorderLayout.CENTER);
+//		
+//		tableShow = new JTable();
+//		tableShow.setModel(new DefaultTableModel(
+//			new Object[][] {
+//			},
+//			new String[] {
+//			}
+//		));
+//		scrollPaneTable.setViewportView(tableShow);
+//		splitPane.setDividerLocation(250);
 
 	}
-	
-	public static void loadContent(int index){
-		System.out.println("ok");
-	}
-	
 }

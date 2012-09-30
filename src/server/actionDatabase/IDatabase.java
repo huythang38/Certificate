@@ -28,4 +28,6 @@ public interface IDatabase extends Remote {
 	public Vector getListNameAndAccount_idStudent(int index) throws RemoteException;
 	
 	//
+	@SuppressWarnings("rawtypes")
+	public Vector getAccount(int id) throws RemoteException;
 }
