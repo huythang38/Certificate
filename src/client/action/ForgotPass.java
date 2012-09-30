@@ -14,7 +14,7 @@ import client.event.MessageDisconnect;
 import client.gui.LoadingImage;
 
 public class ForgotPass extends Thread {
-	public LoadingImage loadingImage = new LoadingImage();
+	public LoadingImage loadingImage = new LoadingImage("lib/images/executeL.gif");
 	public static boolean complete;
 	public String email;
 	public Thread threadLoading;

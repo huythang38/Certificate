@@ -12,6 +12,9 @@ public class SearchPanelAccountStatusEvent extends SearchPanelEvent {
 		UserAndStatus userAndStatus = new UserAndStatus(index);
 		AccountChangeStatusPanel.lblAccountid.setText(userAndStatus.getUser());
 		AccountChangeStatusPanel.cbbxChoiceStatus.setSelectedIndex(userAndStatus.getStatus());
+		AccountChangeStatusPanel.cbbxChoiceStatus.setEnabled(true);
+		AccountChangeStatusPanel.btnOk.setEnabled(true);
+		AccountChangeStatusPanel.btnCancel.setEnabled(true);
 		return inde;
 	}
 }

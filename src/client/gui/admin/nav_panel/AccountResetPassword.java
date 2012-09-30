@@ -2,7 +2,6 @@ package client.gui.admin.nav_panel;
 
 import javax.swing.JPanel;
 
-import client.gui.admin.nav_panel.searchPanel.SearchPanel;
 
 import java.awt.BorderLayout;
 

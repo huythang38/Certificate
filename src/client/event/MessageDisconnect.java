@@ -18,7 +18,7 @@ public class MessageDisconnect {
 		if (check == 0) {
 			RUN.disconnect();
 			RUN runPro = new RUN(true);
-			runPro.showLoadConnect();
+			runPro.showLoadConnect("lib/images/connect.gif");
 			runPro.Connect();
 		} else {
 			System.exit(0);

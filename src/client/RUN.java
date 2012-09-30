@@ -79,8 +79,8 @@ public class RUN {
 		isSpScreen = true;
 	}
 
-	public void showLoadConnect() {
-		loadingImage = new LoadingImage();
+	public void showLoadConnect(String urlImg) {
+		loadingImage = new LoadingImage(urlImg);
 		threadLoading = new Thread(loadingImage);
 		threadLoading.setName("LOadingImage");
 		threadLoading.start();

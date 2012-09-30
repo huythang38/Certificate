@@ -34,7 +34,7 @@ public class ReportTab extends JPanel {
 	}
 	
 	public void paintComponent(Graphics g) {
-		Image img = new ImageIcon("lib/images/bak4.jpg").getImage();
+		Image img = new ImageIcon("lib/images/tabPanel.png").getImage();
 		g.drawImage(img, 0, 0, getWidth(), getHeight(), null);
 	}
 }

@@ -13,6 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 
 import client.event.admin.searchPanel.SearchPanelEvent;
+import java.awt.SystemColor;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class SearchPanel extends JPanel {
@@ -26,13 +28,13 @@ public class SearchPanel extends JPanel {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public SearchPanel(SearchPanelEvent value) {
+		setBackground(new Color(240, 255, 240));
 		event = value;
 		FlowLayout flowLayout = (FlowLayout) getLayout();
 		flowLayout.setVgap(3);
 		flowLayout.setHgap(20);
-		flowLayout.setAlignment(FlowLayout.LEFT);
 
-		setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		setBorder(new EtchedBorder(EtchedBorder.LOWERED, SystemColor.textHighlight, null));
 		setPreferredSize(new Dimension(0, 30));
 
 		JLabel lblSearch = new JLabel("Search:");

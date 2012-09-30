@@ -4,7 +4,9 @@
 
 package client.gui;
 
+import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -16,6 +18,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.text.DecimalFormat;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
@@ -37,8 +40,7 @@ import client.config.Config;
 import client.event.LoginConfigEvent;
 import extend_lib.ContainerCenterLocationUI;
 import extend_lib.LogoContainer;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
+import java.awt.SystemColor;
 
 @SuppressWarnings("serial")
 public class LoginConfig extends JFrame {
@@ -106,6 +108,7 @@ public class LoginConfig extends JFrame {
 		setSize(357, 410);
 		new ContainerCenterLocationUI(this);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.window);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
@@ -113,10 +116,10 @@ public class LoginConfig extends JFrame {
 		config = new Config();
 		contentPane.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblImage = new JLabel("image");
+		JLabel lblImage = new JLabel(new ImageIcon("lib/images/LoginBanner.png"));
 		lblImage.setPreferredSize(new Dimension(0, 105));
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
-		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, SystemColor.textHighlight, null));
 		contentPane.add(lblImage, BorderLayout.NORTH);
 
 		
@@ -129,9 +132,7 @@ public class LoginConfig extends JFrame {
 		panelLogin = new JPanel();
 		panelLogin.setPreferredSize(new Dimension(0, 100));
 		panel.add(panelLogin, "login");
-		panelLogin.setBorder(new TitledBorder(new TitledBorder(null, "Login",
-				TitledBorder.LEADING, TitledBorder.TOP, null, null), "",
-				TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panelLogin.setBorder(new TitledBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Login", TitledBorder.LEADING, TitledBorder.TOP, null, null), "", TitledBorder.LEADING, TitledBorder.TOP, null, SystemColor.textHighlight));
 		panelLogin.setLayout(null);
 
 		JLabel lblUsername = new JLabel("UserName");
@@ -279,7 +280,7 @@ public class LoginConfig extends JFrame {
 					// disconnect anh test new connect
 					RUN.disconnect();
 					RUN runPro = new RUN(true);
-					runPro.showLoadConnect();
+					runPro.showLoadConnect("lib/images/connect.gif");
 					runPro.Connect();
 				}
 			}

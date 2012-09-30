@@ -44,6 +44,7 @@ import server.config.Config;
 import server.event.UIEvent;
 import extend_lib.ContainerCenterLocationUI;
 import extend_lib.LogoContainer;
+import java.awt.SystemColor;
 
 @SuppressWarnings("serial")
 public class ServerUI extends JFrame {
@@ -110,6 +111,7 @@ public class ServerUI extends JFrame {
 	 * Create the frame.
 	 */
 	public ServerUI() {
+		getContentPane().setBackground(SystemColor.inactiveCaption);
 		events = new UIEvent();
 		config = new Config();
 		server = new Server();
@@ -132,15 +134,16 @@ public class ServerUI extends JFrame {
 		getContentPane().setLayout(new BorderLayout(0, 0));
 
 		//
-		JLabel lblImage = new JLabel(new ImageIcon("lib/images/logo.png"));
-		lblImage.setPreferredSize(new Dimension(0, 100));
-		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		JLabel lblImage = new JLabel(new ImageIcon("lib/images/ServerBanner.png"));
+		lblImage.setPreferredSize(new Dimension(0, 105));
+		lblImage.setBorder(new EtchedBorder(EtchedBorder.LOWERED, SystemColor.textHighlight, null));
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImage.setAlignmentX(Component.CENTER_ALIGNMENT);
 		getContentPane().add(lblImage, BorderLayout.NORTH);
 
 		// draw panel control server
 		JPanel panelControl = new JPanel();
+		panelControl.setBackground(SystemColor.window);
 		panelControl.setPreferredSize(new Dimension(0, 80));
 		panelControl.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panelControl.setBorder(new TitledBorder(null, "Server",

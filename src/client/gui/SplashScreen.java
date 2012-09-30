@@ -41,7 +41,7 @@ public class SplashScreen extends JWindow {
 	 */
 	public SplashScreen(){
 		setAlwaysOnTop(true);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 500, 313);
 		new ContainerCenterLocationUI(this);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,13 +51,13 @@ public class SplashScreen extends JWindow {
 	//connect to server icon	
 		JLabel lblProgress = new JLabel(new ImageIcon("lib/images/loading.gif"));
 		lblProgress.setHorizontalAlignment(SwingConstants.CENTER);
-		lblProgress.setBounds(0, 280, 220, 15);
+		lblProgress.setBounds(20, 290, 220, 17);
 		contentPane.add(lblProgress);
 		
 	//background	
 		JLabel lblBackground = new JLabel(new ImageIcon("lib/images/splashscreen.jpg"));
 		lblBackground.setHorizontalAlignment(SwingConstants.CENTER);
-		lblBackground.setBounds(0, 0, 450, 300);
+		lblBackground.setBounds(0, 0, 500, 313);
 		contentPane.add(lblBackground);		
 		
 //		setVisible(true);

@@ -18,7 +18,7 @@ public class HomePanel extends JPanel {
 	}
 
 	public void paintComponent(Graphics g) {
-		Image img = new ImageIcon("lib/images/bak3.jpg").getImage();
+		Image img = new ImageIcon("lib/images/backgroundHome.jpg").getImage();
 		g.drawImage(img, 0, 0, getWidth(), getHeight(), null);		
 	}
 }

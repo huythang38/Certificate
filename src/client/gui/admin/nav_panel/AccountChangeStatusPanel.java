@@ -1,31 +1,37 @@
 package client.gui.admin.nav_panel;
 
-import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.ComponentOrientation;
 import java.awt.Dimension;
-import javax.swing.border.EtchedBorder;
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
 import java.awt.FlowLayout;
 import java.awt.Font;
-import javax.swing.JSplitPane;
-import javax.swing.JTable;
-import javax.swing.border.TitledBorder;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.JScrollPane;
-import java.awt.Color;
-import javax.swing.JButton;
+import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.border.EtchedBorder;
 
+import client.event.admin.ChangeStatusEvent;
 import client.gui.admin.nav_panel.searchPanel.SearchPanelAccountChangeStatus;
-
-import java.awt.ComponentOrientation;
 
 @SuppressWarnings("serial")
 public class AccountChangeStatusPanel extends JPanel {
 	public static JTable tableShow;
 	public static JComboBox<String> cbbxChoiceStatus;
 	public static JLabel lblAccountid;
+	public static JButton btnOk;
+	public static JButton btnCancel;
+	public static JLabel lblWaitting;
+	
+	public ChangeStatusEvent event = new ChangeStatusEvent();
 
 	/**
 	 * Create the panel.
@@ -38,26 +44,43 @@ public class AccountChangeStatusPanel extends JPanel {
 		
 		JPanel contentPanel = new JPanel();
 		add(contentPanel, BorderLayout.CENTER);
-		contentPanel.setBackground(Color.WHITE);
+		contentPanel.setBackground(SystemColor.scrollbar);
 		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 60));
 		
 		JPanel panelChangeStatus = new JPanel();
 		panelChangeStatus.setPreferredSize(new Dimension(350, 230));
-		panelChangeStatus.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		panelChangeStatus.setBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(51, 153, 255), SystemColor.textInactiveText));
 		contentPanel.add(panelChangeStatus);
 		panelChangeStatus.setLayout(null);
 		
 		cbbxChoiceStatus = new JComboBox<String>();
+		cbbxChoiceStatus.setEnabled(false);
 		cbbxChoiceStatus.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		cbbxChoiceStatus.setModel(new DefaultComboBoxModel<String>(new String[] {"disable", "enable"}));
 		cbbxChoiceStatus.setBounds(58, 105, 229, 20);
 		panelChangeStatus.add(cbbxChoiceStatus);
 		
-		JButton btnOk = new JButton("Ok");
+		btnOk = new JButton("Ok");
+		btnOk.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblWaitting.setVisible(true);
+				event.changeStatus(cbbxChoiceStatus.getSelectedIndex());
+//				lblWaitting.setVisible(false);
+			}
+		});
+		btnOk.setEnabled(false);
 		btnOk.setBounds(127, 165, 89, 39);
 		panelChangeStatus.add(btnOk);
 		
-		JButton btnCancel = new JButton("Cancel");
+		btnCancel = new JButton("Cancel");
+		btnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				btnCancel.setEnabled(false);
+				btnOk.setEnabled(false);
+				cbbxChoiceStatus.setEnabled(false);
+			}
+		});
+		btnCancel.setEnabled(false);
 		btnCancel.setBounds(226, 165, 89, 39);
 		panelChangeStatus.add(btnCancel);
 		
@@ -70,23 +93,9 @@ public class AccountChangeStatusPanel extends JPanel {
 		lblAccountid.setBounds(48, 72, 190, 14);
 		panelChangeStatus.add(lblAccountid);
 		
-//		JPanel tablePanel = new JPanel();
-//		tablePanel.setBorder(new TitledBorder(null, "test", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-//		splitPane.setRightComponent(tablePanel);
-//		tablePanel.setLayout(new BorderLayout(0, 0));
-//		
-//		JScrollPane scrollPaneTable = new JScrollPane();
-//		tablePanel.add(scrollPaneTable, BorderLayout.CENTER);
-//		
-//		tableShow = new JTable();
-//		tableShow.setModel(new DefaultTableModel(
-//			new Object[][] {
-//			},
-//			new String[] {
-//			}
-//		));
-//		scrollPaneTable.setViewportView(tableShow);
-//		splitPane.setDividerLocation(250);
-
+		lblWaitting = new JLabel(new ImageIcon("lib/images/loading1.gif"));
+		lblWaitting.setBounds(10, 165, 89, 54);
+		lblWaitting.setVisible(false);
+		panelChangeStatus.add(lblWaitting);
 	}
 }

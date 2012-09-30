@@ -21,7 +21,7 @@ import extend_lib.Button;
 public class HomeTab extends JPanel {
 
 	public HomeTab() {
-		setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
+		setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 0));
 		
 		
 		Button btHome = new Button("lib/images/home.png", "Home");
@@ -84,7 +84,9 @@ public class HomeTab extends JPanel {
 	}
 
 	public void paintComponent(Graphics g) {
-		Image img = new ImageIcon("lib/images/bak3.jpg").getImage();
+		Image img = new ImageIcon("lib/images/tabPanel.png").getImage();
 		g.drawImage(img, 0, 0, getWidth(), getHeight(), null);
+		Image img1 = new ImageIcon("lib/images/certificate.png").getImage();
+		g.drawImage(img1, 0, 0, 300, 80, null);
 	}
 }
