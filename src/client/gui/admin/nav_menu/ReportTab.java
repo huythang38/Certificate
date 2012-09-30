@@ -21,7 +21,7 @@ public class ReportTab extends JPanel {
 		setAlignmentX(Component.RIGHT_ALIGNMENT);
 		setLayout(new FlowLayout(FlowLayout.LEADING, 10, 5));
 
-		Button btGenerateCertificate = new Button("lib/images/certificate.png",
+		Button btGenerateCertificate = new Button("lib/images/certificateicon.png",
 				"Generate Certificate");
 		btGenerateCertificate.addMouseListener(new MouseAdapter() {
 			@Override
