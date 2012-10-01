@@ -18,7 +18,9 @@ public class StudentsTable {
 
 	public StudentsTable() {
 		try {
-			stmt = Server.conn.createStatement();
+			stmt = Server.conn.createStatement(
+			           ResultSet.TYPE_SCROLL_SENSITIVE,
+			           ResultSet.CONCUR_UPDATABLE);
 			String sql = "select * from students";
 			rst = stmt.executeQuery(sql);
 			jrst = new JdbcRowSetImpl(rst);

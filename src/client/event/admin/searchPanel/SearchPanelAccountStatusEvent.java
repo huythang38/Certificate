@@ -10,6 +10,7 @@ public class SearchPanelAccountStatusEvent extends SearchPanelEvent {
 		// TODO Auto-generated method stub
 		int index = super.choiceStudent(inde);
 		UserAndStatus userAndStatus = new UserAndStatus(index);
+		AccountChangeStatusPanel.idAccount = index;
 		AccountChangeStatusPanel.lblAccountid.setText(userAndStatus.getUser());
 		AccountChangeStatusPanel.cbbxChoiceStatus.setSelectedIndex(userAndStatus.getStatus());
 		AccountChangeStatusPanel.cbbxChoiceStatus.setEnabled(true);

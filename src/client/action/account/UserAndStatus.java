@@ -4,6 +4,7 @@ import java.rmi.RemoteException;
 import java.util.Vector;
 
 import client.Client;
+import client.event.DisconnectToExit;
 
 public class UserAndStatus {
 	public static Vector<?> data = new Vector<>();
@@ -13,6 +14,7 @@ public class UserAndStatus {
 			data = Client.conn.getAccount(id);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
+			new DisconnectToExit();
 			e.printStackTrace();
 		}
 	}

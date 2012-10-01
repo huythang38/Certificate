@@ -72,4 +72,10 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		return data;
 	}
 
+	@Override
+	public boolean changeStatus(int id, int status) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.accountsTable.updateStatus(id, status);
+	}
+
 }

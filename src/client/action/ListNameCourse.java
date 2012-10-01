@@ -4,6 +4,7 @@ import java.rmi.RemoteException;
 import java.util.Vector;
 
 import client.Client;
+import client.event.DisconnectToExit;
 
 public class ListNameCourse {
 	public ListNameCourse(){
@@ -17,6 +18,7 @@ public class ListNameCourse {
 			data.add(0, "Choice Course...");
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
+			new DisconnectToExit();
 			e.printStackTrace();
 		}
 		

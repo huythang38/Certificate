@@ -20,7 +20,9 @@ public class ClassTable {
 	
 	public ClassTable() {
 		try {
-			stmt = Server.conn.createStatement();
+			stmt = Server.conn.createStatement(
+			           ResultSet.TYPE_SCROLL_SENSITIVE,
+			           ResultSet.CONCUR_UPDATABLE);
 			String sql = "select * from class";
 			rst = stmt.executeQuery(sql);
 			jrst = new JdbcRowSetImpl(rst);

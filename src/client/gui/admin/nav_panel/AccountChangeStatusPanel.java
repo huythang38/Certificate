@@ -11,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -20,6 +19,7 @@ import javax.swing.JTable;
 import javax.swing.border.EtchedBorder;
 
 import client.event.admin.ChangeStatusEvent;
+import client.gui.ExecuteLoading;
 import client.gui.admin.nav_panel.searchPanel.SearchPanelAccountChangeStatus;
 
 @SuppressWarnings("serial")
@@ -27,9 +27,13 @@ public class AccountChangeStatusPanel extends JPanel {
 	public static JTable tableShow;
 	public static JComboBox<String> cbbxChoiceStatus;
 	public static JLabel lblAccountid;
+	public static int idAccount;
 	public static JButton btnOk;
 	public static JButton btnCancel;
-	public static JLabel lblWaitting;
+	public static ExecuteLoading lblWaitting;
+	public static Thread threadExecuteLoading;
+	public static JPanel contentPanel;
+	public static JPanel panelChangeStatus;
 	
 	public ChangeStatusEvent event = new ChangeStatusEvent();
 
@@ -42,12 +46,12 @@ public class AccountChangeStatusPanel extends JPanel {
 		SearchPanelAccountChangeStatus searchPanel = new SearchPanelAccountChangeStatus();
 		add(searchPanel, BorderLayout.NORTH);
 		
-		JPanel contentPanel = new JPanel();
+		contentPanel = new JPanel();
 		add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setBackground(SystemColor.scrollbar);
 		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 60));
 		
-		JPanel panelChangeStatus = new JPanel();
+		panelChangeStatus = new JPanel();
 		panelChangeStatus.setPreferredSize(new Dimension(350, 230));
 		panelChangeStatus.setBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(51, 153, 255), SystemColor.textInactiveText));
 		contentPanel.add(panelChangeStatus);
@@ -63,9 +67,7 @@ public class AccountChangeStatusPanel extends JPanel {
 		btnOk = new JButton("Ok");
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblWaitting.setVisible(true);
-				event.changeStatus(cbbxChoiceStatus.getSelectedIndex());
-//				lblWaitting.setVisible(false);
+				event.changeStatus(idAccount, cbbxChoiceStatus.getSelectedIndex());
 			}
 		});
 		btnOk.setEnabled(false);
@@ -93,9 +95,10 @@ public class AccountChangeStatusPanel extends JPanel {
 		lblAccountid.setBounds(48, 72, 190, 14);
 		panelChangeStatus.add(lblAccountid);
 		
-		lblWaitting = new JLabel(new ImageIcon("lib/images/loading1.gif"));
+		
+		lblWaitting = new ExecuteLoading();
 		lblWaitting.setBounds(10, 165, 89, 54);
-		lblWaitting.setVisible(false);
 		panelChangeStatus.add(lblWaitting);
+		
 	}
 }

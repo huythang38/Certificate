@@ -27,7 +27,12 @@ public interface IDatabase extends Remote {
 	@SuppressWarnings("rawtypes")
 	public Vector getListNameAndAccount_idStudent(int index) throws RemoteException;
 	
-	//
+	//return username and status of account
 	@SuppressWarnings("rawtypes")
 	public Vector getAccount(int id) throws RemoteException;
+	
+	//change status account
+	public boolean changeStatus(int id, int status) throws RemoteException;
+	
+	
 }

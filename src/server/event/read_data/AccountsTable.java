@@ -17,7 +17,9 @@ public class AccountsTable {
 	
 	public AccountsTable() {
 		try {
-			stmt = Server.conn.createStatement();
+			stmt = Server.conn.createStatement(
+			           ResultSet.TYPE_SCROLL_SENSITIVE,
+			           ResultSet.CONCUR_UPDATABLE);
 			String sql = "select * from accounts";
 			rst = stmt.executeQuery(sql);
 			jrst = new JdbcRowSetImpl(rst);
@@ -145,14 +147,23 @@ public class AccountsTable {
 		return returnValue;
 	}
 	
-	public void updateStatus(int value){
+	public boolean updateStatus(int id, int value){
+		boolean check = false;
 		try {
-			jrst.next();
-			jrst.updateInt("status", value);
-			jrst.updateRow();
+			jrst.beforeFirst();
+			while (jrst.next()){
+				if (jrst.getInt("id") == id){
+					jrst.updateInt("status", value);
+					jrst.updateRow();
+					check = true;
+					break;
+				}
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			check = false;
 		}
+		return check;
 	}
 }
