@@ -4,6 +4,7 @@ import java.awt.CardLayout;
 
 import javax.swing.JPanel;
 
+import client.gui.admin.nav_panel.About;
 import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 import client.gui.admin.nav_panel.AccountResetPassword;
 import client.gui.admin.nav_panel.HomePanel;
@@ -22,7 +23,7 @@ public class NavContentPanel extends JPanel {
 			JPanel contentHelp = new JPanel();
 			add(contentHelp, "help");
 
-			JPanel contentAbout = new JPanel();
+			About contentAbout = new About();
 			add(contentAbout, "about");
 		}
 
