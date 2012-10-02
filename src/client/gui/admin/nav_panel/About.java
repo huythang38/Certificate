@@ -30,7 +30,7 @@ public class About extends JPanel{
 		panel.add(lblCertificareGenerationSystem);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\huythang\\git\\git\\lib\\images\\Education-128.png"));
+		lblNewLabel.setIcon(new ImageIcon("lib/images/Education-128.png"));
 		lblNewLabel.setBounds(179, 56, 136, 118);
 		panel.add(lblNewLabel);
 		

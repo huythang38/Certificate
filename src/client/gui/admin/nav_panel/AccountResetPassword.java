@@ -55,7 +55,7 @@ public class AccountResetPassword extends JPanel {
 		lblResetPasswordFor.setBounds(35, 29, 263, 46);
 		panel.add(lblResetPasswordFor);
 		
-		lblAccountid = new JLabel("accountID");
+		lblAccountid = new JLabel("Username!");
 		lblAccountid.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblAccountid.setBounds(86, 97, 168, 20);
 		panel.add(lblAccountid);

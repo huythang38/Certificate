@@ -28,16 +28,17 @@ public class Button extends JPanel {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		setLayout(gridBagLayout);
 
-		JLabel lblIcon = new JLabel(new javax.swing.ImageIcon(urlIcon));
-		{
-			lblIcon.setOpaque(false);
-			GridBagConstraints gbc_lblIcon = new GridBagConstraints();
-			gbc_lblIcon.anchor = GridBagConstraints.CENTER;
-			gbc_lblIcon.gridx = 0;
-			gbc_lblIcon.gridy = 0;
-			add(lblIcon, gbc_lblIcon);
+		if (urlIcon != null) {
+			JLabel lblIcon = new JLabel(new javax.swing.ImageIcon(urlIcon));
+			{
+				lblIcon.setOpaque(false);
+				GridBagConstraints gbc_lblIcon = new GridBagConstraints();
+				gbc_lblIcon.anchor = GridBagConstraints.CENTER;
+				gbc_lblIcon.gridx = 0;
+				gbc_lblIcon.gridy = 0;
+				add(lblIcon, gbc_lblIcon);
+			}
 		}
-
 		JLabel label = new JLabel(nameButton);
 		{
 			label.setFont(new Font("SansSerif", Font.BOLD, 12));
