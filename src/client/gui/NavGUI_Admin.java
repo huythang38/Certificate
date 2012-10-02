@@ -100,4 +100,5 @@ public class NavGUI_Admin extends JFrame {
 			contentPane.add(navPanel, gbc_navPanel);
 		}
 	}//end NavGUI_Admin method
+	
 }//end NavGUI_Admin method

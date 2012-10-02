@@ -166,4 +166,24 @@ public class AccountsTable {
 		}
 		return check;
 	}
+	
+	public boolean resetPass(int id){
+		boolean check = false;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()){
+				if (jrst.getInt("id") == id){
+					jrst.updateString("password", "123456");
+					jrst.updateRow();
+					check = true;
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			check = false;
+		}
+		return check;
+	}
 }

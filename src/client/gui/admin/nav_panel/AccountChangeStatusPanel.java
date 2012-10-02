@@ -6,11 +6,14 @@ import java.awt.ComponentOrientation;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -42,11 +45,11 @@ public class AccountChangeStatusPanel extends JPanel {
 	 */
 	public AccountChangeStatusPanel() {
 		setLayout(new BorderLayout(0, 0));
-		
 		SearchPanelAccountChangeStatus searchPanel = new SearchPanelAccountChangeStatus();
 		add(searchPanel, BorderLayout.NORTH);
 		
 		contentPanel = new JPanel();
+		contentPanel.setOpaque(false);
 		add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setBackground(SystemColor.scrollbar);
 		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 60));
@@ -86,7 +89,7 @@ public class AccountChangeStatusPanel extends JPanel {
 		btnCancel.setBounds(226, 165, 89, 39);
 		panelChangeStatus.add(btnCancel);
 		
-		JLabel lblChangeAccountStatus = new JLabel("Change Account Status of Student:");
+		JLabel lblChangeAccountStatus = new JLabel("Change Account Status of Account:");
 		lblChangeAccountStatus.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblChangeAccountStatus.setBounds(24, 30, 302, 31);
 		panelChangeStatus.add(lblChangeAccountStatus);
@@ -100,5 +103,10 @@ public class AccountChangeStatusPanel extends JPanel {
 		lblWaitting.setBounds(10, 165, 89, 54);
 		panelChangeStatus.add(lblWaitting);
 		
+	}
+	
+	public void paintComponent(Graphics g) {
+		Image img = new ImageIcon("lib/images/Background.jpg").getImage();
+		g.drawImage(img, 0, 0, getWidth(), getHeight(), null);		
 	}
 }

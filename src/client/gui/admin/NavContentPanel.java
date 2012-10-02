@@ -14,7 +14,6 @@ public class NavContentPanel extends JPanel {
 	
 	public NavContentPanel() {
 		setLayout(new CardLayout());
-
 		// tab home
 		{
 			HomePanel contentHome = new HomePanel();

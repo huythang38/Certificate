@@ -34,5 +34,7 @@ public interface IDatabase extends Remote {
 	//change status account
 	public boolean changeStatus(int id, int status) throws RemoteException;
 	
+	//reset password
+	public boolean resetPass(int id) throws RemoteException;
 	
 }
