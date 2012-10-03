@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `records`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `records` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `outofmark` int(11) DEFAULT NULL,
-  `mark` int(11) DEFAULT NULL,
+  `outofmark` int(11) NOT NULL,
+  `mark` int(11) NOT NULL,
   `subjects_id` int(11) NOT NULL,
   `students_id` int(11) NOT NULL,
   PRIMARY KEY (`id`,`subjects_id`,`students_id`),
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-10-02 12:13:36
+-- Dump completed on 2012-10-03 13:32:56

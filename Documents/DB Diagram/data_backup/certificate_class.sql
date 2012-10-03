@@ -26,10 +26,10 @@ DROP TABLE IF EXISTS `class`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `class` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
   `size` int(11) DEFAULT NULL,
   `courses_id` int(11) NOT NULL,
-  `year` int(11) DEFAULT NULL,
+  `year` int(11) NOT NULL,
   PRIMARY KEY (`id`,`courses_id`),
   KEY `fk_class_courses1` (`courses_id`),
   CONSTRAINT `fk_class_courses1` FOREIGN KEY (`courses_id`) REFERENCES `courses` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-10-02 12:13:43
+-- Dump completed on 2012-10-03 13:33:02

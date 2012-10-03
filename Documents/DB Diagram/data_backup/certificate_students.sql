@@ -26,14 +26,14 @@ DROP TABLE IF EXISTS `students`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `students` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) DEFAULT NULL,
-  `address` varchar(100) DEFAULT NULL,
-  `birthday` date DEFAULT NULL,
-  `gender` int(11) DEFAULT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `birthday` date NOT NULL,
+  `gender` int(11) NOT NULL,
   `email` varchar(45) DEFAULT NULL,
   `phone_number` int(11) DEFAULT NULL,
   `candidates_id` int(11) NOT NULL,
-  `class_id` int(11) NOT NULL,
+  `class_id` int(11) NOT NULL DEFAULT '0',
   `accounts_id` int(11) NOT NULL,
   PRIMARY KEY (`id`,`candidates_id`,`class_id`,`accounts_id`),
   KEY `accounts_id` (`accounts_id`),
@@ -64,4 +64,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-10-02 12:13:35
+-- Dump completed on 2012-10-03 13:32:55

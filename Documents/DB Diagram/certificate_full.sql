@@ -13,10 +13,10 @@ DROP TABLE IF EXISTS `certificate`.`accounts` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`accounts` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `username` VARCHAR(100) NULL DEFAULT NULL ,
-  `password` VARCHAR(100) NULL DEFAULT NULL ,
-  `status` INT(11) NULL DEFAULT NULL ,
-  `role` INT(11) NULL DEFAULT NULL ,
+  `username` VARCHAR(100) NOT NULL ,
+  `password` VARCHAR(100) NOT NULL ,
+  `status` INT(11) NOT NULL ,
+  `role` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 5
@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `certificate`.`candidates` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`candidates` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) NULL DEFAULT NULL ,
+  `name` VARCHAR(50) NOT NULL ,
   `tuitions_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`, `tuitions_id`) ,
   INDEX `fk_tuitions_id` (`tuitions_id` ASC) ,
@@ -65,7 +65,7 @@ DROP TABLE IF EXISTS `certificate`.`courses` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`courses` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) NULL DEFAULT NULL ,
+  `name` VARCHAR(50) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
@@ -79,10 +79,10 @@ DROP TABLE IF EXISTS `certificate`.`class` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`class` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(50) NULL DEFAULT NULL ,
+  `name` VARCHAR(50) NOT NULL ,
   `size` INT(11) NULL DEFAULT NULL ,
   `courses_id` INT(11) NOT NULL ,
-  `year` INT(11) NULL DEFAULT NULL ,
+  `year` INT(11) NOT NULL ,
   PRIMARY KEY (`id`, `courses_id`) ,
   INDEX `fk_class_courses1` (`courses_id` ASC) ,
   CONSTRAINT `fk_class_courses1`
@@ -102,14 +102,14 @@ DROP TABLE IF EXISTS `certificate`.`students` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`students` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(100) NULL DEFAULT NULL ,
-  `address` VARCHAR(100) NULL DEFAULT NULL ,
-  `birthday` DATE NULL DEFAULT NULL ,
-  `gender` INT(11) NULL DEFAULT NULL ,
+  `name` VARCHAR(100) NOT NULL ,
+  `address` VARCHAR(100) NOT NULL ,
+  `birthday` DATE NOT NULL ,
+  `gender` INT(11) NOT NULL ,
   `email` VARCHAR(45) NULL DEFAULT NULL ,
   `phone_number` INT(11) NULL DEFAULT NULL ,
   `candidates_id` INT(11) NOT NULL ,
-  `class_id` INT(11) NOT NULL ,
+  `class_id` INT(11) NULL ,
   `accounts_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`, `candidates_id`, `class_id`, `accounts_id`) ,
   INDEX `accounts_id` (`accounts_id` ASC) ,
@@ -142,9 +142,8 @@ DROP TABLE IF EXISTS `certificate`.`certificates` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`certificates` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `score` INT(11) NULL DEFAULT NULL ,
-  `status` INT(11) NULL DEFAULT NULL ,
-  `classifield` VARCHAR(50) NULL DEFAULT NULL ,
+  `score` INT(11) NOT NULL ,
+  `classified` VARCHAR(50) NOT NULL ,
   `students_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`, `students_id`) ,
   INDEX `fk_certificates_students1` (`students_id` ASC) ,
@@ -184,7 +183,7 @@ DROP TABLE IF EXISTS `certificate`.`subjects` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`subjects` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `name` VARCHAR(100) NULL DEFAULT NULL ,
+  `name` VARCHAR(100) NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 5
@@ -198,8 +197,8 @@ DROP TABLE IF EXISTS `certificate`.`records` ;
 
 CREATE  TABLE IF NOT EXISTS `certificate`.`records` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `outofmark` INT(11) NULL DEFAULT NULL ,
-  `mark` INT(11) NULL DEFAULT NULL ,
+  `outofmark` INT(11) NOT NULL ,
+  `mark` INT(11) NOT NULL ,
   `subjects_id` INT(11) NOT NULL ,
   `students_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`, `subjects_id`, `students_id`) ,
