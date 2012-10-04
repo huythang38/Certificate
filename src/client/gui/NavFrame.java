@@ -7,7 +7,7 @@ package client.gui;
 import java.awt.EventQueue;
 
 public class NavFrame {
-	
+	public static NavGUI_Admin navGUI_Admin;
 	/**
 	 * Launch the application.
 	 */
@@ -28,7 +28,8 @@ public class NavFrame {
 	 */
 	public NavFrame(int id, String userName, int role) {
 		if (role == 1){
-			new NavGUI_Admin().setVisible(true);
+			navGUI_Admin = new NavGUI_Admin();
+			navGUI_Admin.setVisible(true);
 		}else{
 			
 		}
