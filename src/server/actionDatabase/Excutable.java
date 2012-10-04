@@ -120,4 +120,52 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		return Server.coursesTable.isNameCourse(name);
 	}
 
+	
+	
+	@Override
+	public boolean isPaymentTuition(Float payment) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.tuitionsTable.isPaymentTuition(payment);
+	}
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	public Vector getFullTuition() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.tuitionsTable.getFullCollection();
+	}
+
+	@Override
+	public Vector<Float> getListPaymentTuition() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.tuitionsTable.getPaymentCollection();
+	}
+
+	@Override
+	public Vector<Integer> getListIdTuition() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.tuitionsTable.getIdCollection();
+	}
+
+	@Override
+	public boolean updateTuition(int id, Float payment) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.tuitionsTable.updateTuiton(id, payment);
+	}
+
+	@Override
+	public boolean deleteTuition(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.tuitionsTable.deleteTuition(id);
+	}
+
+	@Override
+	public boolean newTuition(Float payment) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.tuitionsTable.addTuition(payment);
+	}
+
+	
+	
+	
 }

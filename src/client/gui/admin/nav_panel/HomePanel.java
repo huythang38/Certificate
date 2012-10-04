@@ -143,11 +143,11 @@ public class HomePanel extends JPanel {
 		btnCreateSubject.setBounds(528, 293, 129, 25);
 		panel.add(btnCreateSubject);
 		
-		Button btnCreateTuition = new Button((String) null, "Create Tuition");
+		Button btnCreateTuition = new Button((String) null, "Manage Tuition");
 		btnCreateTuition.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("createTuition");
+				NavGUI_Admin.navPanel.showContent("manageTuition");
 			}
 		});
 		btnCreateTuition.setBounds(528, 324, 129, 25);

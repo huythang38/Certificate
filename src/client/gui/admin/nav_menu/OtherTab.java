@@ -85,17 +85,6 @@ public class OtherTab extends JPanel {
 		btManageCourse.setPreferredSize(new Dimension(110, 80));
 		panel.add(btManageCourse);
 
-//		Button btChangeCourse = new Button("lib/images/course_change.png",
-//				"Change Course");
-//		btChangeCourse.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mousePressed(MouseEvent arg0) {
-//				NavGUI_Admin.navPanel.showContent("changeCourse");
-//			}
-//		});
-//		btChangeCourse.setPreferredSize(new Dimension(120, 80));
-//		panel.add(btChangeCourse);
-
 		JSeparator separator_1 = new JSeparator();
 		separator_1.setPreferredSize(new Dimension(1, 50));
 		separator_1.setOrientation(SwingConstants.VERTICAL);
@@ -103,27 +92,27 @@ public class OtherTab extends JPanel {
 				SystemColor.textHighlight, null));
 		panel.add(separator_1);
 
-		Button btCreateTuition = new Button("lib/images/tuition_add.png",
-				"Create Tuition");
-		btCreateTuition.addMouseListener(new MouseAdapter() {
+		Button btManageTuition = new Button("lib/images/tuition.png",
+				"Manage Tuition");
+		btManageTuition.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("createTuition");
+				NavGUI_Admin.navPanel.showContent("manageTuition");
 			}
 		});
-		btCreateTuition.setPreferredSize(new Dimension(110, 80));
-		panel.add(btCreateTuition);
+		btManageTuition.setPreferredSize(new Dimension(110, 80));
+		panel.add(btManageTuition);
 
-		Button btChangeTuition = new Button("lib/images/tuition_change.png",
-				"Change Tuition");
-		btChangeTuition.addMouseListener(new MouseAdapter() {
+		Button btManageCandidate = new Button("lib/images/student_48.png",
+				"Manage Candidate");
+		btManageCandidate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("changeTuition");
+				NavGUI_Admin.navPanel.showContent("manageCandidate");
 			}
 		});
-		btChangeTuition.setPreferredSize(new Dimension(120, 80));
-		panel.add(btChangeTuition);
+		btManageCandidate.setPreferredSize(new Dimension(120, 80));
+		panel.add(btManageCandidate);
 
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setPreferredSize(new Dimension(1, 50));

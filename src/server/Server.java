@@ -25,6 +25,7 @@ import server.event.read_data.AccountsTable;
 import server.event.read_data.ClassTable;
 import server.event.read_data.CoursesTable;
 import server.event.read_data.StudentsTable;
+import server.event.read_data.TuitionsTable;
 
 public class Server {
 	private static Excutable run;
@@ -37,6 +38,7 @@ public class Server {
 	public static StudentsTable studentsTable;
 	public static CoursesTable coursesTable;
 	public static ClassTable classTable;
+	public static TuitionsTable tuitionsTable;
 
 	public boolean startServer() {
 		try {
@@ -137,5 +139,6 @@ public class Server {
 		studentsTable = new StudentsTable();
 		coursesTable = new CoursesTable();
 		classTable = new ClassTable();
+		tuitionsTable = new TuitionsTable();
 	}
 }

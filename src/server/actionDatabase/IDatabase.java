@@ -17,19 +17,6 @@ public interface IDatabase extends Remote {
 	// forgot Password
 	public boolean forgotPassWord(String email) throws RemoteException;
 
-	// check name in table courses
-	public boolean isNameCourse(String name) throws RemoteException;
-
-	// return full data in table courses
-	@SuppressWarnings("rawtypes")
-	public Vector getFullCourse() throws RemoteException;
-
-	// return list name course in table courses
-	public Vector<String> getListNameCourse() throws RemoteException;
-
-	// return list id course in table courses
-	public Vector<Integer> getListIdCourse() throws RemoteException;
-
 	// return list name class and id in table class
 	@SuppressWarnings("rawtypes")
 	public Vector getListNameAndIDClass(int index) throws RemoteException;
@@ -45,9 +32,24 @@ public interface IDatabase extends Remote {
 
 	// change status account
 	public boolean changeStatus(int id, int status) throws RemoteException;
-
+	
 	// reset password
 	public boolean resetPass(int id) throws RemoteException;
+
+	
+	
+	// check name in table courses
+	public boolean isNameCourse(String name) throws RemoteException;
+
+	// return full data in table courses
+	@SuppressWarnings("rawtypes")
+	public Vector getFullCourse() throws RemoteException;
+
+	// return list name course in table courses
+	public Vector<String> getListNameCourse() throws RemoteException;
+
+	// return list id course in table courses
+	public Vector<Integer> getListIdCourse() throws RemoteException;
 
 	// update course
 	public boolean updateCourse(int id, String name) throws RemoteException;
@@ -57,5 +59,29 @@ public interface IDatabase extends Remote {
 
 	// new course
 	public boolean newCourse(String name) throws RemoteException;
+
+	
+	
+	// check payment in table tuitions
+	public boolean isPaymentTuition(Float payment) throws RemoteException;
+
+	// return full data in table tuitions
+	@SuppressWarnings("rawtypes")
+	public Vector getFullTuition() throws RemoteException;
+
+	// return list payment in table tuitions
+	public Vector<Float> getListPaymentTuition() throws RemoteException;
+
+	// return list id in table tuitions
+	public Vector<Integer> getListIdTuition() throws RemoteException;
+
+	// update tuition
+	public boolean updateTuition(int id, Float payment) throws RemoteException;
+
+	// delete tuition
+	public boolean deleteTuition(int id) throws RemoteException;
+
+	// new tuition
+	public boolean newTuition(Float payment) throws RemoteException;
 
 }

@@ -7,8 +7,9 @@ import javax.swing.JPanel;
 import client.gui.admin.nav_panel.About;
 import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 import client.gui.admin.nav_panel.AccountResetPassword;
-import client.gui.admin.nav_panel.ManageCourse;
 import client.gui.admin.nav_panel.HomePanel;
+import client.gui.admin.nav_panel.ManageCourse;
+import client.gui.admin.nav_panel.ManageTuition;
 
 @SuppressWarnings("serial")
 public class NavContentPanel extends JPanel {
@@ -66,11 +67,11 @@ public class NavContentPanel extends JPanel {
 			ManageCourse contentChangeCourse = new ManageCourse();
 			add(contentChangeCourse, "manageCourse");
 
-			JPanel contentCreateTuition = new JPanel();
-			add(contentCreateTuition, "createTuition");
+			ManageTuition contentManageTuition = new ManageTuition();
+			add(contentManageTuition, "manageTuition");
 
-			JPanel contentChangeTuition = new JPanel();
-			add(contentChangeTuition, "changeTuition");
+			JPanel contentManageCandidate = new JPanel();
+			add(contentManageCandidate, "manageCandidate");
 
 			JPanel contentCreateSubject = new JPanel();
 			add(contentCreateSubject, "createSubject");
