@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import client.gui.admin.nav_panel.About;
 import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 import client.gui.admin.nav_panel.AccountResetPassword;
+import client.gui.admin.nav_panel.ManageCourse;
 import client.gui.admin.nav_panel.HomePanel;
 
 @SuppressWarnings("serial")
@@ -65,11 +66,8 @@ public class NavContentPanel extends JPanel {
 			JPanel contentChangeClass = new JPanel();
 			add(contentChangeClass, "changeClass");
 
-			JPanel contentCreateCourse = new JPanel();
-			add(contentCreateCourse, "createCourse");
-
-			JPanel contentChangeCourse = new JPanel();
-			add(contentChangeCourse, "changeCourse");
+			ManageCourse contentChangeCourse = new ManageCourse();
+			add(contentChangeCourse, "manageCourse");
 
 			JPanel contentCreateTuition = new JPanel();
 			add(contentCreateTuition, "createTuition");

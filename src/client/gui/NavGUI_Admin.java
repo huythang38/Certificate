@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 
+import client.Client;
 import client.gui.admin.MenuPane;
 import client.gui.admin.NavContentPanel;
 import extend_lib.ContainerCenterLocationUI;
@@ -25,6 +26,7 @@ public class NavGUI_Admin extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		new Client().connectServer("localhost", 7777);
 		try {
 			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager
 					.getInstalledLookAndFeels()) {

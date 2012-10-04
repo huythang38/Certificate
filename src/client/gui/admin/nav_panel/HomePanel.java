@@ -113,15 +113,15 @@ public class HomePanel extends JPanel {
 		btnResetPass.setBounds(153, 260, 129, 25);
 		panel.add(btnResetPass);
 		
-		Button btnCreateCourse = new Button((String) null, "Create Course");
-		btnCreateCourse.addMouseListener(new MouseAdapter() {
+		Button btnManageCourse = new Button((String) null, "Manage Course");
+		btnManageCourse.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("createCourse");
+				NavGUI_Admin.navPanel.showContent("manageCourse");
 			}
 		});
-		btnCreateCourse.setBounds(528, 229, 129, 25);
-		panel.add(btnCreateCourse);
+		btnManageCourse.setBounds(528, 229, 129, 25);
+		panel.add(btnManageCourse);
 		
 		Button btnCreateClass = new Button((String) null, "Create Class");
 		btnCreateClass.addMouseListener(new MouseAdapter() {

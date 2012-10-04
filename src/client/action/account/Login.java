@@ -1,4 +1,4 @@
-package client.action;
+package client.action.account;
 
 import java.rmi.RemoteException;
 import java.util.Vector;

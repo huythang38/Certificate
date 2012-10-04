@@ -36,10 +36,10 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		}
 	}
 
-	@Override
-	public Vector<String> getListNameCourse() throws RemoteException {
+	@SuppressWarnings("rawtypes")
+	public Vector getFullCourse() throws RemoteException {
 		// TODO Auto-generated method stub
-		return Server.coursesTable.getNameCollection();
+		return Server.coursesTable.getFullCollection();
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -82,6 +82,42 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 	public boolean resetPass(int id) throws RemoteException {
 		// TODO Auto-generated method stub
 		return Server.accountsTable.resetPass(id);
+	}
+
+	@Override
+	public boolean updateCourse(int id, String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.coursesTable.updateCourse(id, name);
+	}
+
+	@Override
+	public boolean deleteCourse(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.coursesTable.deleteCourse(id);
+	}
+
+	@Override
+	public boolean newCourse(String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.coursesTable.addCourse(name);
+	}
+
+	@Override
+	public Vector<String> getListNameCourse() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.coursesTable.getNameCollection();
+	}
+
+	@Override
+	public Vector<Integer> getListIdCourse() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.coursesTable.getIdCollection();
+	}
+
+	@Override
+	public boolean isNameCourse(String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.coursesTable.isNameCourse(name);
 	}
 
 }

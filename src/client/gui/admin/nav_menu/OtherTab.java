@@ -74,27 +74,27 @@ public class OtherTab extends JPanel {
 		separator.setPreferredSize(new Dimension(1, 50));
 		panel.add(separator);
 
-		Button btCreateCourse = new Button("lib/images/course_add.png",
-				"Create Course");
-		btCreateCourse.addMouseListener(new MouseAdapter() {
+		Button btManageCourse = new Button("lib/images/course.png",
+				"Manage Course");
+		btManageCourse.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("createCourse");
+				NavGUI_Admin.navPanel.showContent("manageCourse");
 			}
 		});
-		btCreateCourse.setPreferredSize(new Dimension(110, 80));
-		panel.add(btCreateCourse);
+		btManageCourse.setPreferredSize(new Dimension(110, 80));
+		panel.add(btManageCourse);
 
-		Button btChangeCourse = new Button("lib/images/course_change.png",
-				"Change Course");
-		btChangeCourse.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("changeCourse");
-			}
-		});
-		btChangeCourse.setPreferredSize(new Dimension(120, 80));
-		panel.add(btChangeCourse);
+//		Button btChangeCourse = new Button("lib/images/course_change.png",
+//				"Change Course");
+//		btChangeCourse.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mousePressed(MouseEvent arg0) {
+//				NavGUI_Admin.navPanel.showContent("changeCourse");
+//			}
+//		});
+//		btChangeCourse.setPreferredSize(new Dimension(120, 80));
+//		panel.add(btChangeCourse);
 
 		JSeparator separator_1 = new JSeparator();
 		separator_1.setPreferredSize(new Dimension(1, 50));

@@ -9,7 +9,7 @@ import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import client.action.Login;
+import client.action.account.Login;
 import client.config.Config;
 import client.gui.NavFrame;
 

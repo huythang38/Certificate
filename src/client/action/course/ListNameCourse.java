@@ -1,4 +1,4 @@
-package client.action;
+package client.action.course;
 
 import java.rmi.RemoteException;
 import java.util.Vector;
@@ -7,9 +7,7 @@ import client.Client;
 import client.event.DisconnectToExit;
 
 public class ListNameCourse {
-	public ListNameCourse(){
-		new Client().connectServer("localhost", 7777);
-	}
+	public ListNameCourse(){}
 	
 	public Vector<String> getListNameCourse(){
 		Vector<String> data = null;
