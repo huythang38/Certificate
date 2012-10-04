@@ -29,37 +29,43 @@ public class ManageCoursesEvent {
 	}
 
 	public void deleteCourse(final int id) {
+		int bol = JOptionPane.showConfirmDialog(new JFrame(), "Delete course can delete records in other tables!",
+				"Message", JOptionPane.OK_OPTION);
 
-		ManageCourse.lblWaitting.setVisible(true);
+		if (bol == 0) {
+			ManageCourse.lblWaitting.setVisible(true);
 
-		Thread t = new Thread() {
-			public void run() {
-				try {
-					if (Client.conn.deleteCourse(id)) {
-						ManageCourse.lblWaitting.setVisible(false);
-						ManageCourse.tableModel = new DefaultTableModel(
-								FullDataCourse.getModelDataCourse(),
-								ManageCourse.headTable);
-						ManageCourse.table.setModel(ManageCourse.tableModel);
+			Thread t = new Thread() {
+				public void run() {
+					try {
+						if (Client.conn.deleteCourse(id)) {
+							ManageCourse.lblWaitting.setVisible(false);
+							ManageCourse.tableModel = new DefaultTableModel(
+									FullDataCourse.getModelDataCourse(),
+									ManageCourse.headTable);
+							ManageCourse.table
+									.setModel(ManageCourse.tableModel);
 
-						JOptionPane.showMessageDialog(new JFrame(), "Deleted!");
-						ManageCourse.setEnableConpoment(false, false, true,
-								false, false, true);
-						ManageCourse.txtId.setText("");
-						ManageCourse.txtName.setText("");
-					} else {
-						ManageCourse.lblWaitting.setVisible(false);
-						JOptionPane.showMessageDialog(new JFrame(),
-								"Don't delete!");
+							JOptionPane.showMessageDialog(new JFrame(),
+									"Deleted!");
+							ManageCourse.setEnableConpoment(false, false, true,
+									false, false, true);
+							ManageCourse.txtId.setText("");
+							ManageCourse.txtName.setText("");
+						} else {
+							ManageCourse.lblWaitting.setVisible(false);
+							JOptionPane.showMessageDialog(new JFrame(),
+									"Don't delete!");
+						}
+					} catch (RemoteException e) {
+						// TODO Auto-generated catch block
+						new DisconnectToExit();
+						e.printStackTrace();
 					}
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					new DisconnectToExit();
-					e.printStackTrace();
 				}
-			}
-		};
-		t.start();
+			};
+			t.start();
+		}
 	}
 
 	public void updateCourse(final int id, String name) {

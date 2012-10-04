@@ -190,7 +190,7 @@ public class ManageCourse extends JPanel {
 				@Override
 				public void mousePressed(MouseEvent e) {
 					// TODO Auto-generated method stub
-					setEnableConpoment(true, true, false, true, true, true);
+					setEnableConpoment(false, true, false, true, true, true);
 					btnOk.setVisible(false);
 					btnNew.setVisible(true);
 
