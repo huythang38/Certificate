@@ -16,6 +16,7 @@ import client.Client;
 import client.gui.admin.MenuPane;
 import client.gui.admin.NavContentPanel;
 import extend_lib.ContainerCenterLocationUI;
+import extend_lib.LogoContainer;
 
 @SuppressWarnings("serial")
 public class NavGUI_Admin extends JFrame {
@@ -58,6 +59,7 @@ public class NavGUI_Admin extends JFrame {
 	 */
 	public NavGUI_Admin() {
 		setTitle("Certificate Generation System - Admin");
+		new LogoContainer(this);
 		setMinimumSize(new Dimension(800, 600));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
