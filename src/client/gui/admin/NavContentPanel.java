@@ -21,9 +21,6 @@ public class NavContentPanel extends JPanel {
 			HomePanel contentHome = new HomePanel();
 			add(contentHome, "home");
 
-			JPanel contentHelp = new JPanel();
-			add(contentHelp, "help");
-
 			About contentAbout = new About();
 			add(contentAbout, "about");
 		}

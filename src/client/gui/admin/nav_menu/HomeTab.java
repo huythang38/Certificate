@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
+import client.event.admin.CallFileHelp;
 import client.gui.NavGUI_Admin;
 import extend_lib.Button;
 
@@ -45,7 +46,7 @@ public class HomeTab extends JPanel {
 			btHelp.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mousePressed(MouseEvent arg0) {
-					NavGUI_Admin.navPanel.showContent("help");
+					new CallFileHelp();
 				}
 			});
 			btHelp.setBounds(11, 13, 87, 70);
