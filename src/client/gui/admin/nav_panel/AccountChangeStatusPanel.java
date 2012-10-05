@@ -22,8 +22,9 @@ import javax.swing.JTable;
 import javax.swing.border.EtchedBorder;
 
 import client.event.admin.ChangeStatusEvent;
+import client.event.admin.searchPanel.SearchPanelAccountStatusEvent;
 import client.gui.ExecuteLoading;
-import client.gui.admin.nav_panel.searchPanel.SearchPanelAccountChangeStatus;
+import client.gui.admin.nav_panel.searchPanel.SearchPanel;
 
 @SuppressWarnings("serial")
 public class AccountChangeStatusPanel extends JPanel {
@@ -45,7 +46,8 @@ public class AccountChangeStatusPanel extends JPanel {
 	 */
 	public AccountChangeStatusPanel() {
 		setLayout(new BorderLayout(0, 0));
-		SearchPanelAccountChangeStatus searchPanel = new SearchPanelAccountChangeStatus();
+		SearchPanelAccountStatusEvent searchPanelEvent = new SearchPanelAccountStatusEvent();
+		SearchPanel searchPanel = new SearchPanel(searchPanelEvent);
 		add(searchPanel, BorderLayout.NORTH);
 		
 		contentPanel = new JPanel();

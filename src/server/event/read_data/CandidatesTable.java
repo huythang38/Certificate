@@ -118,4 +118,22 @@ public class CandidatesTable {
 			return false;
 		}
 	}
+	
+	
+	public int getTuitions_id(int id) {
+		int _return = 0;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if (jrst.getInt("id") == id) {
+					_return = jrst.getInt("tuitions_id");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return _return;
+	}
 }

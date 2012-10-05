@@ -180,6 +180,10 @@ public class ManageCandidate extends JPanel {
 			lblWaitting.setBounds(320, 83, 89, 54);
 			panel.add(lblWaitting);
 		}
+		
+		JLabel label_1 = new JLabel("$");
+		label_1.setBounds(221, 175, 46, 14);
+		panel.add(label_1);
 
 		JPanel tablePanel = new JPanel();
 		{

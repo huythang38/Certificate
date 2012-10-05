@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import client.gui.admin.nav_panel.About;
 import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 import client.gui.admin.nav_panel.AccountResetPassword;
+import client.gui.admin.nav_panel.EnterPayment;
 import client.gui.admin.nav_panel.HomePanel;
 import client.gui.admin.nav_panel.ManageCandidate;
 import client.gui.admin.nav_panel.ManageCourse;
@@ -41,7 +42,7 @@ public class NavContentPanel extends JPanel {
 			JPanel contentInputMark = new JPanel();
 			add(contentInputMark, "inputMark");
 
-			JPanel contentEnterPayment = new JPanel();
+			EnterPayment contentEnterPayment = new EnterPayment();
 			add(contentEnterPayment, "enterPayment");
 		}
 

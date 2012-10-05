@@ -202,13 +202,47 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 			throws RemoteException {
 		// TODO Auto-generated method stub
 		int tuitions_id = Server.tuitionsTable.getId(payment);
-		return  Server.candidatesTable.updateCandidate(id, name, tuitions_id);
+		return Server.candidatesTable.updateCandidate(id, name, tuitions_id);
 	}
 
 	@Override
 	public boolean isNameCandidate(String name) throws RemoteException {
 		// TODO Auto-generated method stub
 		return Server.candidatesTable.isNameCandidate(name);
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getModelEnterPaymentTable(int class_id)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector _return = new Vector();
+		Vector data = Server.studentsTable
+				.getName_ID_CandidateId_Collection(class_id);
+		for (int x = 0; x < data.size(); x++) {
+			Vector dataChild = (Vector) data.get(x);
+			
+			{
+				int students_id = Integer.parseInt(dataChild.get(2).toString());
+				Float paid = Server.paymentsTable.getPaid(students_id);
+				dataChild.add(paid);
+			}
+			{
+				int candidates_id = Integer.parseInt(dataChild.get(1).toString());
+				Float payment = Server.tuitionsTable.getPayment(candidates_id);
+				dataChild.set(1, payment);
+			}
+			
+			_return.add(dataChild);
+		}
+		return _return;
+	}
+
+	@Override
+	public boolean enterPayment(int students_id, Float newPaid)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.paymentsTable.enterPayment(students_id, newPaid);
 	}
 
 }

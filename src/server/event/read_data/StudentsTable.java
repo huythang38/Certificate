@@ -113,4 +113,27 @@ public class StudentsTable {
 		}
 		return returnValue;
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public Vector getName_ID_CandidateId_Collection(int class_id) {
+		Vector collection = new Vector();
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()){
+				if (jrst.getInt("class_id") == class_id){
+					Vector collection1 = new Vector<>();
+					collection1.add(jrst.getString("name"));
+					collection1.add(jrst.getInt("candidates_id"));
+					collection1.add(jrst.getInt("id"));
+					
+					collection.add(collection1);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return collection;
+	}
 }

@@ -97,4 +97,12 @@ public interface IDatabase extends Remote {
 	// update candidate
 	public boolean updateCandidate(int id, String name, Float payment)
 			throws RemoteException;
+	
+	
+	//return model(name in student, paid in paymnents, payment in tuitions) for module enter payment
+	@SuppressWarnings("rawtypes")
+	public Vector getModelEnterPaymentTable(int class_id) throws RemoteException;
+	
+	//enter new payments
+	public boolean enterPayment(int students_id, Float newPaid) throws RemoteException;
 }

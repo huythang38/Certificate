@@ -7,6 +7,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -15,10 +17,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 
 import client.event.admin.ResetPassEvent;
+import client.event.admin.searchPanel.SearchPanelAccountResetPasswordEvent;
 import client.gui.ExecuteLoading;
-import client.gui.admin.nav_panel.searchPanel.SearchPanelAccountResetPassword;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import client.gui.admin.nav_panel.searchPanel.SearchPanel;
 
 @SuppressWarnings("serial")
 public class AccountResetPassword extends JPanel {
@@ -34,8 +35,8 @@ public class AccountResetPassword extends JPanel {
 	 */
 	public AccountResetPassword() {
 		setLayout(new BorderLayout(0, 0));
-		
-		SearchPanelAccountResetPassword searchPanel = new SearchPanelAccountResetPassword();
+		SearchPanelAccountResetPasswordEvent searchPanelEvent = new SearchPanelAccountResetPasswordEvent();
+		SearchPanel searchPanel = new SearchPanel(searchPanelEvent);
 		add(searchPanel, BorderLayout.NORTH);
 		
 		contentPanel = new JPanel();

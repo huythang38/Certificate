@@ -46,6 +46,7 @@ public class ManageTuition extends JPanel {
 	public static DefaultTableModel tableModel;
 
 	public ManageTuitionsEvent event = new ManageTuitionsEvent();
+	private JLabel label_1;
 
 	public ManageTuition() {
 		setLayout(new BorderLayout(0, 0));
@@ -171,6 +172,10 @@ public class ManageTuition extends JPanel {
 			lblWaitting.setBounds(320, 83, 89, 54);
 			panel.add(lblWaitting);
 		}
+		
+		label_1 = new JLabel("$");
+		label_1.setBounds(310, 127, 46, 14);
+		panel.add(label_1);
 
 		JPanel tablePanel = new JPanel();
 		{
