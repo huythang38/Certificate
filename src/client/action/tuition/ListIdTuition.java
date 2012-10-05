@@ -10,7 +10,7 @@ public class ListIdTuition {
 	public ListIdTuition() {
 	}
 
-	public static Vector<Integer> getListIdCourse() {
+	public static Vector<Integer> getListIdTuition() {
 		Vector<Integer> data = null;
 		try {
 			data = Client.conn.getListIdTuition();

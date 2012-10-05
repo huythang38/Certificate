@@ -9,7 +9,7 @@ import client.event.DisconnectToExit;
 public class ListPaymentTuition {
 	public ListPaymentTuition(){}
 	
-	public Vector<Float> getListNameCourse(){
+	public static Vector<Float> getListPaymentTuition(){
 		Vector<Float> data = null;
 		try {
 			data = Client.conn.getListPaymentTuition();

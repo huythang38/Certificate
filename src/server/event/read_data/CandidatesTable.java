@@ -11,49 +11,32 @@ import server.Server;
 
 import com.sun.rowset.JdbcRowSetImpl;
 
-public class TuitionsTable {
+public class CandidatesTable {
 	public Statement stmt;
 	public ResultSet rst;
 	public JdbcRowSet jrst;
 
-	public TuitionsTable() {
+	public CandidatesTable() {
 		try {
 			stmt = Server.conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
 					ResultSet.CONCUR_UPDATABLE);
-			String sql = "select * from tuitions";
+			String sql = "select * from candidates";
 			rst = stmt.executeQuery(sql);
 			jrst = new JdbcRowSetImpl(rst);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 		}
 	}
-
-	public int getId(Float payment) {
-		int _return = 0;
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				if (jrst.getFloat("payment") == payment) {
-					_return = jrst.getInt("id");
-					break;
-				}
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return _return;
-	}
-
-	public boolean isPaymentTuition(float payment) {
+	
+	public boolean isNameCandidate(String name){
 		boolean check = false;
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
-				if (jrst.getFloat("payment") == payment) {
+				if (jrst.getString("name").equals(name)) {
 					check = true;
 					break;
-				} else {
+				}else{
 					check = false;
 				}
 			}
@@ -64,24 +47,7 @@ public class TuitionsTable {
 		}
 		return check;
 	}
-
-	public Float getPayment(int id) {
-		Float _return = null;
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				if (jrst.getInt("id") == id) {
-					_return = jrst.getFloat("payment");
-				}
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			_return = 0f;
-		}
-		return _return;
-	}
-
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Vector getFullCollection() {
 		Vector FullCollection = new Vector<>();
@@ -90,7 +56,8 @@ public class TuitionsTable {
 			while (jrst.next()) {
 				Vector data = new Vector();
 				data.add(jrst.getInt("id"));
-				data.add(jrst.getFloat("payment"));
+				data.add(jrst.getString("name"));
+				data.add(jrst.getInt("tuitions_id"));
 				FullCollection.add(data);
 			}
 		} catch (SQLException e) {
@@ -100,38 +67,8 @@ public class TuitionsTable {
 
 		return FullCollection;
 	}
-
-	public Vector<Integer> getIdCollection() {
-		Vector<Integer> nameCollection = new Vector<>();
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				nameCollection.add(jrst.getInt("id"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return nameCollection;
-	}
-
-	public Vector<Float> getPaymentCollection() {
-		Vector<Float> paymentCollection = new Vector<>();
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				paymentCollection.add(jrst.getFloat("payment"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return paymentCollection;
-	}
-
-	public boolean deleteTuition(int id) {
+	
+	public boolean deleteCandidate(int id) {
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
@@ -147,12 +84,13 @@ public class TuitionsTable {
 			return false;
 		}
 	}
-
-	public boolean addTuition(Float payment) {
+	
+	public boolean addCandidate(String name, int tuitions_id) {
 
 		try {
 			jrst.moveToInsertRow();
-			jrst.updateFloat("payment", payment);
+			jrst.updateString("name", name);
+			jrst.updateInt("tuitions_id", tuitions_id);
 			jrst.insertRow();
 			return true;
 		} catch (SQLException e) {
@@ -161,13 +99,14 @@ public class TuitionsTable {
 			return false;
 		}
 	}
-
-	public boolean updateTuiton(int id, Float payment) {
+	
+	public boolean updateCandidate(int id, String name, int tuitions_id) {
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
 				if (jrst.getInt("id") == id) {
-					jrst.updateFloat("payment", payment);
+					jrst.updateString("name", name);
+					jrst.updateInt("tuitions_id", tuitions_id);
 					jrst.updateRow();
 					return true;
 				}

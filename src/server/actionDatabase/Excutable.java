@@ -16,7 +16,8 @@ import server.event.Login;
 public class Excutable extends UnicastRemoteObject implements IDatabase {
 	public Login login = new Login();
 
-	public Excutable() throws RemoteException {}
+	public Excutable() throws RemoteException {
+	}
 
 	@Override
 	public Vector<?> checkAccount(String username, String password)
@@ -31,7 +32,7 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		if (forgotPass.checkEmail(email)) {
 			forgotPass.sendPassToMail(email);
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
@@ -54,7 +55,8 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
-	public Vector getListNameAndAccount_idStudent(int index) throws RemoteException {
+	public Vector getListNameAndAccount_idStudent(int index)
+			throws RemoteException {
 		// TODO Auto-generated method stub
 		Vector data = new Vector();
 		data.add(Server.studentsTable.getAccounts_idCollection(index));
@@ -120,8 +122,6 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		return Server.coursesTable.isNameCourse(name);
 	}
 
-	
-	
 	@Override
 	public boolean isPaymentTuition(Float payment) throws RemoteException {
 		// TODO Auto-generated method stub
@@ -165,7 +165,50 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		return Server.tuitionsTable.addTuition(payment);
 	}
 
-	
-	
-	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getModelCandidate() throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector dataCandidate = Server.candidatesTable.getFullCollection();
+		Vector _return = new Vector();
+		for (int x = 0; x < dataCandidate.size(); x++) {
+			Vector dataChild = new Vector();
+			dataChild = (Vector) dataCandidate.get(x);
+			Float payment = Server.tuitionsTable.getPayment((int) dataChild
+					.get(2));
+			dataChild.set(2, payment);
+
+			_return.add(dataChild);
+		}
+		return _return;
+	}
+
+	@Override
+	public boolean deleteCandidate(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.candidatesTable.deleteCandidate(id);
+	}
+
+	@Override
+	public boolean newCandidate(String name, Float payment)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int tuitions_id = Server.tuitionsTable.getId(payment);
+		return Server.candidatesTable.addCandidate(name, tuitions_id);
+	}
+
+	@Override
+	public boolean updateCandidate(int id, String name, Float payment)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int tuitions_id = Server.tuitionsTable.getId(payment);
+		return  Server.candidatesTable.updateCandidate(id, name, tuitions_id);
+	}
+
+	@Override
+	public boolean isNameCandidate(String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.candidatesTable.isNameCandidate(name);
+	}
+
 }

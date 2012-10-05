@@ -22,6 +22,7 @@ import javax.swing.JOptionPane;
 import server.actionDatabase.Excutable;
 import server.config.Config;
 import server.event.read_data.AccountsTable;
+import server.event.read_data.CandidatesTable;
 import server.event.read_data.ClassTable;
 import server.event.read_data.CoursesTable;
 import server.event.read_data.StudentsTable;
@@ -39,6 +40,7 @@ public class Server {
 	public static CoursesTable coursesTable;
 	public static ClassTable classTable;
 	public static TuitionsTable tuitionsTable;
+	public static CandidatesTable candidatesTable;
 
 	public boolean startServer() {
 		try {
@@ -140,5 +142,6 @@ public class Server {
 		coursesTable = new CoursesTable();
 		classTable = new ClassTable();
 		tuitionsTable = new TuitionsTable();
+		candidatesTable = new CandidatesTable();
 	}
 }

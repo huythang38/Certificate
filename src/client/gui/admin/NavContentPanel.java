@@ -8,6 +8,7 @@ import client.gui.admin.nav_panel.About;
 import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 import client.gui.admin.nav_panel.AccountResetPassword;
 import client.gui.admin.nav_panel.HomePanel;
+import client.gui.admin.nav_panel.ManageCandidate;
 import client.gui.admin.nav_panel.ManageCourse;
 import client.gui.admin.nav_panel.ManageTuition;
 
@@ -70,7 +71,7 @@ public class NavContentPanel extends JPanel {
 			ManageTuition contentManageTuition = new ManageTuition();
 			add(contentManageTuition, "manageTuition");
 
-			JPanel contentManageCandidate = new JPanel();
+			ManageCandidate contentManageCandidate = new ManageCandidate();
 			add(contentManageCandidate, "manageCandidate");
 
 			JPanel contentCreateSubject = new JPanel();

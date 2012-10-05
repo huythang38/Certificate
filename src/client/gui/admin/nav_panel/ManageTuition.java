@@ -117,7 +117,6 @@ public class ManageTuition extends JPanel {
 			btnOk.setVisible(false);
 			btnOk.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					setEnableConpoment(false, true, true, false, false, true);
 					try {
 						event.newTuition(Float.parseFloat(txtPayment.getText()));
 					} catch (Exception e) {
