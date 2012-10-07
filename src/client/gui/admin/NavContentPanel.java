@@ -10,7 +10,9 @@ import client.gui.admin.nav_panel.AccountResetPassword;
 import client.gui.admin.nav_panel.EnterPayment;
 import client.gui.admin.nav_panel.HomePanel;
 import client.gui.admin.nav_panel.ManageCandidate;
+import client.gui.admin.nav_panel.ManageClass;
 import client.gui.admin.nav_panel.ManageCourse;
+import client.gui.admin.nav_panel.ManageSubject;
 import client.gui.admin.nav_panel.ManageTuition;
 
 @SuppressWarnings("serial")
@@ -60,11 +62,8 @@ public class NavContentPanel extends JPanel {
 
 		// tab Other
 		{
-			JPanel contentCreateClass = new JPanel();
-			add(contentCreateClass, "createClass");
-
-			JPanel contentChangeClass = new JPanel();
-			add(contentChangeClass, "changeClass");
+			ManageClass contentManageClass = new ManageClass();
+			add(contentManageClass, "manageClass");
 
 			ManageCourse contentChangeCourse = new ManageCourse();
 			add(contentChangeCourse, "manageCourse");
@@ -75,11 +74,8 @@ public class NavContentPanel extends JPanel {
 			ManageCandidate contentManageCandidate = new ManageCandidate();
 			add(contentManageCandidate, "manageCandidate");
 
-			JPanel contentCreateSubject = new JPanel();
-			add(contentCreateSubject, "createSubject");
-
-			JPanel contentChangeSubject = new JPanel();
-			add(contentChangeSubject, "changeSubject");
+			ManageSubject contentManageSubject = new ManageSubject();
+			add(contentManageSubject, "manageSubject");
 		}
 		
 		//tab report

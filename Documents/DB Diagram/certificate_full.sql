@@ -1,6 +1,6 @@
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 DROP SCHEMA IF EXISTS `certificate` ;
 CREATE SCHEMA IF NOT EXISTS `certificate` DEFAULT CHARACTER SET utf8 ;
@@ -46,8 +46,8 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`candidates` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(50) NOT NULL ,
   `tuitions_id` INT(11) NOT NULL ,
-  PRIMARY KEY (`id`, `tuitions_id`) ,
-  INDEX `fk_tuitions_id` (`tuitions_id` ASC) ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_tuitions_id_idx` (`tuitions_id` ASC) ,
   CONSTRAINT `fk_tuitions_id`
     FOREIGN KEY (`tuitions_id` )
     REFERENCES `certificate`.`tuitions` (`id` )
@@ -83,8 +83,8 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`class` (
   `size` INT(11) NULL DEFAULT NULL ,
   `courses_id` INT(11) NOT NULL ,
   `year` INT(11) NOT NULL ,
-  PRIMARY KEY (`id`, `courses_id`) ,
-  INDEX `fk_class_courses1` (`courses_id` ASC) ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_class_courses1_idx` (`courses_id` ASC) ,
   CONSTRAINT `fk_class_courses1`
     FOREIGN KEY (`courses_id` )
     REFERENCES `certificate`.`courses` (`id` )
@@ -111,10 +111,10 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`students` (
   `candidates_id` INT(11) NOT NULL ,
   `class_id` INT(11) NULL ,
   `accounts_id` INT(11) NOT NULL ,
-  PRIMARY KEY (`id`, `candidates_id`, `class_id`, `accounts_id`) ,
-  INDEX `accounts_id` (`accounts_id` ASC) ,
-  INDEX `candidates_id` (`candidates_id` ASC) ,
-  INDEX `fk_students_class1` (`class_id` ASC) ,
+  PRIMARY KEY (`id`) ,
+  INDEX `accounts_id_idx` (`accounts_id` ASC) ,
+  INDEX `candidates_id_idx` (`candidates_id` ASC) ,
+  INDEX `fk_students_class1_idx` (`class_id` ASC) ,
   CONSTRAINT `accounts_id`
     FOREIGN KEY (`accounts_id` )
     REFERENCES `certificate`.`accounts` (`id` )
@@ -145,8 +145,8 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`certificates` (
   `score` INT(11) NOT NULL ,
   `classified` VARCHAR(50) NOT NULL ,
   `students_id` INT(11) NOT NULL ,
-  PRIMARY KEY (`id`, `students_id`) ,
-  INDEX `fk_certificates_students1` (`students_id` ASC) ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_certificates_students1_idx` (`students_id` ASC) ,
   CONSTRAINT `fk_certificates_students1`
     FOREIGN KEY (`students_id` )
     REFERENCES `certificate`.`students` (`id` )
@@ -165,8 +165,8 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`payments` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `paid` FLOAT NULL DEFAULT NULL ,
   `students_id` INT(11) NOT NULL ,
-  PRIMARY KEY (`id`, `students_id`) ,
-  INDEX `fk_tuitions_students1` (`students_id` ASC) ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_tuitions_students1_idx` (`students_id` ASC) ,
   CONSTRAINT `fk_tuitions_students1`
     FOREIGN KEY (`students_id` )
     REFERENCES `certificate`.`students` (`id` )
@@ -184,7 +184,14 @@ DROP TABLE IF EXISTS `certificate`.`subjects` ;
 CREATE  TABLE IF NOT EXISTS `certificate`.`subjects` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(100) NOT NULL ,
-  PRIMARY KEY (`id`) )
+  `courses_id` INT NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `courses_id_idx` (`courses_id` ASC) ,
+  CONSTRAINT `courses_id`
+    FOREIGN KEY (`courses_id` )
+    REFERENCES `certificate`.`courses` (`id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8;
@@ -201,9 +208,9 @@ CREATE  TABLE IF NOT EXISTS `certificate`.`records` (
   `mark` INT(11) NOT NULL ,
   `subjects_id` INT(11) NOT NULL ,
   `students_id` INT(11) NOT NULL ,
-  PRIMARY KEY (`id`, `subjects_id`, `students_id`) ,
-  INDEX `fk_records_subjects` (`subjects_id` ASC) ,
-  INDEX `fk_records_students1` (`students_id` ASC) ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_records_subjects_idx` (`subjects_id` ASC) ,
+  INDEX `fk_records_students1_idx` (`students_id` ASC) ,
   CONSTRAINT `fk_records_subjects`
     FOREIGN KEY (`subjects_id` )
     REFERENCES `certificate`.`subjects` (`id` )
