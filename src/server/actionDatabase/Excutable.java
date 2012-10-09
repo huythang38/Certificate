@@ -293,4 +293,51 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		return Server.subjectsTable.isSubject(name, courses_id);
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getModelClass() throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector dataClass = Server.classTable.getFullCollection();
+		Vector _return = new Vector();
+		for (int x = 0; x < dataClass.size(); x++) {
+			Vector dataChild = new Vector();
+			dataChild = ((Vector) dataClass.get(x));
+			int courses_id = (int) dataChild.get(2);
+			String courseName = Server.coursesTable.getName(courses_id);
+			dataChild.set(2, courseName);
+			_return.add(dataChild);
+		}
+		return _return;
+	}
+
+	@Override
+	public boolean deleteClass(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.classTable.deleteClass(id);
+	}
+
+	@Override
+	public boolean newClass(String name, String courses_name, int size, int year)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int courses_id = Server.coursesTable.getId(courses_name);
+		return Server.classTable.addClass(name, courses_id, size, year);
+	}
+
+	@Override
+	public boolean updateClass(int id, String name, String courses_name,
+			int size, int year) throws RemoteException {
+		// TODO Auto-generated method stub
+		int courses_id = Server.coursesTable.getId(courses_name);
+		return Server.classTable.updateClass(id, name, courses_id, size, year);
+	}
+
+	@Override
+	public boolean isClass(String name, String courses_name)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int courses_id = Server.coursesTable.getId(courses_name);
+		return Server.classTable.isClass(name, courses_id);
+	}
+
 }

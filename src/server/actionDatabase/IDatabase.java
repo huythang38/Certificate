@@ -116,7 +116,7 @@ public interface IDatabase extends Remote {
 	// delete subject
 	public boolean deleteSubject(int id) throws RemoteException;
 
-	// new candidate
+	// new subject
 	public boolean newSubject(String name, String courses_name)
 			throws RemoteException;
 
@@ -128,4 +128,24 @@ public interface IDatabase extends Remote {
 	public boolean isSubject(String name, String courses_name)
 			throws RemoteException;
 
+	// return model(id in class, name in class, name in courses, size in class,
+	// year in class) for
+	// module manage class
+	@SuppressWarnings("rawtypes")
+	public Vector getModelClass() throws RemoteException;
+
+	// delete class
+	public boolean deleteClass(int id) throws RemoteException;
+
+	// new class
+	public boolean newClass(String name, String courses_name, int size, int year)
+			throws RemoteException;
+
+	// update class
+	public boolean updateClass(int id, String name, String courses_name,
+			int size, int year) throws RemoteException;
+
+	// check exist class
+	public boolean isClass(String name, String courses_name)
+			throws RemoteException;
 }

@@ -34,7 +34,7 @@ public class UpdateCourse extends Thread{
 						ManageCourse.table.setModel(ManageCourse.tableModel);
 
 						JOptionPane.showMessageDialog(new JFrame(), "Updated!");
-						ManageCourse.setEnableConpoment(true, true, false,
+						ManageCourse.setEnableConpoment(false, true, false,
 								true, true, true);
 					} else {
 						ManageCourse.lblWaitting.setVisible(false);

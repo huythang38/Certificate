@@ -34,7 +34,7 @@ public class UpdateTuition extends Thread{
 						ManageTuition.table.setModel(ManageTuition.tableModel);
 
 						JOptionPane.showMessageDialog(new JFrame(), "Updated!");
-						ManageTuition.setEnableConpoment(true, true, false,
+						ManageTuition.setEnableConpoment(false, true, false,
 								true, true, true);
 					} else {
 						ManageTuition.lblWaitting.setVisible(false);

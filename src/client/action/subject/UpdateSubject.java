@@ -33,7 +33,7 @@ public class UpdateSubject extends Thread {
 				ManageSubject.table.setModel(ManageSubject.tableModel);
 
 				JOptionPane.showMessageDialog(new JFrame(), "Updated!");
-				ManageSubject.setEnableConpoment(true, true, true, false,
+				ManageSubject.setEnableConpoment(false, true, true, false,
 						true, true, true);
 			} else {
 				ManageSubject.lblWaitting.setVisible(false);
