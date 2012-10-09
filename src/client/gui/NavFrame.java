@@ -32,7 +32,7 @@ public class NavFrame {
 			navGUI_Admin = new NavGUI_Admin();
 			navGUI_Admin.setVisible(true);
 		}else{
-			navGUI_Student = new NavGUI_Student();
+			navGUI_Student = new NavGUI_Student(id, userName);
 			navGUI_Student.setVisible(true);
 		}
 	}

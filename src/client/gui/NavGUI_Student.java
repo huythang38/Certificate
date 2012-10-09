@@ -13,14 +13,16 @@ import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 
 import client.Client;
-import client.gui.admin.MenuPane;
-import client.gui.admin.NavContentPanel;
+import client.gui.student.MenuPane;
+import client.gui.student.NavContentPanel;
 import extend_lib.ContainerCenterLocationUI;
 import extend_lib.LogoContainer;
 
 @SuppressWarnings("serial")
 public class NavGUI_Student extends JFrame {
 	public static NavContentPanel navPanel;
+	public static String username;
+	public static int id;
 	private JPanel contentPane;
 
 	/**
@@ -45,7 +47,7 @@ public class NavGUI_Student extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					NavGUI_Admin frame = new NavGUI_Admin();
+					NavGUI_Student frame = new NavGUI_Student(0, null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -57,8 +59,13 @@ public class NavGUI_Student extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public NavGUI_Student() {
-		setTitle("Certificate Generation System - Admin");
+	@SuppressWarnings("static-access")
+	public NavGUI_Student(int _id, String _username) {
+		this.username = _username;
+		this.id = _id;
+		
+		
+		setTitle("Certificate Generation System - Student");
 		new LogoContainer(this);
 		setMinimumSize(new Dimension(800, 600));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,6 +110,6 @@ public class NavGUI_Student extends JFrame {
 			gbc_navPanel.gridy = 1;
 			contentPane.add(navPanel, gbc_navPanel);
 		}
-	}//end NavGUI_Admin method
+	}//end NavGUI_Student method
 	
-}//end NavGUI_Admin method
+}//end NavGUI_Student method
