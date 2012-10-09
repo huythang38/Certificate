@@ -136,4 +136,53 @@ public class CandidatesTable {
 		}
 		return _return;
 	}
+	
+	public String getName(int id) {
+		String _return = null;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if (jrst.getInt("id") == id) {
+					_return = jrst.getString("name");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return _return;
+	}
+	
+	public Vector<String> getNameCollection() {
+		Vector<String> nameCollection = new Vector<>();
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				nameCollection.add(jrst.getString("name"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return nameCollection;
+	}
+	
+	public int getId(String name) {
+		int _return = 0;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if (jrst.getString("name").equals(name)) {
+					_return = jrst.getInt("id");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return _return;
+	}
 }

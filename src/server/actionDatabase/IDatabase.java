@@ -148,4 +148,19 @@ public interface IDatabase extends Remote {
 	// check exist class
 	public boolean isClass(String name, String courses_name)
 			throws RemoteException;
+
+	//
+	//
+	//
+	@SuppressWarnings("rawtypes")
+	public Vector getModelStudent(int class_id) throws RemoteException;
+
+	// return list name candidate in table candidate
+	public Vector<String> getListNameCandidate() throws RemoteException;
+
+	// update student
+	public boolean updateStudent(int id, String name, String address,
+			int gender, String birthday, String email, int phone,
+			String candidate, String _class)
+			throws RemoteException;
 }

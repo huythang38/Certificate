@@ -340,4 +340,63 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		return Server.classTable.isClass(name, courses_id);
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getModelStudent(int class_id) throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector _return = new Vector();
+		Vector data = Server.studentsTable.getFullData(class_id);
+
+		for (int x = 0; x < data.size(); x++) {
+			Vector dataChild = (Vector) data.get(x);
+
+			{
+				int gender = Integer.parseInt(dataChild.get(3).toString());
+				if (gender == 1) {
+					dataChild.set(3, "Male");
+				} else {
+					dataChild.set(3, "Female");
+				}
+			}
+			{
+				int candidates_id = Integer.parseInt(dataChild.get(7)
+						.toString());
+				String candidates_name = Server.candidatesTable
+						.getName(candidates_id);
+				dataChild.set(7, candidates_name);
+			}
+			{
+				String class_name = Server.classTable.getName(class_id);
+				dataChild.set(8, class_name);
+			}
+			{
+				int courses_id = Server.classTable.getCourses_id(class_id);
+				String courses_name = Server.coursesTable.getName(courses_id);
+				dataChild.set(9, courses_name);
+			}
+			_return.add(dataChild);
+		}
+
+		return _return;
+	}
+
+	@Override
+	public Vector<String> getListNameCandidate() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.candidatesTable.getNameCollection();
+	}
+
+	@Override
+	public boolean updateStudent(int id, String name, String address,
+			int gender, String birthday, String email, int phone,
+			String candidate, String _class) throws RemoteException {
+		// TODO Auto-generated method stub
+
+		int candidates_id = Server.candidatesTable.getId(candidate);
+		int class_id = Server.classTable.getId(_class);
+		boolean isUpdate = Server.studentsTable.updateStudent(id, name,
+				address, gender, birthday, email, phone, candidates_id,
+				class_id);
+		return isUpdate;
+	}
 }
