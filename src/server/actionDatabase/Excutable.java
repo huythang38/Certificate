@@ -221,18 +221,19 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 				.getName_ID_CandidateId_Collection(class_id);
 		for (int x = 0; x < data.size(); x++) {
 			Vector dataChild = (Vector) data.get(x);
-			
+
 			{
 				int students_id = Integer.parseInt(dataChild.get(2).toString());
 				Float paid = Server.paymentsTable.getPaid(students_id);
 				dataChild.add(paid);
 			}
 			{
-				int candidates_id = Integer.parseInt(dataChild.get(1).toString());
+				int candidates_id = Integer.parseInt(dataChild.get(1)
+						.toString());
 				Float payment = Server.tuitionsTable.getPayment(candidates_id);
 				dataChild.set(1, payment);
 			}
-			
+
 			_return.add(dataChild);
 		}
 		return _return;
@@ -243,6 +244,53 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 			throws RemoteException {
 		// TODO Auto-generated method stub
 		return Server.paymentsTable.enterPayment(students_id, newPaid);
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getModelSubject() throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector dataSubject = Server.subjectsTable.getFullCollection();
+		Vector _return = new Vector();
+		for (int x = 0; x < dataSubject.size(); x++) {
+			Vector dataChild = new Vector();
+			dataChild = ((Vector) dataSubject.get(x));
+			int courses_id = (int) dataChild.get(2);
+			String courseName = Server.coursesTable.getName(courses_id);
+			dataChild.set(2, courseName);
+			_return.add(dataChild);
+		}
+		return _return;
+	}
+
+	@Override
+	public boolean deleteSubject(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.subjectsTable.deleteSubject(id);
+	}
+
+	@Override
+	public boolean newSubject(String name, String courses_name)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int courses_id = Server.coursesTable.getId(courses_name);
+		return Server.subjectsTable.addSubject(name, courses_id);
+	}
+
+	@Override
+	public boolean updateSubject(int id, String name, String courses_name)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int courses_id = Server.coursesTable.getId(courses_name);
+		return Server.subjectsTable.updateSubject(id, name, courses_id);
+	}
+
+	@Override
+	public boolean isSubject(String name, String courses_name)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int courses_id = Server.coursesTable.getId(courses_name);
+		return Server.subjectsTable.isSubject(name, courses_id);
 	}
 
 }

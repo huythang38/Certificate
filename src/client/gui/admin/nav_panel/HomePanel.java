@@ -123,25 +123,25 @@ public class HomePanel extends JPanel {
 		btnManageCourse.setBounds(528, 229, 129, 25);
 		panel.add(btnManageCourse);
 		
-		Button btnCreateClass = new Button((String) null, "Create Class");
-		btnCreateClass.addMouseListener(new MouseAdapter() {
+		Button btnManageClass = new Button((String) null, "Manage Class");
+		btnManageClass.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("createClass");
+				NavGUI_Admin.navPanel.showContent("manageClass");
 			}
 		});
-		btnCreateClass.setBounds(528, 260, 129, 25);
-		panel.add(btnCreateClass);
+		btnManageClass.setBounds(528, 260, 129, 25);
+		panel.add(btnManageClass);
 		
-		Button btnCreateSubject = new Button((String) null, "Create Subject");
-		btnCreateSubject.addMouseListener(new MouseAdapter() {
+		Button btnManageeSubject = new Button((String) null, "Manage Subject");
+		btnManageeSubject.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				NavGUI_Admin.navPanel.showContent("createSubject");
+				NavGUI_Admin.navPanel.showContent("manageSubject");
 			}
 		});
-		btnCreateSubject.setBounds(528, 293, 129, 25);
-		panel.add(btnCreateSubject);
+		btnManageeSubject.setBounds(528, 293, 129, 25);
+		panel.add(btnManageeSubject);
 		
 		Button btnCreateTuition = new Button((String) null, "Manage Tuition");
 		btnCreateTuition.addMouseListener(new MouseAdapter() {

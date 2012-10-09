@@ -14,6 +14,7 @@ public class SearchPanelEvent {
 	public ListNameAndID listNameAndIDClass;
 	public ListNameAndAccounts_ID listNameAndAccount_IDStudent;
 	
+	@SuppressWarnings("static-access")
 	public Vector<String> getListNameCourse(){
 		return listNameCourse.getListNameCourse();
 	}

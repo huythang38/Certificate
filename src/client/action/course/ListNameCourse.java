@@ -9,7 +9,7 @@ import client.event.DisconnectToExit;
 public class ListNameCourse {
 	public ListNameCourse(){}
 	
-	public Vector<String> getListNameCourse(){
+	public static Vector<String> getListNameCourse(){
 		Vector<String> data = null;
 		try {
 			data = Client.conn.getListNameCourse();

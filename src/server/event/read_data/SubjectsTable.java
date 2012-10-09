@@ -11,41 +11,21 @@ import server.Server;
 
 import com.sun.rowset.JdbcRowSetImpl;
 
-public class CoursesTable {
+public class SubjectsTable {
 	public Statement stmt;
 	public ResultSet rst;
 	public JdbcRowSet jrst;
 
-	public CoursesTable() {
+	public SubjectsTable() {
 		try {
 			stmt = Server.conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
 					ResultSet.CONCUR_UPDATABLE);
-			String sql = "select * from courses";
+			String sql = "select * from subjects";
 			rst = stmt.executeQuery(sql);
 			jrst = new JdbcRowSetImpl(rst);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 		}
-	}
-
-	public boolean isNameCourse(String name) {
-		boolean check = false;
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				if (jrst.getString("name").equals(name)) {
-					check = true;
-					break;
-				} else {
-					check = false;
-				}
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			check = false;
-		}
-		return check;
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -57,6 +37,7 @@ public class CoursesTable {
 				Vector data = new Vector();
 				data.add(jrst.getInt("id"));
 				data.add(jrst.getString("name"));
+				data.add(jrst.getInt("courses_id"));
 				FullCollection.add(data);
 			}
 		} catch (SQLException e) {
@@ -67,37 +48,7 @@ public class CoursesTable {
 		return FullCollection;
 	}
 
-	public Vector<Integer> getIdCollection() {
-		Vector<Integer> nameCollection = new Vector<>();
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				nameCollection.add(jrst.getInt("id"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return nameCollection;
-	}
-
-	public Vector<String> getNameCollection() {
-		Vector<String> nameCollection = new Vector<>();
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				nameCollection.add(jrst.getString("name"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return nameCollection;
-	}
-
-	public boolean deleteCourse(int id) {
+	public boolean deleteSubject(int id) {
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
@@ -114,11 +65,12 @@ public class CoursesTable {
 		}
 	}
 
-	public boolean addCourse(String name) {
+	public boolean addSubject(String name, int courses_id) {
 
 		try {
 			jrst.moveToInsertRow();
 			jrst.updateString("name", name);
+			jrst.updateInt("courses_id", courses_id);
 			jrst.insertRow();
 			return true;
 		} catch (SQLException e) {
@@ -128,12 +80,13 @@ public class CoursesTable {
 		}
 	}
 
-	public boolean updateCourse(int id, String name) {
+	public boolean updateSubject(int id, String name, int courses_id) {
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
 				if (jrst.getInt("id") == id) {
 					jrst.updateString("name", name);
+					jrst.updateInt("courses_id", courses_id);
 					jrst.updateRow();
 					return true;
 				}
@@ -146,37 +99,27 @@ public class CoursesTable {
 		}
 	}
 
-	public String getName(int id) {
-		String _return = null;
-		try {
-			jrst.beforeFirst();
-			while (jrst.next()) {
-				if (jrst.getInt("id") == id) {
-					_return = jrst.getString("name");
-				}
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return _return;
-	}
-	
-	public int getId(String name) {
-		int _return = 0;
+	public boolean isSubject(String name, int courses_id) {
+		boolean check = false;
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
 				if (jrst.getString("name").equals(name)) {
-					_return = jrst.getInt("id");
-					break;
+					if (jrst.getInt("courses_id") == courses_id) {
+						check = true;
+						break;
+					} else {
+						check = false;
+					}
+				} else {
+					check = false;
 				}
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			check = false;
 		}
-		return _return;
+		return check;
 	}
 }

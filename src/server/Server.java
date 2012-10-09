@@ -27,6 +27,7 @@ import server.event.read_data.ClassTable;
 import server.event.read_data.CoursesTable;
 import server.event.read_data.PaymentsTable;
 import server.event.read_data.StudentsTable;
+import server.event.read_data.SubjectsTable;
 import server.event.read_data.TuitionsTable;
 
 public class Server {
@@ -43,6 +44,7 @@ public class Server {
 	public static TuitionsTable tuitionsTable;
 	public static CandidatesTable candidatesTable;
 	public static PaymentsTable paymentsTable;
+	public static SubjectsTable subjectsTable;
 
 	public boolean startServer() {
 		try {
@@ -146,5 +148,6 @@ public class Server {
 		tuitionsTable = new TuitionsTable();
 		candidatesTable = new CandidatesTable();
 		paymentsTable = new PaymentsTable();
+		subjectsTable = new SubjectsTable();
 	}
 }

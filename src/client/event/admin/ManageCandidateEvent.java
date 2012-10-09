@@ -24,8 +24,8 @@ public class ManageCandidateEvent {
 				JOptionPane.OK_OPTION);
 
 		if (bol == 0) {
-			DeleteCandidate deleteCourse = new DeleteCandidate(id);
-			deleteCourse.start();
+			DeleteCandidate delete = new DeleteCandidate(id);
+			delete.start();
 		}
 	}
 

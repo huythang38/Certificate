@@ -97,12 +97,35 @@ public interface IDatabase extends Remote {
 	// update candidate
 	public boolean updateCandidate(int id, String name, Float payment)
 			throws RemoteException;
-	
-	
-	//return model(name in student, paid in paymnents, payment in tuitions) for module enter payment
+
+	// return model(name in student, paid in paymnents, payment in tuitions) for
+	// module enter payment
 	@SuppressWarnings("rawtypes")
-	public Vector getModelEnterPaymentTable(int class_id) throws RemoteException;
-	
-	//enter new payments
-	public boolean enterPayment(int students_id, Float newPaid) throws RemoteException;
+	public Vector getModelEnterPaymentTable(int class_id)
+			throws RemoteException;
+
+	// enter new payments
+	public boolean enterPayment(int students_id, Float newPaid)
+			throws RemoteException;
+
+	// return model(id in subjects, name in subjects, name in courses) for
+	// module manage subjects
+	@SuppressWarnings("rawtypes")
+	public Vector getModelSubject() throws RemoteException;
+
+	// delete subject
+	public boolean deleteSubject(int id) throws RemoteException;
+
+	// new candidate
+	public boolean newSubject(String name, String courses_name)
+			throws RemoteException;
+
+	// update subject
+	public boolean updateSubject(int id, String name, String courses_name)
+			throws RemoteException;
+
+	// check exist subject
+	public boolean isSubject(String name, String courses_name)
+			throws RemoteException;
+
 }
