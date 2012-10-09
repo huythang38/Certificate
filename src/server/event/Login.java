@@ -20,7 +20,7 @@ public class Login {
 		// TODO Auto-generated method stub
 		Vector data = new Vector();
 		if (Server.accountsTable.getUsername(username) != null){
-			if (Server.accountsTable.getUsername(password) != null){
+			if (Server.accountsTable.getPassword(password) != null){
 				int id = Server.accountsTable.getId(username);
 				data.addElement(id);
 				data.addElement(username);

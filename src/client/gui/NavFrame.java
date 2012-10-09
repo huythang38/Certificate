@@ -8,6 +8,7 @@ import java.awt.EventQueue;
 
 public class NavFrame {
 	public static NavGUI_Admin navGUI_Admin;
+	public static NavGUI_Student navGUI_Student;
 	/**
 	 * Launch the application.
 	 */
@@ -31,7 +32,8 @@ public class NavFrame {
 			navGUI_Admin = new NavGUI_Admin();
 			navGUI_Admin.setVisible(true);
 		}else{
-			
+			navGUI_Student = new NavGUI_Student();
+			navGUI_Student.setVisible(true);
 		}
 	}
 }
