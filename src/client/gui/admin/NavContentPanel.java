@@ -15,6 +15,7 @@ import client.gui.admin.nav_panel.ManageCourse;
 import client.gui.admin.nav_panel.ManageSubject;
 import client.gui.admin.nav_panel.ManageTuition;
 import client.gui.admin.nav_panel.UpdateStudent;
+import client.gui.admin.nav_panel.ViewStudent;
 
 @SuppressWarnings("serial")
 public class NavContentPanel extends JPanel {
@@ -33,7 +34,7 @@ public class NavContentPanel extends JPanel {
 
 		// tab Student
 		{
-			JPanel contentViewInfoStudent = new JPanel();
+			ViewStudent contentViewInfoStudent = new ViewStudent();
 			add(contentViewInfoStudent, "viewInfoStudent");
 
 			JPanel contentCreateStudent = new JPanel();

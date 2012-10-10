@@ -399,4 +399,10 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 				class_id);
 		return isUpdate;
 	}
+
+	@Override
+	public int getAccounts_id(int idStudent) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.studentsTable.getAccounts_id(idStudent);
+	}
 }

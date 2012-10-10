@@ -194,4 +194,22 @@ public class StudentsTable {
 		}
 	}
 
+	public int getAccounts_id(int id) {
+		int returnValue = 0;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if ((jrst.getInt("id")) == id) {
+					returnValue = jrst.getInt("accounts_id");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnValue;
+
+	}
+
 }

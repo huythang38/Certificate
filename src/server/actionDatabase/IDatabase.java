@@ -163,4 +163,7 @@ public interface IDatabase extends Remote {
 			int gender, String birthday, String email, int phone,
 			String candidate, String _class)
 			throws RemoteException;
+	
+	//get Accounts_id
+	public int getAccounts_id(int idStudent) throws RemoteException;
 }
