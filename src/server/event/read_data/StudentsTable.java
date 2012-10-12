@@ -181,7 +181,11 @@ public class StudentsTable {
 					jrst.updateString("email", email);
 					jrst.updateInt("phone_number", phone);
 					jrst.updateInt("candidates_id", candidates_id);
-					jrst.updateInt("class_id", class_id);
+					if (class_id == 0) {
+						jrst.updateNull("class_id");
+					} else {
+						jrst.updateInt("class_id", class_id);
+					}
 					jrst.updateRow();
 					return true;
 				}
@@ -210,6 +214,47 @@ public class StudentsTable {
 		}
 		return returnValue;
 
+	}
+
+	public boolean createStudent(String name, String address, int gender,
+			String birthday, String email, int phone, int candidates_id,
+			int class_id, int accounts_id) {
+		try {
+			jrst.moveToInsertRow();
+			jrst.updateString("name", name);
+			jrst.updateString("address", address);
+			jrst.updateInt("gender", gender);
+			jrst.updateString("birthday", birthday);
+			jrst.updateString("email", email);
+			jrst.updateInt("phone_number", phone);
+			jrst.updateInt("accounts_id", accounts_id);
+			jrst.updateInt("candidates_id", candidates_id);
+			if (class_id == 0) {
+				jrst.updateNull("class_id");
+			} else {
+				jrst.updateInt("class_id", class_id);
+			}
+			jrst.insertRow();
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public int getIdLast() {
+		int returnValue = 0;
+		try {
+			jrst.afterLast();
+			jrst.last();
+			returnValue = jrst.getInt("id");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnValue;
 	}
 
 }

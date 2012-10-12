@@ -3,24 +3,23 @@ package client.event.admin;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import client.action.student.UpdateStudents;
+import client.action.student.CreateStudents;
 import extend_lib.ValidateEmail;
 
-public class UpdateStudentEvent {
-	public void updateStudent(final int id, String name, String address,
-			int gender, String birthday, String email, int phone,
-			String candidate, String _class, int class_id) {
+public class CreateStudentEvent {
+	public void createStudent(String name, String address, int gender,
+			String birthday, String email, int phone, String candidate,
+			String _class) {
 
-		UpdateStudents updateStudents = new UpdateStudents(id, name, address,
-				gender, birthday, email, phone, candidate, _class, class_id);
-		updateStudents.start();
+		CreateStudents createStudents = new CreateStudents(name, address,
+				gender, birthday, email, phone, candidate, _class);
+		createStudents.start();
 
 	}
 
-	public void update(final String id, String name, String address,
-			boolean male, boolean female, String birthday, String email,
-			String phone, String candidate, String _class, int class_id,
-			int Class) {
+	public void create(String name, String address, boolean male,
+			boolean female, String birthday, String email, String phone,
+			String candidate, String _class, int Class, int course) {
 
 		if (name.equals("") || address.equals("") || birthday.equals("")) {
 			JOptionPane.showMessageDialog(new JFrame(),
@@ -38,10 +37,14 @@ public class UpdateStudentEvent {
 			JOptionPane.showMessageDialog(new JFrame(),
 					"Validate birthday fail! Please check again!");
 
+		} else if (course == 0) {
+			JOptionPane.showMessageDialog(new JFrame(),
+					"Not select an item in the course!");
+
 		} else if (Class == 0) {
 			JOptionPane.showMessageDialog(new JFrame(),
 					"Not select an item in the class!");
-			
+
 		} else {
 			int _phone;
 			if (phone.equals("")) {
@@ -49,13 +52,13 @@ public class UpdateStudentEvent {
 			} else {
 				_phone = Integer.parseInt(phone);
 			}
-			
+
 			if (male == true) {
-				updateStudent(Integer.parseInt(id), name, address, 1, birthday,
-						email, _phone, candidate, _class, class_id);
+				createStudent(name, address, 1, birthday, email, _phone,
+						candidate, _class);
 			} else if (female == true) {
-				updateStudent(Integer.parseInt(id), name, address, 0, birthday,
-						email, _phone, candidate, _class, class_id);
+				createStudent(name, address, 0, birthday, email, _phone,
+						candidate, _class);
 			}
 
 		}

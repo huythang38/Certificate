@@ -131,7 +131,7 @@ public class ManageClass extends JPanel {
 			lblYear.setBounds(80, 250, 46, 14);
 			panel.add(lblYear);
 
-			frmtdtxtfldSize = new JFormattedTextField();
+			frmtdtxtfldSize = new JFormattedTextField(0);
 			frmtdtxtfldSize.setText("size");
 			frmtdtxtfldSize.setEnabled(false);
 			frmtdtxtfldSize.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -140,7 +140,7 @@ public class ManageClass extends JPanel {
 			frmtdtxtfldSize.setBounds(141, 202, 80, 25);
 			panel.add(frmtdtxtfldSize);
 
-			frmtdtxtfldYear = new JFormattedTextField();
+			frmtdtxtfldYear = new JFormattedTextField(0);
 			frmtdtxtfldYear.setText("year");
 			frmtdtxtfldYear.setEnabled(false);
 			frmtdtxtfldYear.setHorizontalAlignment(SwingConstants.RIGHT);

@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.sql.rowset.JdbcRowSet;
-
 import server.Server;
 
 import com.sun.rowset.JdbcRowSetImpl;
@@ -61,4 +60,18 @@ public class PaymentsTable {
 			return false;
 		}
 	}
+	
+	public boolean addPayment(int students_id){
+			try {
+				jrst.moveToInsertRow();
+				jrst.updateFloat("paid", 0);
+				jrst.updateInt("students_id", students_id);
+				jrst.insertRow();
+				return true;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return false;
+			}
+		}
 }

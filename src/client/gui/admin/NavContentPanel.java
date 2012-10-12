@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import client.gui.admin.nav_panel.About;
 import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 import client.gui.admin.nav_panel.AccountResetPassword;
+import client.gui.admin.nav_panel.CreateStudent;
 import client.gui.admin.nav_panel.EnterPayment;
 import client.gui.admin.nav_panel.HomePanel;
 import client.gui.admin.nav_panel.ManageCandidate;
@@ -37,7 +38,7 @@ public class NavContentPanel extends JPanel {
 			ViewStudent contentViewInfoStudent = new ViewStudent();
 			add(contentViewInfoStudent, "viewInfoStudent");
 
-			JPanel contentCreateStudent = new JPanel();
+			CreateStudent contentCreateStudent = new CreateStudent();
 			add(contentCreateStudent, "createStudent");
 
 			UpdateStudent contentUpdateStudent = new UpdateStudent();

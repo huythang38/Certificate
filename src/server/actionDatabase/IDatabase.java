@@ -161,9 +161,31 @@ public interface IDatabase extends Remote {
 	// update student
 	public boolean updateStudent(int id, String name, String address,
 			int gender, String birthday, String email, int phone,
-			String candidate, String _class)
-			throws RemoteException;
-	
-	//get Accounts_id
+			String candidate, String _class) throws RemoteException;
+
+	// get Accounts_id
 	public int getAccounts_id(int idStudent) throws RemoteException;
+
+	//
+	//
+	//
+	// getLastIdLast in Accounts
+	public int getAccountsLastID() throws RemoteException;
+
+	// getLastIdLast in Student
+	public int getStudentsLastID() throws RemoteException;
+	
+	// create new Account
+	public boolean createAccount() throws RemoteException;
+
+	// create Payment
+	public boolean createPayment(int students_id) throws RemoteException;
+
+	// create Student
+	public boolean createStudent(String name, String address, int gender,
+			String birthday, String email, int phone, String candidate,
+			String _class, int accounts_id) throws RemoteException;
+	
+	//get id in class
+	public int getClassID(String name) throws RemoteException;
 }

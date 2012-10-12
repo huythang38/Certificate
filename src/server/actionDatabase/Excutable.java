@@ -405,4 +405,48 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		// TODO Auto-generated method stub
 		return Server.studentsTable.getAccounts_id(idStudent);
 	}
+
+	@Override
+	public int getAccountsLastID() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.accountsTable.getIdLast();
+	}
+
+	@Override
+	public boolean createAccount() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.accountsTable.addAccount();
+	}
+
+	@Override
+	public boolean createPayment(int students_id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.paymentsTable.addPayment(students_id);
+	}
+
+	@Override
+	public boolean createStudent(String name, String address, int gender,
+			String birthday, String email, int phone, String candidate,
+			String _class, int accounts_id) throws RemoteException {
+		// TODO Auto-generated method stub
+
+		int candidates_id = Server.candidatesTable.getId(candidate);
+		int class_id = Server.classTable.getId(_class);
+		boolean isUpdate = Server.studentsTable.createStudent(name, address,
+				gender, birthday, email, phone, candidates_id, class_id,
+				accounts_id);
+		return isUpdate;
+	}
+
+	@Override
+	public int getStudentsLastID() throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.studentsTable.getIdLast();
+	}
+
+	@Override
+	public int getClassID(String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.classTable.getId(name);
+	}
 }
