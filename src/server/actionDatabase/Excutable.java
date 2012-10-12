@@ -449,4 +449,52 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		// TODO Auto-generated method stub
 		return Server.classTable.getId(name);
 	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getListNameAndIDSubject(int index) throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector data = new Vector<>();
+		data.add(Server.subjectsTable.getIDCollection(index));
+		data.add(Server.subjectsTable.getNameCollection(index));
+		return data;
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Vector getModelInputMark(int class_id, int subjects_id)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		Vector StudentsCollection = new Vector();
+		Vector _return = new Vector();
+
+		StudentsCollection = Server.studentsTable
+				.getName_ID_CandidateId_Collection(class_id);
+
+		for (int x = 0; x < StudentsCollection.size(); x++) {
+			Vector data = new Vector();
+			Vector dataChild = new Vector();
+
+			data = (Vector) StudentsCollection.get(x);
+			{
+				dataChild.add(data.get(0));
+				int students_id = Integer.parseInt(data.get(2).toString());
+				int mark = Server.recordsTable
+						.getMark(students_id, subjects_id);
+				dataChild.add(mark);
+
+				_return.add(dataChild);
+			}
+		}
+
+		return _return;
+	}
+
+	@Override
+	public boolean inputMark(String students_name, int subjects_id, int mark)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int students_id = Server.studentsTable.getId(students_name);
+		return Server.recordsTable.updateRecord(students_id, subjects_id, mark);
+	}
 }

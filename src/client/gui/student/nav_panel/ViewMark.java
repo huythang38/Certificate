@@ -1,25 +1,14 @@
 package client.gui.student.nav_panel;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.SystemColor;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.EtchedBorder;
 
 import client.event.admin.ResetPassEvent;
-import client.event.admin.searchPanel.SearchPanelAccountResetPasswordEvent;
 import client.gui.ExecuteLoading;
-import client.gui.admin.nav_panel.searchPanel.SearchPanel;
 
 @SuppressWarnings("serial")
 public class ViewMark extends JPanel {

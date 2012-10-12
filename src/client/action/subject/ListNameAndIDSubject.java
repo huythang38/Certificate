@@ -1,4 +1,4 @@
-package client.action.Class;
+package client.action.subject;
 
 import java.rmi.RemoteException;
 import java.util.Vector;
@@ -6,12 +6,12 @@ import java.util.Vector;
 import client.Client;
 import client.event.DisconnectToExit;
 
-public class ListNameAndID {
+public class ListNameAndIDSubject {
 	@SuppressWarnings("rawtypes")
 	public Vector data = new Vector<>();
-	public ListNameAndID(int index){
+	public ListNameAndIDSubject(int index){
 		try {
-			data = Client.conn.getListNameAndIDClass(index);
+			data = Client.conn.getListNameAndIDSubject(index);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			new DisconnectToExit();
@@ -19,15 +19,15 @@ public class ListNameAndID {
 		}
 	}
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public Vector<String> getListNameClass() {
+	public Vector<String> getListName() {
 		Vector<String> dataListName = new Vector<>();
 		dataListName = (Vector) data.get(1);
-		dataListName.add(0, "Choice Class...");
+		dataListName.add(0, "Choice Subject...");
 		return dataListName;
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public Vector<Integer> getListIDClass() {
+	public Vector<Integer> getListID() {
 		Vector<Integer> dataListID = new Vector<>();
 		dataListID = (Vector) data.get(0);
 		return dataListID;

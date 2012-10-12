@@ -4,14 +4,14 @@ import java.util.Vector;
 
 import javax.swing.DefaultComboBoxModel;
 
-import client.action.Class.ListNameAndID;
+import client.action.Class.ListNameAndIDClass;
 import client.action.course.ListIdCourse;
 import client.action.course.ListNameCourse;
 import client.action.student.ListNameAndAccounts_ID;
 
 public class SearchPanelEvent {
 	public ListNameCourse listNameCourse = new ListNameCourse();
-	public ListNameAndID listNameAndIDClass;
+	public ListNameAndIDClass listNameAndIDClass;
 	public ListNameAndAccounts_ID listNameAndAccount_IDStudent;
 	
 	@SuppressWarnings("static-access")
@@ -21,7 +21,7 @@ public class SearchPanelEvent {
 	
 	public DefaultComboBoxModel<String> getListNameClassModel(int inde){
 		int index = ListIdCourse.getListIdCourse().get(inde - 1);
-		listNameAndIDClass = new ListNameAndID(index);
+		listNameAndIDClass = new ListNameAndIDClass(index);
 		Vector<String> data = listNameAndIDClass.getListNameClass();
 		return new DefaultComboBoxModel<String>(data);
 	}

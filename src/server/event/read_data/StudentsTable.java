@@ -45,12 +45,12 @@ public class StudentsTable {
 		return accounts_idCollection;
 	}
 
-	public Vector<String> getNameCollection(int index) {
+	public Vector<String> getNameCollection(int class_id) {
 		Vector<String> nameCollection = new Vector<>();
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
-				if (jrst.getInt("class_id") == index) {
+				if (jrst.getInt("class_id") == class_id) {
 					nameCollection.add(jrst.getString("name"));
 				}
 			}
@@ -257,4 +257,20 @@ public class StudentsTable {
 		return returnValue;
 	}
 
+	public int getId(String name) {
+		int returnValue = 0;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if ((jrst.getString("name")).equals(name)) {
+					returnValue = jrst.getInt("id");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnValue;
+	}
 }

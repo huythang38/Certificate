@@ -174,7 +174,7 @@ public interface IDatabase extends Remote {
 
 	// getLastIdLast in Student
 	public int getStudentsLastID() throws RemoteException;
-	
+
 	// create new Account
 	public boolean createAccount() throws RemoteException;
 
@@ -185,7 +185,23 @@ public interface IDatabase extends Remote {
 	public boolean createStudent(String name, String address, int gender,
 			String birthday, String email, int phone, String candidate,
 			String _class, int accounts_id) throws RemoteException;
-	
-	//get id in class
+
+	// get id in class
 	public int getClassID(String name) throws RemoteException;
+
+	//
+	//
+	//
+	// return list name class and id in table class
+	@SuppressWarnings("rawtypes")
+	public Vector getListNameAndIDSubject(int index) throws RemoteException;
+
+	//
+	@SuppressWarnings("rawtypes")
+	public Vector getModelInputMark(int class_id, int subjects_id)
+			throws RemoteException;
+
+	//
+	public boolean inputMark(String students_name, int subjects_id, int mark)
+			throws RemoteException;
 }

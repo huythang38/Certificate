@@ -122,4 +122,38 @@ public class SubjectsTable {
 		}
 		return check;
 	}
+	
+	public Vector<Integer> getIDCollection(int index) {
+		Vector<Integer> idCollection = new Vector<>();
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if (jrst.getInt("courses_id") == index) {
+					idCollection.add(jrst.getInt("id"));
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return idCollection;
+	}
+	
+	public Vector<String> getNameCollection(int index) {
+		Vector<String> nameCollection = new Vector<>();
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if (jrst.getInt("courses_id") == index) {
+					nameCollection.add(jrst.getString("name"));
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return nameCollection;
+	}
 }

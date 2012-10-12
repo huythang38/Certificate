@@ -10,6 +10,7 @@ import client.gui.admin.nav_panel.AccountResetPassword;
 import client.gui.admin.nav_panel.CreateStudent;
 import client.gui.admin.nav_panel.EnterPayment;
 import client.gui.admin.nav_panel.HomePanel;
+import client.gui.admin.nav_panel.InputMark;
 import client.gui.admin.nav_panel.ManageCandidate;
 import client.gui.admin.nav_panel.ManageClass;
 import client.gui.admin.nav_panel.ManageCourse;
@@ -44,7 +45,7 @@ public class NavContentPanel extends JPanel {
 			UpdateStudent contentUpdateStudent = new UpdateStudent();
 			add(contentUpdateStudent, "updateStudent");
 
-			JPanel contentInputMark = new JPanel();
+			InputMark contentInputMark = new InputMark();
 			add(contentInputMark, "inputMark");
 
 			EnterPayment contentEnterPayment = new EnterPayment();
