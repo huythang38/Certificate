@@ -467,7 +467,6 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 		// TODO Auto-generated method stub
 		Vector StudentsCollection = new Vector();
 		Vector _return = new Vector();
-
 		StudentsCollection = Server.studentsTable
 				.getName_ID_CandidateId_Collection(class_id);
 
@@ -491,10 +490,80 @@ public class Excutable extends UnicastRemoteObject implements IDatabase {
 	}
 
 	@Override
-	public boolean inputMark(String students_name, int subjects_id, int mark)
+	public boolean inputMark(String students_name, int class_id,
+			int subjects_id, int mark) throws RemoteException {
+		// TODO Auto-generated method stub
+		int students_id = Server.studentsTable.getId(students_name, class_id);
+		return Server.recordsTable.updateRecord(students_id, subjects_id, mark);
+	}
+
+	@Override
+	public boolean isCertificate(int students_id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.certificatesTable.isCertificate(students_id);
+	}
+
+	@Override
+	public Float getPaid(int students_id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.paymentsTable.getPaid(students_id);
+	}
+
+	@Override
+	public Float getPayment(String candidates_Name) throws RemoteException {
+		// TODO Auto-generated method stub
+		int tuitions_id = Server.candidatesTable
+				.getTuitions_id(candidates_Name);
+		return Server.tuitionsTable.getPayment(tuitions_id);
+	}
+
+	@Override
+	public boolean isCompleteSubject(int students_id, String courses_name)
 			throws RemoteException {
 		// TODO Auto-generated method stub
-		int students_id = Server.studentsTable.getId(students_name);
-		return Server.recordsTable.updateRecord(students_id, subjects_id, mark);
+		boolean _return = false;
+
+		int courses_id = Server.coursesTable.getId(courses_name);
+		Vector<Integer> listIdSubject = new Vector<Integer>();
+		listIdSubject = Server.subjectsTable.getIDCollection(courses_id);
+
+		for (int x = 0; x < listIdSubject.size(); x++) {
+			int subjects_id = listIdSubject.get(x);
+			int mark = Server.recordsTable.getMark(students_id, subjects_id);
+			if (mark < 40) {
+				_return = false;
+				break;
+			} else {
+				_return = true;
+			}
+		}
+
+		return _return;
+	}
+
+	@Override
+	public int getScore(int students_id, String courses_name)
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		int _return = 0;
+
+		int courses_id = Server.coursesTable.getId(courses_name);
+		Vector<Integer> listIdSubject = new Vector<Integer>();
+		listIdSubject = Server.subjectsTable.getIDCollection(courses_id);
+
+		for (int x = 0; x < listIdSubject.size(); x++) {
+			int subjects_id = listIdSubject.get(x);
+			int mark = Server.recordsTable.getMark(students_id, subjects_id);
+				_return = _return + mark;
+		}
+
+		return _return / listIdSubject.size();
+	}
+
+	@Override
+	public boolean createCertificate(int score, String classified,
+			int students_id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return Server.certificatesTable.createCertificate(score, classified, students_id);
 	}
 }

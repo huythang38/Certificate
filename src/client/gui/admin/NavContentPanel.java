@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import client.gui.admin.nav_panel.About;
 import client.gui.admin.nav_panel.AccountChangeStatusPanel;
 import client.gui.admin.nav_panel.AccountResetPassword;
+import client.gui.admin.nav_panel.Certificate;
 import client.gui.admin.nav_panel.CreateStudent;
 import client.gui.admin.nav_panel.EnterPayment;
 import client.gui.admin.nav_panel.HomePanel;
@@ -84,7 +85,7 @@ public class NavContentPanel extends JPanel {
 		
 		//tab report
 		{
-			JPanel contentGenerateCertificate = new JPanel();
+			Certificate contentGenerateCertificate = new Certificate();
 			add(contentGenerateCertificate, "generateCertificate");
 		}
 		

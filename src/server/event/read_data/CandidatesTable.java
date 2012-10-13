@@ -137,6 +137,23 @@ public class CandidatesTable {
 		return _return;
 	}
 	
+	public int getTuitions_id(String name) {
+		int _return = 0;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if (jrst.getString("name").equals(name)) {
+					_return = jrst.getInt("tuitions_id");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return _return;
+	}
+	
 	public String getName(int id) {
 		String _return = null;
 		try {

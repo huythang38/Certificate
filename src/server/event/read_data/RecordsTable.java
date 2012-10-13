@@ -43,25 +43,29 @@ public class RecordsTable {
 	}
 
 	public boolean updateRecord(int students_id, int subjects_id, int mark) {
+		boolean _return = false;
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
 				if (jrst.getInt("students_id") == students_id) {
 					if (jrst.getInt("subjects_id") == subjects_id) {
-						jrst.updateInt("students_id", students_id);
-						jrst.updateInt("subjects_id", subjects_id);
 						jrst.updateInt("mark", mark);
 						jrst.updateRow();
-						return true;
+						_return = true;
+						break;
+					} else {
+						_return = false;
 					}
+				} else {
+					_return = false;
 				}
 			}
-			return false;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return false;
+			_return = false;
 		}
+		return _return;
 	}
 
 	public int getMark(int students_id, int subjects_id) {

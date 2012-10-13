@@ -273,4 +273,21 @@ public class StudentsTable {
 		}
 		return returnValue;
 	}
+	
+	public int getId(String name, int class_id) {
+		int returnValue = 0;
+		try {
+			jrst.beforeFirst();
+			while (jrst.next()) {
+				if ((jrst.getString("name").equals(name)) && (jrst.getInt("class_id") == class_id)) {
+					returnValue = jrst.getInt("id");
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return returnValue;
+	}
 }

@@ -14,10 +14,12 @@ public class InputMarks extends Thread {
 	public String name;
 	public int subjects_id;
 	public int mark;
+	public int class_id;
 
-	public InputMarks(String students_name, int _subjects_id, String _mark) {
+	public InputMarks(String students_name, int _class_id, int _subjects_id, String _mark) {
 		this.name = students_name;
 		this.subjects_id = _subjects_id;
+		this.class_id = _class_id;
 		this.mark = Integer.parseInt(_mark);
 	}
 
@@ -25,7 +27,7 @@ public class InputMarks extends Thread {
 	public void run() {
 		InputMark.lblWaitting.setVisible(true);
 		try {
-			if (Client.conn.inputMark(name, subjects_id, mark)) {
+			if (Client.conn.inputMark(name, class_id, subjects_id, mark)) {
 				InputMark.lblWaitting.setVisible(false);
 
 				SearchPanelInputMarkEvent.showRecord(

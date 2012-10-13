@@ -123,12 +123,12 @@ public class SubjectsTable {
 		return check;
 	}
 	
-	public Vector<Integer> getIDCollection(int index) {
+	public Vector<Integer> getIDCollection(int courses_id) {
 		Vector<Integer> idCollection = new Vector<>();
 		try {
 			jrst.beforeFirst();
 			while (jrst.next()) {
-				if (jrst.getInt("courses_id") == index) {
+				if (jrst.getInt("courses_id") == courses_id) {
 					idCollection.add(jrst.getInt("id"));
 				}
 			}

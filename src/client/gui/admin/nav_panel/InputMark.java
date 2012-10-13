@@ -128,9 +128,13 @@ public class InputMark extends JPanel {
 								.getListID().get(
 										searchPanel.cbbxSubject
 												.getSelectedIndex() - 1);
+						int indexClass = searchPanelEvent.listNameAndIDC
+								.getListIDClass().get(
+										searchPanel.cbbxClass
+												.getSelectedIndex() - 1);
 						
-						event.inputMark(lblShowName.getText(), indexSubject,
-								frmtdtxtfldMark.getText());
+						event.inputMark(lblShowName.getText(), indexClass,
+								indexSubject, frmtdtxtfldMark.getText());
 					} catch (Exception e) {
 						JOptionPane.showMessageDialog(new JFrame(),
 								"Incorrect format of the Mark! Please check!");

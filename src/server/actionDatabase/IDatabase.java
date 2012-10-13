@@ -202,6 +202,28 @@ public interface IDatabase extends Remote {
 			throws RemoteException;
 
 	//
-	public boolean inputMark(String students_name, int subjects_id, int mark)
+	public boolean inputMark(String students_name, int class_id,
+			int subjects_id, int mark) throws RemoteException;
+
+	// is certificate
+	public boolean isCertificate(int students_id) throws RemoteException;
+
+	//
+	public Float getPaid(int students_id) throws RemoteException;
+
+	//
+	public Float getPayment(String candidates_name) throws RemoteException;
+
+	//
+	public boolean isCompleteSubject(int students_id, String courses_name)
 			throws RemoteException;
+
+	//
+	public int getScore(int students_id, String courses_name)
+			throws RemoteException;
+
+	//
+	public boolean createCertificate(int score, String classified,
+			int students_id) throws RemoteException;
+
 }

@@ -24,6 +24,7 @@ public class SearchPanelInputMark extends SearchPanel {
 
 		cbbxSubject = new JComboBox<String>();
 		cbbxSubject.addActionListener(new ActionListener() {
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent arg0) {
 				int indexSubject = cbbxSubject.getSelectedIndex();
 				int indexClass = cbbxClass.getSelectedIndex();

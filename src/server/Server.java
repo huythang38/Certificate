@@ -23,6 +23,7 @@ import server.actionDatabase.Excutable;
 import server.config.Config;
 import server.event.read_data.AccountsTable;
 import server.event.read_data.CandidatesTable;
+import server.event.read_data.CertificatesTable;
 import server.event.read_data.ClassTable;
 import server.event.read_data.CoursesTable;
 import server.event.read_data.PaymentsTable;
@@ -47,6 +48,7 @@ public class Server {
 	public static PaymentsTable paymentsTable;
 	public static SubjectsTable subjectsTable;
 	public static RecordsTable recordsTable;
+	public static CertificatesTable certificatesTable;
 
 
 	public boolean startServer() {
@@ -153,5 +155,6 @@ public class Server {
 		paymentsTable = new PaymentsTable();
 		subjectsTable = new SubjectsTable();
 		recordsTable = new RecordsTable();
+		certificatesTable = new CertificatesTable();
 	}
 }
