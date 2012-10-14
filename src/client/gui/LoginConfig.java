@@ -200,7 +200,7 @@ public class LoginConfig extends JFrame {
 		btnConfigConnect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnBackToLogin.setEnabled(true);
-				setTitle("Config Conect");
+				setTitle("Config Connect");
 				cl.show(panel, "config");
 
 			}
