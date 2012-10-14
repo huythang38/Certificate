@@ -49,11 +49,6 @@ public class About extends JPanel{
 		lblPhanCongHuu.setBounds(70, 271, 87, 14);
 		panel.add(lblPhanCongHuu);
 		
-		JLabel lblNgoKhanhNhat = new JLabel("Ngo Khanh Nhat");
-		lblNgoKhanhNhat.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNgoKhanhNhat.setBounds(70, 296, 103, 14);
-		panel.add(lblNgoKhanhNhat);
-		
 		JLabel lblCenter = new JLabel("Company:");
 		lblCenter.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 11));
 		lblCenter.setBounds(310, 221, 136, 14);

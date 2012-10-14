@@ -8,7 +8,6 @@
 	<classpathentry kind="lib" path="C:/Users/huyth_000/git/Certificate/lib/iReport/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/huyth_000/git/Certificate/lib/iReport/commons-digester-2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/huyth_000/git/Certificate/lib/iReport/commons-logging-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/huyth_000/git/Certificate/lib/iReport/groovy-all-1.7.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/huyth_000/git/Certificate/lib/iReport/iText-2.1.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/huyth_000/git/Certificate/lib/iReport/jasperreports-4.7.1.jar" sourcepath="D:/ubuntu/backup/new/workspace/javaSE/testReport/lib/jasperreports-4.7.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/huyth_000/git/Certificate/lib/iReport/jcommon-1.0.15.jar"/>

@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Class-Path: lib/JTattoo.jar
+Class-Path: lib/iReport/commons-beanutils-1.8.2.jar lib/iReport/commons-collections-3.2.1.jar lib/iReport/commons-digester-2.1.jar lib/iReport/commons-logging-1.1.jar lib/iReport/jcommon-1.0.15.jar lib/iReport/iText-2.1.7.jar lib/iReport/jfreechart-1.0.12.jar lib/iReport/jasperreports-4.7.1.jar lib/iReport/js_commons-codec-1.3.jar
 Main-Class: client.RUN
 
