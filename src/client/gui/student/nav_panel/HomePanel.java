@@ -137,6 +137,9 @@ public class HomePanel extends JPanel {
 	
 	public void setWelcome(){
 		lblUsername.setText(NavGUI_Student.username);
+		lblName_1.setText("");
+		lblClass_1.setText("");
+		lblCourse_1.setText("");
 	}
 
 	public void paintComponent(Graphics g) {
