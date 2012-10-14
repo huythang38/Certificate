@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="actionDatabase" size="891,2302" id="server.actionDatabase" metadata="uml2-1.0" initialized="true" scrolledY="562" tag="10" key="32303037303533312D3130204365727469666963617465">
+  <children xsi:type="editmodel:ClassEditModel" name="Excutable" location="330,15" size="224,1093" id="server.actionDatabase/Excutable" runTimeClassModel="isClass(Ljava.lang.String;Ljava.lang.String;),deleteTuition(I),getListPaymentTuition(),getModelStudent(I),getPaid(I),deleteClass(I),getFullCourse(),updateClass(ILjava.lang.String;Ljava.lang.String;II),resetPass(I),newSubject(Ljava.lang.String;Ljava.lang.String;),newClass(Ljava.lang.String;Ljava.lang.String;II),getFullTuition(),newCandidate(Ljava.lang.String;Ljava.lang.Float;),createStudent(Ljava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;I),getClassID(Ljava.lang.String;),getListIdTuition(),getModelCandidate(),updateSubject(ILjava.lang.String;Ljava.lang.String;),newTuition(Ljava.lang.Float;),isSubject(Ljava.lang.String;Ljava.lang.String;),getListNameCandidate(),inputMark(Ljava.lang.String;III),updateTuition(ILjava.lang.Float;),updateStudent(ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;),isPaymentTuition(Ljava.lang.Float;),enterPayment(ILjava.lang.Float;),createAccount(),isCertificate(I),createPayment(I),Excutable(),isNameCandidate(Ljava.lang.String;),deleteCandidate(I),getPayment(Ljava.lang.String;),changeStatus(II),getListNameAndIDSubject(I),deleteSubject(I),createCertificate(ILjava.lang.String;I),getListNameAndIDClass(I),getModelEnterPaymentTable(I),newCourse(Ljava.lang.String;),getModelInputMark(II),updateCandidate(ILjava.lang.String;Ljava.lang.Float;),getAccounts_id(I),getListNameCourse(),updateCourse(ILjava.lang.String;),getStudentsLastID(),getAccountsLastID(),isCompleteSubject(ILjava.lang.String;),isNameCourse(Ljava.lang.String;),deleteCourse(I),getListNameAndAccount_idStudent(I),getAccount(I),forgotPassWord(Ljava.lang.String;),getModelClass(),getScore(ILjava.lang.String;),getModelSubject(),checkAccount(Ljava.lang.String;Ljava.lang.String;),getListIdCourse()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="201,1044">
+      <children xsi:type="editmodel:MethodEditModel" name="Excutable" id="server.actionDatabase/Excutable#Excutable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="changeStatus" id="server.actionDatabase/Excutable#changeStatus(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="checkAccount" id="server.actionDatabase/Excutable#checkAccount(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createAccount" id="server.actionDatabase/Excutable#createAccount()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createCertificate" id="server.actionDatabase/Excutable#createCertificate(ILjava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createPayment" id="server.actionDatabase/Excutable#createPayment(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createStudent" id="server.actionDatabase/Excutable#createStudent(Ljava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteCandidate" id="server.actionDatabase/Excutable#deleteCandidate(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteClass" id="server.actionDatabase/Excutable#deleteClass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteCourse" id="server.actionDatabase/Excutable#deleteCourse(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteSubject" id="server.actionDatabase/Excutable#deleteSubject(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteTuition" id="server.actionDatabase/Excutable#deleteTuition(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="enterPayment" id="server.actionDatabase/Excutable#enterPayment(ILjava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="forgotPassWord" id="server.actionDatabase/Excutable#forgotPassWord(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccount" id="server.actionDatabase/Excutable#getAccount(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccountsLastID" id="server.actionDatabase/Excutable#getAccountsLastID()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccounts_id" id="server.actionDatabase/Excutable#getAccounts_id(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getClassID" id="server.actionDatabase/Excutable#getClassID(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullCourse" id="server.actionDatabase/Excutable#getFullCourse()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullTuition" id="server.actionDatabase/Excutable#getFullTuition()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListIdCourse" id="server.actionDatabase/Excutable#getListIdCourse()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListIdTuition" id="server.actionDatabase/Excutable#getListIdTuition()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameAndAccount_idStudent" id="server.actionDatabase/Excutable#getListNameAndAccount_idStudent(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameAndIDClass" id="server.actionDatabase/Excutable#getListNameAndIDClass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameAndIDSubject" id="server.actionDatabase/Excutable#getListNameAndIDSubject(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameCandidate" id="server.actionDatabase/Excutable#getListNameCandidate()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameCourse" id="server.actionDatabase/Excutable#getListNameCourse()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListPaymentTuition" id="server.actionDatabase/Excutable#getListPaymentTuition()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelCandidate" id="server.actionDatabase/Excutable#getModelCandidate()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelClass" id="server.actionDatabase/Excutable#getModelClass()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelEnterPaymentTable" id="server.actionDatabase/Excutable#getModelEnterPaymentTable(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelInputMark" id="server.actionDatabase/Excutable#getModelInputMark(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelStudent" id="server.actionDatabase/Excutable#getModelStudent(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelSubject" id="server.actionDatabase/Excutable#getModelSubject()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPaid" id="server.actionDatabase/Excutable#getPaid(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPayment" id="server.actionDatabase/Excutable#getPayment(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScore" id="server.actionDatabase/Excutable#getScore(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStudentsLastID" id="server.actionDatabase/Excutable#getStudentsLastID()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="inputMark" id="server.actionDatabase/Excutable#inputMark(Ljava.lang.String;III)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isCertificate" id="server.actionDatabase/Excutable#isCertificate(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isClass" id="server.actionDatabase/Excutable#isClass(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isCompleteSubject" id="server.actionDatabase/Excutable#isCompleteSubject(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isNameCandidate" id="server.actionDatabase/Excutable#isNameCandidate(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isNameCourse" id="server.actionDatabase/Excutable#isNameCourse(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isPaymentTuition" id="server.actionDatabase/Excutable#isPaymentTuition(Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isSubject" id="server.actionDatabase/Excutable#isSubject(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newCandidate" id="server.actionDatabase/Excutable#newCandidate(Ljava.lang.String;Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newClass" id="server.actionDatabase/Excutable#newClass(Ljava.lang.String;Ljava.lang.String;II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newCourse" id="server.actionDatabase/Excutable#newCourse(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newSubject" id="server.actionDatabase/Excutable#newSubject(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newTuition" id="server.actionDatabase/Excutable#newTuition(Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="resetPass" id="server.actionDatabase/Excutable#resetPass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateCandidate" id="server.actionDatabase/Excutable#updateCandidate(ILjava.lang.String;Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateClass" id="server.actionDatabase/Excutable#updateClass(ILjava.lang.String;Ljava.lang.String;II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateCourse" id="server.actionDatabase/Excutable#updateCourse(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateStudent" id="server.actionDatabase/Excutable#updateStudent(ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateSubject" id="server.actionDatabase/Excutable#updateSubject(ILjava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateTuition" id="server.actionDatabase/Excutable#updateTuition(ILjava.lang.Float;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="server.actionDatabase/IDatabase&lt;-server.actionDatabase/Excutable" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,544" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="224,544"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.0" name="IDatabase" location="60,15" size="224,1089" id="server.actionDatabase/IDatabase" runTimeClassModel="deleteTuition(I),isClass(Ljava.lang.String;Ljava.lang.String;),getListPaymentTuition(),getModelStudent(I),getPaid(I),deleteClass(I),updateClass(ILjava.lang.String;Ljava.lang.String;II),resetPass(I),newSubject(Ljava.lang.String;Ljava.lang.String;),newClass(Ljava.lang.String;Ljava.lang.String;II),newCandidate(Ljava.lang.String;Ljava.lang.Float;),createStudent(Ljava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;I),getClassID(Ljava.lang.String;),getListIdTuition(),updateSubject(ILjava.lang.String;Ljava.lang.String;),newTuition(Ljava.lang.Float;),getListNameCandidate(),isSubject(Ljava.lang.String;Ljava.lang.String;),inputMark(Ljava.lang.String;III),updateTuition(ILjava.lang.Float;),updateStudent(ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;),isPaymentTuition(Ljava.lang.Float;),enterPayment(ILjava.lang.Float;),createAccount(),fullTuition,isCertificate(I),createPayment(I),isNameCandidate(Ljava.lang.String;),deleteCandidate(I),getPayment(Ljava.lang.String;),changeStatus(II),getListNameAndIDSubject(I),deleteSubject(I),createCertificate(ILjava.lang.String;I),modelClass,getListNameAndIDClass(I),getModelEnterPaymentTable(I),newCourse(Ljava.lang.String;),getModelInputMark(II),updateCandidate(ILjava.lang.String;Ljava.lang.Float;),getAccounts_id(I),getListNameCourse(),fullCourse,updateCourse(ILjava.lang.String;),getStudentsLastID(),getAccountsLastID(),isCompleteSubject(ILjava.lang.String;),isNameCourse(Ljava.lang.String;),deleteCourse(I),getListNameAndAccount_idStudent(I),getAccount(I),forgotPassWord(Ljava.lang.String;),modelSubject,getScore(ILjava.lang.String;),getListIdCourse(),checkAccount(Ljava.lang.String;Ljava.lang.String;),modelCandidate">
+    <children xsi:type="editmodel:CompartmentEditModel" size="154,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="fullCourse" id="server.actionDatabase/IDatabase#fullCourse"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fullTuition" id="server.actionDatabase/IDatabase#fullTuition"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="modelCandidate" id="server.actionDatabase/IDatabase#modelCandidate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="modelClass" id="server.actionDatabase/IDatabase#modelClass"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="modelSubject" id="server.actionDatabase/IDatabase#modelSubject"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="201,936">
+      <children xsi:type="editmodel:MethodEditModel" name="changeStatus" id="server.actionDatabase/IDatabase#changeStatus(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="checkAccount" id="server.actionDatabase/IDatabase#checkAccount(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createAccount" id="server.actionDatabase/IDatabase#createAccount()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createCertificate" id="server.actionDatabase/IDatabase#createCertificate(ILjava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createPayment" id="server.actionDatabase/IDatabase#createPayment(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createStudent" id="server.actionDatabase/IDatabase#createStudent(Ljava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteCandidate" id="server.actionDatabase/IDatabase#deleteCandidate(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteClass" id="server.actionDatabase/IDatabase#deleteClass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteCourse" id="server.actionDatabase/IDatabase#deleteCourse(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteSubject" id="server.actionDatabase/IDatabase#deleteSubject(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteTuition" id="server.actionDatabase/IDatabase#deleteTuition(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="enterPayment" id="server.actionDatabase/IDatabase#enterPayment(ILjava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="forgotPassWord" id="server.actionDatabase/IDatabase#forgotPassWord(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccount" id="server.actionDatabase/IDatabase#getAccount(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccountsLastID" id="server.actionDatabase/IDatabase#getAccountsLastID()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccounts_id" id="server.actionDatabase/IDatabase#getAccounts_id(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getClassID" id="server.actionDatabase/IDatabase#getClassID(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListIdCourse" id="server.actionDatabase/IDatabase#getListIdCourse()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListIdTuition" id="server.actionDatabase/IDatabase#getListIdTuition()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameAndAccount_idStudent" id="server.actionDatabase/IDatabase#getListNameAndAccount_idStudent(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameAndIDClass" id="server.actionDatabase/IDatabase#getListNameAndIDClass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameAndIDSubject" id="server.actionDatabase/IDatabase#getListNameAndIDSubject(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameCandidate" id="server.actionDatabase/IDatabase#getListNameCandidate()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListNameCourse" id="server.actionDatabase/IDatabase#getListNameCourse()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListPaymentTuition" id="server.actionDatabase/IDatabase#getListPaymentTuition()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelEnterPaymentTable" id="server.actionDatabase/IDatabase#getModelEnterPaymentTable(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelInputMark" id="server.actionDatabase/IDatabase#getModelInputMark(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModelStudent" id="server.actionDatabase/IDatabase#getModelStudent(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPaid" id="server.actionDatabase/IDatabase#getPaid(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPayment" id="server.actionDatabase/IDatabase#getPayment(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScore" id="server.actionDatabase/IDatabase#getScore(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStudentsLastID" id="server.actionDatabase/IDatabase#getStudentsLastID()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="inputMark" id="server.actionDatabase/IDatabase#inputMark(Ljava.lang.String;III)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isCertificate" id="server.actionDatabase/IDatabase#isCertificate(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isClass" id="server.actionDatabase/IDatabase#isClass(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isCompleteSubject" id="server.actionDatabase/IDatabase#isCompleteSubject(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isNameCandidate" id="server.actionDatabase/IDatabase#isNameCandidate(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isNameCourse" id="server.actionDatabase/IDatabase#isNameCourse(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isPaymentTuition" id="server.actionDatabase/IDatabase#isPaymentTuition(Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isSubject" id="server.actionDatabase/IDatabase#isSubject(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newCandidate" id="server.actionDatabase/IDatabase#newCandidate(Ljava.lang.String;Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newClass" id="server.actionDatabase/IDatabase#newClass(Ljava.lang.String;Ljava.lang.String;II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newCourse" id="server.actionDatabase/IDatabase#newCourse(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newSubject" id="server.actionDatabase/IDatabase#newSubject(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newTuition" id="server.actionDatabase/IDatabase#newTuition(Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="resetPass" id="server.actionDatabase/IDatabase#resetPass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateCandidate" id="server.actionDatabase/IDatabase#updateCandidate(ILjava.lang.String;Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateClass" id="server.actionDatabase/IDatabase#updateClass(ILjava.lang.String;Ljava.lang.String;II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateCourse" id="server.actionDatabase/IDatabase#updateCourse(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateStudent" id="server.actionDatabase/IDatabase#updateStudent(ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateSubject" id="server.actionDatabase/IDatabase#updateSubject(ILjava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateTuition" id="server.actionDatabase/IDatabase#updateTuition(ILjava.lang.Float;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

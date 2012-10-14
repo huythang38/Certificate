@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="event" size="908,556" id="server.event" metadata="uml2-1.0" initialized="true" tag="10" key="32303037303533312D3130204365727469666963617465">
+  <children xsi:type="editmodel:ClassEditModel" name="ForgotPass" location="264,50" size="130,193" id="server.event/ForgotPass" runTimeClassModel="name,stmt,rst,checkEmail(Ljava.lang.String;),ForgotPass(),sendPassToMail(Ljava.lang.String;),sendMail(Ljava.lang.String;Ljava.lang.String;),accounts_id">
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="accounts_id" id="server.event/ForgotPass#accounts_id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="server.event/ForgotPass#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event/ForgotPass#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event/ForgotPass#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,72">
+      <children xsi:type="editmodel:MethodEditModel" name="ForgotPass" id="server.event/ForgotPass#ForgotPass()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="checkEmail" id="server.event/ForgotPass#checkEmail(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendMail" id="server.event/ForgotPass#sendMail(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendPassToMail" id="server.event/ForgotPass#sendPassToMail(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ForgotPassUIEvent" location="444,50" size="160,103" id="server.event/ForgotPassUIEvent" runTimeClassModel="isUpdateForm(),check,updateForm(Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="92,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="check" id="server.event/ForgotPassUIEvent#check"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="96,36">
+      <children xsi:type="editmodel:MethodEditModel" name="isUpdateForm" id="server.event/ForgotPassUIEvent#isUpdateForm()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateForm" id="server.event/ForgotPassUIEvent#updateForm(Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Login" location="444,165" size="123,67" id="server.event/Login" runTimeClassModel="checkAccount(Ljava.lang.String;Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="100,18">
+      <children xsi:type="editmodel:MethodEditModel" name="checkAccount" id="server.event/Login#checkAccount(Ljava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="UIEvent" location="50,50" size="164,157" id="server.event/UIEvent" runTimeClassModel="windowClosing(),showAction(),btnUpdateConfigAction(Ljava.lang.String;Ljava.lang.String;I),systemTray(),UIEvent(),mntmExitAction()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="141,108">
+      <children xsi:type="editmodel:MethodEditModel" name="UIEvent" id="server.event/UIEvent#UIEvent()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="btnUpdateConfigAction" id="server.event/UIEvent#btnUpdateConfigAction(Ljava.lang.String;Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="mntmExitAction" id="server.event/UIEvent#mntmExitAction()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="showAction" id="server.event/UIEvent#showAction()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="systemTray" id="server.event/UIEvent#systemTray()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="windowClosing" id="server.event/UIEvent#windowClosing()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

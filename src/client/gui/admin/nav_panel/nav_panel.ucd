@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="nav_panel" size="2753,2378" id="client.gui.admin.nav_panel" metadata="uml2-1.0" initialized="true" scrolledY="1798" tag="10" key="32303037303533312D3130204365727469666963617465">
+  <children xsi:type="editmodel:ClassEditModel" name="About" location="45,2250" size="130,85" id="client.gui.admin.nav_panel/About" runTimeClassModel="About(),paintComponent(Ljava.awt.Graphics;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,36">
+      <children xsi:type="editmodel:MethodEditModel" name="About" id="client.gui.admin.nav_panel/About#About()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/About#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AccountChangeStatusPanel" location="1005,1094" size="233,265" id="client.gui.admin.nav_panel/AccountChangeStatusPanel" runTimeClassModel="lblAccountid,paintComponent(Ljava.awt.Graphics;),tableShow,panelChangeStatus,threadExecuteLoading,contentPanel,idAccount,btnCancel,lblWaitting,AccountChangeStatusPanel(),btnOk,cbbxChoiceStatus">
+    <children xsi:type="editmodel:CompartmentEditModel" size="210,180">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxChoiceStatus" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#cbbxChoiceStatus"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="contentPanel" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#contentPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="idAccount" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#idAccount"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblAccountid" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#lblAccountid"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="panelChangeStatus" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#panelChangeStatus"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tableShow" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#tableShow"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="threadExecuteLoading" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#threadExecuteLoading"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="164,36">
+      <children xsi:type="editmodel:MethodEditModel" name="AccountChangeStatusPanel" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#AccountChangeStatusPanel()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/AccountChangeStatusPanel#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AccountResetPassword" location="341,2205" size="189,139" id="client.gui.admin.nav_panel/AccountResetPassword" runTimeClassModel="lblAccountid,paintComponent(Ljava.awt.Graphics;),idAccount,lblWaitting,AccountResetPassword()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="150,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="idAccount" id="client.gui.admin.nav_panel/AccountResetPassword#idAccount"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblAccountid" id="client.gui.admin.nav_panel/AccountResetPassword#lblAccountid"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/AccountResetPassword#lblWaitting"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="148,36">
+      <children xsi:type="editmodel:MethodEditModel" name="AccountResetPassword" id="client.gui.admin.nav_panel/AccountResetPassword#AccountResetPassword()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/AccountResetPassword#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Certificate" location="660,32" size="298,463" id="client.gui.admin.nav_panel/Certificate" runTimeClassModel="searchPanel,txtName,setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),lblPaymentstatus,model,paintComponent(Ljava.awt.Graphics;),btnGeneration,Certificate(),txtId,btnCancel,lblWaitting,table,btnExportCertificate,txtClass,lblStatusCompleteSubject,txtCourse,headTable,lblScore,rdbGroup,txtBirthday,searchPanelEvent,lblLock,lblGrade">
+    <children xsi:type="editmodel:CompartmentEditModel" size="275,360">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/Certificate#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnExportCertificate" id="client.gui.admin.nav_panel/Certificate#btnExportCertificate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnGeneration" id="client.gui.admin.nav_panel/Certificate#btnGeneration"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/Certificate#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblGrade" id="client.gui.admin.nav_panel/Certificate#lblGrade"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblLock" id="client.gui.admin.nav_panel/Certificate#lblLock"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblPaymentstatus" id="client.gui.admin.nav_panel/Certificate#lblPaymentstatus"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblScore" id="client.gui.admin.nav_panel/Certificate#lblScore"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblStatusCompleteSubject" id="client.gui.admin.nav_panel/Certificate#lblStatusCompleteSubject"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/Certificate#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="model" id="client.gui.admin.nav_panel/Certificate#model"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbGroup" id="client.gui.admin.nav_panel/Certificate#rdbGroup"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanel" id="client.gui.admin.nav_panel/Certificate#searchPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanelEvent" id="client.gui.admin.nav_panel/Certificate#searchPanelEvent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/Certificate#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtBirthday" id="client.gui.admin.nav_panel/Certificate#txtBirthday"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtClass" id="client.gui.admin.nav_panel/Certificate#txtClass"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtCourse" id="client.gui.admin.nav_panel/Certificate#txtCourse"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/Certificate#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/Certificate#txtName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Certificate" id="client.gui.admin.nav_panel/Certificate#Certificate()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/Certificate#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/Certificate#setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CreateStudent" location="22,32" size="294,481" id="client.gui.admin.nav_panel/CreateStudent" runTimeClassModel="txtName,searchPanel,model,paintComponent(Ljava.awt.Graphics;),cbbxCandidate,frmtdtxtfldPhone,btnCancel,cbbxCourse,rdbtnMale,lblWaitting,btnCreate,table,setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.Object;Ljava.lang.Object;Ljava.lang.Object;),txtEmail,txtAddress,cbbxClass,headTable,CreateStudent(),txtUsername,rdbGroup,txtBirthday,searchPanelEvent,refreshFeild(),rdbtnFemale">
+    <children xsi:type="editmodel:CompartmentEditModel" size="271,360">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/CreateStudent#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCreate" id="client.gui.admin.nav_panel/CreateStudent#btnCreate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxCandidate" id="client.gui.admin.nav_panel/CreateStudent#cbbxCandidate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxClass" id="client.gui.admin.nav_panel/CreateStudent#cbbxClass"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxCourse" id="client.gui.admin.nav_panel/CreateStudent#cbbxCourse"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frmtdtxtfldPhone" id="client.gui.admin.nav_panel/CreateStudent#frmtdtxtfldPhone"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/CreateStudent#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/CreateStudent#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="model" id="client.gui.admin.nav_panel/CreateStudent#model"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbGroup" id="client.gui.admin.nav_panel/CreateStudent#rdbGroup"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbtnFemale" id="client.gui.admin.nav_panel/CreateStudent#rdbtnFemale"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbtnMale" id="client.gui.admin.nav_panel/CreateStudent#rdbtnMale"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanel" id="client.gui.admin.nav_panel/CreateStudent#searchPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanelEvent" id="client.gui.admin.nav_panel/CreateStudent#searchPanelEvent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/CreateStudent#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtAddress" id="client.gui.admin.nav_panel/CreateStudent#txtAddress"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtBirthday" id="client.gui.admin.nav_panel/CreateStudent#txtBirthday"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtEmail" id="client.gui.admin.nav_panel/CreateStudent#txtEmail"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/CreateStudent#txtName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtUsername" id="client.gui.admin.nav_panel/CreateStudent#txtUsername"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,72">
+      <children xsi:type="editmodel:MethodEditModel" name="CreateStudent" id="client.gui.admin.nav_panel/CreateStudent#CreateStudent()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/CreateStudent#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="refreshFeild" id="client.gui.admin.nav_panel/CreateStudent#refreshFeild()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/CreateStudent#setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.Object;Ljava.lang.Object;Ljava.lang.Object;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="EnterPayment" location="230,1904" size="289,229" id="client.gui.admin.nav_panel/EnterPayment" runTimeClassModel="searchPanel,headTable,model,paintComponent(Ljava.awt.Graphics;),EnterPayment(),setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),searchPanelEvent,lblWaitting,table,btnOk">
+    <children xsi:type="editmodel:CompartmentEditModel" size="266,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/EnterPayment#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/EnterPayment#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/EnterPayment#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="model" id="client.gui.admin.nav_panel/EnterPayment#model"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanel" id="client.gui.admin.nav_panel/EnterPayment#searchPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanelEvent" id="client.gui.admin.nav_panel/EnterPayment#searchPanelEvent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/EnterPayment#table"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,54">
+      <children xsi:type="editmodel:MethodEditModel" name="EnterPayment" id="client.gui.admin.nav_panel/EnterPayment#EnterPayment()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/EnterPayment#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/EnterPayment#setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="HomePanel" location="585,2250" size="130,85" id="client.gui.admin.nav_panel/HomePanel" runTimeClassModel="paintComponent(Ljava.awt.Graphics;),HomePanel()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,36">
+      <children xsi:type="editmodel:MethodEditModel" name="HomePanel" id="client.gui.admin.nav_panel/HomePanel#HomePanel()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/HomePanel#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="InputMark" location="254,1094" size="269,283" id="client.gui.admin.nav_panel/InputMark" runTimeClassModel="searchPanel,frmtdtxtfldMark,headTable,model,paintComponent(Ljava.awt.Graphics;),setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),InputMark(),searchPanelEvent,lblWaitting,table,lblShowSubject,btnOk,lblShowName">
+    <children xsi:type="editmodel:CompartmentEditModel" size="246,180">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/InputMark#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frmtdtxtfldMark" id="client.gui.admin.nav_panel/InputMark#frmtdtxtfldMark"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/InputMark#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblShowName" id="client.gui.admin.nav_panel/InputMark#lblShowName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblShowSubject" id="client.gui.admin.nav_panel/InputMark#lblShowSubject"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/InputMark#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="model" id="client.gui.admin.nav_panel/InputMark#model"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanel" id="client.gui.admin.nav_panel/InputMark#searchPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanelEvent" id="client.gui.admin.nav_panel/InputMark#searchPanelEvent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/InputMark#table"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,54">
+      <children xsi:type="editmodel:MethodEditModel" name="InputMark" id="client.gui.admin.nav_panel/InputMark#InputMark()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/InputMark#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/InputMark#setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ManageCandidate" location="549,1094" size="213,337" id="client.gui.admin.nav_panel/ManageCandidate" runTimeClassModel="txtName,paintComponent(Ljava.awt.Graphics;),txtId,btnCancel,lblWaitting,setEnableConpoment(ZZZZZZZ),table,btnOk,ManageCandidate(),headTable,btnDelete,cbbxPayment,btnNew,tableModel,setContentToPanel(ILjava.lang.String;Ljava.lang.Object;),btnUpdate">
+    <children xsi:type="editmodel:CompartmentEditModel" size="190,216">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/ManageCandidate#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnDelete" id="client.gui.admin.nav_panel/ManageCandidate#btnDelete"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnNew" id="client.gui.admin.nav_panel/ManageCandidate#btnNew"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/ManageCandidate#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnUpdate" id="client.gui.admin.nav_panel/ManageCandidate#btnUpdate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxPayment" id="client.gui.admin.nav_panel/ManageCandidate#cbbxPayment"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/ManageCandidate#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/ManageCandidate#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/ManageCandidate#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tableModel" id="client.gui.admin.nav_panel/ManageCandidate#tableModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/ManageCandidate#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/ManageCandidate#txtName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,72">
+      <children xsi:type="editmodel:MethodEditModel" name="ManageCandidate" id="client.gui.admin.nav_panel/ManageCandidate#ManageCandidate()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/ManageCandidate#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/ManageCandidate#setContentToPanel(ILjava.lang.String;Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEnableConpoment" id="client.gui.admin.nav_panel/ManageCandidate#setEnableConpoment(ZZZZZZZ)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ManageClass" location="22,1094" size="215,373" id="client.gui.admin.nav_panel/ManageClass" runTimeClassModel="txtName,setContentToPanel(ILjava.lang.String;Ljava.lang.Object;Ljava.lang.Object;Ljava.lang.Object;),paintComponent(Ljava.awt.Graphics;),txtId,cbbxCourse,btnCancel,lblWaitting,table,frmtdtxtfldSize,btnOk,ManageClass(),headTable,btnDelete,btnNew,frmtdtxtfldYear,setEnableConpoment(ZZZZZZZZZ),tableModel,btnUpdate">
+    <children xsi:type="editmodel:CompartmentEditModel" size="192,252">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/ManageClass#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnDelete" id="client.gui.admin.nav_panel/ManageClass#btnDelete"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnNew" id="client.gui.admin.nav_panel/ManageClass#btnNew"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/ManageClass#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnUpdate" id="client.gui.admin.nav_panel/ManageClass#btnUpdate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxCourse" id="client.gui.admin.nav_panel/ManageClass#cbbxCourse"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frmtdtxtfldSize" id="client.gui.admin.nav_panel/ManageClass#frmtdtxtfldSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frmtdtxtfldYear" id="client.gui.admin.nav_panel/ManageClass#frmtdtxtfldYear"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/ManageClass#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/ManageClass#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/ManageClass#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tableModel" id="client.gui.admin.nav_panel/ManageClass#tableModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/ManageClass#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/ManageClass#txtName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,72">
+      <children xsi:type="editmodel:MethodEditModel" name="ManageClass" id="client.gui.admin.nav_panel/ManageClass#ManageClass()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/ManageClass#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/ManageClass#setContentToPanel(ILjava.lang.String;Ljava.lang.Object;Ljava.lang.Object;Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEnableConpoment" id="client.gui.admin.nav_panel/ManageClass#setEnableConpoment(ZZZZZZZZZ)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ManageCourse" location="540,1904" size="186,319" id="client.gui.admin.nav_panel/ManageCourse" runTimeClassModel="txtName,paintComponent(Ljava.awt.Graphics;),txtId,btnCancel,setEnableConpoment(ZZZZZZ),lblWaitting,table,btnOk,headTable,btnDelete,btnNew,setContentToPanel(ILjava.lang.String;),tableModel,ManageCourse(),btnUpdate">
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,198">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/ManageCourse#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnDelete" id="client.gui.admin.nav_panel/ManageCourse#btnDelete"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnNew" id="client.gui.admin.nav_panel/ManageCourse#btnNew"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/ManageCourse#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnUpdate" id="client.gui.admin.nav_panel/ManageCourse#btnUpdate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/ManageCourse#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/ManageCourse#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/ManageCourse#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tableModel" id="client.gui.admin.nav_panel/ManageCourse#tableModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/ManageCourse#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/ManageCourse#txtName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,72">
+      <children xsi:type="editmodel:MethodEditModel" name="ManageCourse" id="client.gui.admin.nav_panel/ManageCourse#ManageCourse()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/ManageCourse#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/ManageCourse#setContentToPanel(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEnableConpoment" id="client.gui.admin.nav_panel/ManageCourse#setEnableConpoment(ZZZZZZ)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ManageSubject" location="780,1095" size="207,337" id="client.gui.admin.nav_panel/ManageSubject" runTimeClassModel="txtName,paintComponent(Ljava.awt.Graphics;),txtId,cbbxCourse,btnCancel,lblWaitting,setEnableConpoment(ZZZZZZZ),table,btnOk,ManageSubject(),headTable,btnDelete,btnNew,tableModel,setContentToPanel(ILjava.lang.String;Ljava.lang.Object;),btnUpdate">
+    <children xsi:type="editmodel:CompartmentEditModel" size="184,216">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/ManageSubject#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnDelete" id="client.gui.admin.nav_panel/ManageSubject#btnDelete"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnNew" id="client.gui.admin.nav_panel/ManageSubject#btnNew"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/ManageSubject#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnUpdate" id="client.gui.admin.nav_panel/ManageSubject#btnUpdate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxCourse" id="client.gui.admin.nav_panel/ManageSubject#cbbxCourse"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/ManageSubject#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/ManageSubject#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/ManageSubject#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tableModel" id="client.gui.admin.nav_panel/ManageSubject#tableModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/ManageSubject#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/ManageSubject#txtName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,72">
+      <children xsi:type="editmodel:MethodEditModel" name="ManageSubject" id="client.gui.admin.nav_panel/ManageSubject#ManageSubject()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/ManageSubject#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/ManageSubject#setContentToPanel(ILjava.lang.String;Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEnableConpoment" id="client.gui.admin.nav_panel/ManageSubject#setEnableConpoment(ZZZZZZZ)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ManageTuition" location="30,1904" size="186,319" id="client.gui.admin.nav_panel/ManageTuition" runTimeClassModel="paintComponent(Ljava.awt.Graphics;),txtId,btnCancel,setEnableConpoment(ZZZZZZ),lblWaitting,table,btnOk,headTable,btnDelete,btnNew,setContentToPanel(ILjava.lang.String;),txtPayment,tableModel,btnUpdate,ManageTuition()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,198">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/ManageTuition#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnDelete" id="client.gui.admin.nav_panel/ManageTuition#btnDelete"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnNew" id="client.gui.admin.nav_panel/ManageTuition#btnNew"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.admin.nav_panel/ManageTuition#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnUpdate" id="client.gui.admin.nav_panel/ManageTuition#btnUpdate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/ManageTuition#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/ManageTuition#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/ManageTuition#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tableModel" id="client.gui.admin.nav_panel/ManageTuition#tableModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/ManageTuition#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtPayment" id="client.gui.admin.nav_panel/ManageTuition#txtPayment"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,72">
+      <children xsi:type="editmodel:MethodEditModel" name="ManageTuition" id="client.gui.admin.nav_panel/ManageTuition#ManageTuition()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/ManageTuition#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/ManageTuition#setContentToPanel(ILjava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEnableConpoment" id="client.gui.admin.nav_panel/ManageTuition#setEnableConpoment(ZZZZZZ)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Preview" location="215,2232" size="94,85" id="client.gui.admin.nav_panel/Preview" runTimeClassModel="main([Ljava.lang.String;),Preview(Ljava.awt.image.BufferedImage;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="70,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Preview" id="client.gui.admin.nav_panel/Preview#Preview(Ljava.awt.image.BufferedImage;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="client.gui.admin.nav_panel/Preview#main([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="UpdateStudent" location="341,32" size="294,481" id="client.gui.admin.nav_panel/UpdateStudent" runTimeClassModel="txtName,searchPanel,model,paintComponent(Ljava.awt.Graphics;),UpdateStudent(),cbbxCandidate,setEnableConpoment(Z),txtId,frmtdtxtfldPhone,btnCancel,cbbxCourse,rdbtnMale,lblWaitting,table,setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.Object;Ljava.lang.Object;Ljava.lang.Object;),txtEmail,txtAddress,cbbxClass,headTable,rdbGroup,txtBirthday,searchPanelEvent,btnUpdate,rdbtnFemale">
+    <children xsi:type="editmodel:CompartmentEditModel" size="271,360">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.admin.nav_panel/UpdateStudent#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnUpdate" id="client.gui.admin.nav_panel/UpdateStudent#btnUpdate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxCandidate" id="client.gui.admin.nav_panel/UpdateStudent#cbbxCandidate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxClass" id="client.gui.admin.nav_panel/UpdateStudent#cbbxClass"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxCourse" id="client.gui.admin.nav_panel/UpdateStudent#cbbxCourse"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frmtdtxtfldPhone" id="client.gui.admin.nav_panel/UpdateStudent#frmtdtxtfldPhone"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/UpdateStudent#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/UpdateStudent#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="model" id="client.gui.admin.nav_panel/UpdateStudent#model"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbGroup" id="client.gui.admin.nav_panel/UpdateStudent#rdbGroup"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbtnFemale" id="client.gui.admin.nav_panel/UpdateStudent#rdbtnFemale"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbtnMale" id="client.gui.admin.nav_panel/UpdateStudent#rdbtnMale"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanel" id="client.gui.admin.nav_panel/UpdateStudent#searchPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanelEvent" id="client.gui.admin.nav_panel/UpdateStudent#searchPanelEvent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/UpdateStudent#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtAddress" id="client.gui.admin.nav_panel/UpdateStudent#txtAddress"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtBirthday" id="client.gui.admin.nav_panel/UpdateStudent#txtBirthday"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtEmail" id="client.gui.admin.nav_panel/UpdateStudent#txtEmail"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/UpdateStudent#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/UpdateStudent#txtName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,72">
+      <children xsi:type="editmodel:MethodEditModel" name="UpdateStudent" id="client.gui.admin.nav_panel/UpdateStudent#UpdateStudent()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/UpdateStudent#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/UpdateStudent#setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.Object;Ljava.lang.Object;Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEnableConpoment" id="client.gui.admin.nav_panel/UpdateStudent#setEnableConpoment(Z)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ViewStudent" location="975,32" size="278,445" id="client.gui.admin.nav_panel/ViewStudent" runTimeClassModel="txtName,searchPanel,model,paintComponent(Ljava.awt.Graphics;),frmtdtxtfldPhone,txtId,rdbtnMale,lblWaitting,table,txtClass,txtEmail,txtCourse,txtAddress,headTable,rdbGroup,txtBirthday,txtCandidate,setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),searchPanelEvent,lblLock,ViewStudent(),rdbtnFemale">
+    <children xsi:type="editmodel:CompartmentEditModel" size="255,342">
+      <children xsi:type="editmodel:AttributeEditModel" name="frmtdtxtfldPhone" id="client.gui.admin.nav_panel/ViewStudent#frmtdtxtfldPhone"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="headTable" id="client.gui.admin.nav_panel/ViewStudent#headTable"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblLock" id="client.gui.admin.nav_panel/ViewStudent#lblLock"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.admin.nav_panel/ViewStudent#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="model" id="client.gui.admin.nav_panel/ViewStudent#model"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbGroup" id="client.gui.admin.nav_panel/ViewStudent#rdbGroup"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbtnFemale" id="client.gui.admin.nav_panel/ViewStudent#rdbtnFemale"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rdbtnMale" id="client.gui.admin.nav_panel/ViewStudent#rdbtnMale"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanel" id="client.gui.admin.nav_panel/ViewStudent#searchPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchPanelEvent" id="client.gui.admin.nav_panel/ViewStudent#searchPanelEvent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="table" id="client.gui.admin.nav_panel/ViewStudent#table"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtAddress" id="client.gui.admin.nav_panel/ViewStudent#txtAddress"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtBirthday" id="client.gui.admin.nav_panel/ViewStudent#txtBirthday"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtCandidate" id="client.gui.admin.nav_panel/ViewStudent#txtCandidate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtClass" id="client.gui.admin.nav_panel/ViewStudent#txtClass"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtCourse" id="client.gui.admin.nav_panel/ViewStudent#txtCourse"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtEmail" id="client.gui.admin.nav_panel/ViewStudent#txtEmail"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtId" id="client.gui.admin.nav_panel/ViewStudent#txtId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="txtName" id="client.gui.admin.nav_panel/ViewStudent#txtName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,54">
+      <children xsi:type="editmodel:MethodEditModel" name="ViewStudent" id="client.gui.admin.nav_panel/ViewStudent#ViewStudent()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.admin.nav_panel/ViewStudent#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContentToPanel" id="client.gui.admin.nav_panel/ViewStudent#setContentToPanel(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

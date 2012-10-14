@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="908,556" id="extend_lib" metadata="uml2-1.0" initialized="true" tag="10" key="32303037303533312D3130204365727469666963617465">
+  <children xsi:type="editmodel:ClassEditModel" name="Button" location="50,50" size="246,341" id="extend_lib/Button" runTimeClassModel="extend_lib.Button.changeMouseAdapter,paintComponent(Ljava.awt.Graphics;),extend_lib.Button.changeMouseMotionAdapter,Button(Ljava.lang.String;Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Button" id="extend_lib/Button#Button(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="extend_lib/Button#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="223,246">
+      <children xsi:type="editmodel:ClassEditModel" name="changeMouseAdapter" size="180,139" id="extend_lib/Button$changeMouseAdapter" runTimeClassModel="panel,changeMouseAdapter(Ljavax.swing.JPanel;),mouseClicked(Ljava.awt.event.MouseEvent;),mousePressed(Ljava.awt.event.MouseEvent;),mouseExited(Ljava.awt.event.MouseEvent;)">
+        <children xsi:type="editmodel:CompartmentEditModel" size="82,18">
+          <children xsi:type="editmodel:AttributeEditModel" name="panel" id="extend_lib/Button$changeMouseAdapter#panel"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="137,72">
+          <children xsi:type="editmodel:MethodEditModel" name="changeMouseAdapter" id="extend_lib/Button$changeMouseAdapter#changeMouseAdapter(Ljavax.swing.JPanel;)"/>
+          <children xsi:type="editmodel:MethodEditModel" name="mouseClicked" id="extend_lib/Button$changeMouseAdapter#mouseClicked(Ljava.awt.event.MouseEvent;)"/>
+          <children xsi:type="editmodel:MethodEditModel" name="mouseExited" id="extend_lib/Button$changeMouseAdapter#mouseExited(Ljava.awt.event.MouseEvent;)"/>
+          <children xsi:type="editmodel:MethodEditModel" name="mousePressed" id="extend_lib/Button$changeMouseAdapter#mousePressed(Ljava.awt.event.MouseEvent;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+      <children xsi:type="editmodel:ClassEditModel" name="changeMouseMotionAdapter" size="223,103" id="extend_lib/Button$changeMouseMotionAdapter" runTimeClassModel="panel,changeMouseMotionAdapter(Ljavax.swing.JPanel;),mouseMoved(Ljava.awt.event.MouseEvent;)">
+        <children xsi:type="editmodel:CompartmentEditModel" size="82,18">
+          <children xsi:type="editmodel:AttributeEditModel" name="panel" id="extend_lib/Button$changeMouseMotionAdapter#panel"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="168,36">
+          <children xsi:type="editmodel:MethodEditModel" name="changeMouseMotionAdapter" id="extend_lib/Button$changeMouseMotionAdapter#changeMouseMotionAdapter(Ljavax.swing.JPanel;)"/>
+          <children xsi:type="editmodel:MethodEditModel" name="mouseMoved" id="extend_lib/Button$changeMouseMotionAdapter#mouseMoved(Ljava.awt.event.MouseEvent;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ContainerCenterLocationUI" location="630,50" size="214,103" id="extend_lib/ContainerCenterLocationUI" runTimeClassModel="ContainerCenterLocationUI(Ljavax.swing.JFrame;),ContainerCenterLocationUI(Ljavax.swing.JDialog;),ContainerCenterLocationUI(Ljavax.swing.JWindow;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="158,54">
+      <children xsi:type="editmodel:MethodEditModel" name="ContainerCenterLocationUI" id="extend_lib/ContainerCenterLocationUI#ContainerCenterLocationUI(Ljavax.swing.JWindow;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="ContainerCenterLocationUI" id="extend_lib/ContainerCenterLocationUI#ContainerCenterLocationUI(Ljavax.swing.JDialog;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="ContainerCenterLocationUI" id="extend_lib/ContainerCenterLocationUI#ContainerCenterLocationUI(Ljavax.swing.JFrame;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="LogoContainer" location="346,270" size="136,67" id="extend_lib/LogoContainer" runTimeClassModel="LogoContainer(Ljavax.swing.JFrame;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="100,18">
+      <children xsi:type="editmodel:MethodEditModel" name="LogoContainer" id="extend_lib/LogoContainer#LogoContainer(Ljavax.swing.JFrame;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TransparentBackgroundFrame" location="346,50" size="234,193" id="extend_lib/TransparentBackgroundFrame" runTimeClassModel="componentMoved(Ljava.awt.event.ComponentEvent;),windowGainedFocus(Ljava.awt.event.WindowEvent;),TransparentBackgroundFrame(Ljavax.swing.JDialog;),run(),componentHidden(Ljava.awt.event.ComponentEvent;),componentResized(Ljava.awt.event.ComponentEvent;),componentShown(Ljava.awt.event.ComponentEvent;),windowLostFocus(Ljava.awt.event.WindowEvent;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="177,144">
+      <children xsi:type="editmodel:MethodEditModel" name="TransparentBackgroundFrame" id="extend_lib/TransparentBackgroundFrame#TransparentBackgroundFrame(Ljavax.swing.JDialog;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="componentHidden" id="extend_lib/TransparentBackgroundFrame#componentHidden(Ljava.awt.event.ComponentEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="componentMoved" id="extend_lib/TransparentBackgroundFrame#componentMoved(Ljava.awt.event.ComponentEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="componentResized" id="extend_lib/TransparentBackgroundFrame#componentResized(Ljava.awt.event.ComponentEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="componentShown" id="extend_lib/TransparentBackgroundFrame#componentShown(Ljava.awt.event.ComponentEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="extend_lib/TransparentBackgroundFrame#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="windowGainedFocus" id="extend_lib/TransparentBackgroundFrame#windowGainedFocus(Ljava.awt.event.WindowEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="windowLostFocus" id="extend_lib/TransparentBackgroundFrame#windowLostFocus(Ljava.awt.event.WindowEvent;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ValidateEmail" location="630,204" size="130,67" id="extend_lib/ValidateEmail" runTimeClassModel="isEmail(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="62,18">
+      <children xsi:type="editmodel:MethodEditModel" name="isEmail" id="extend_lib/ValidateEmail#isEmail(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

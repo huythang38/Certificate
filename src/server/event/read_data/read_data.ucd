@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="read_data" size="1468,965" id="server.event.read_data" metadata="uml2-1.0" initialized="true" scrolledY="399" tag="10" key="32303037303533312D3130204365727469666963617465">
+  <children xsi:type="editmodel:ClassEditModel" name="AccountsTable" location="255,437" size="134,301" id="server.event.read_data/AccountsTable" runTimeClassModel="getRole(I),addAccount(),resetPass(I),getPassword(I),getUsername(I),getIdLast(),AccountsTable(),getUsername(Ljava.lang.String;),stmt,rst,getId(Ljava.lang.String;),updateStatus(II),getPassword(Ljava.lang.String;),getStatus(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/AccountsTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/AccountsTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="101,216">
+      <children xsi:type="editmodel:MethodEditModel" name="AccountsTable" id="server.event.read_data/AccountsTable#AccountsTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAccount" id="server.event.read_data/AccountsTable#addAccount()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="server.event.read_data/AccountsTable#getId(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIdLast" id="server.event.read_data/AccountsTable#getIdLast()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPassword" id="server.event.read_data/AccountsTable#getPassword(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPassword" id="server.event.read_data/AccountsTable#getPassword(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRole" id="server.event.read_data/AccountsTable#getRole(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStatus" id="server.event.read_data/AccountsTable#getStatus(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUsername" id="server.event.read_data/AccountsTable#getUsername(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUsername" id="server.event.read_data/AccountsTable#getUsername(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="resetPass" id="server.event.read_data/AccountsTable#resetPass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateStatus" id="server.event.read_data/AccountsTable#updateStatus(II)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CandidatesTable" location="566,50" size="148,283" id="server.event.read_data/CandidatesTable" runTimeClassModel="getFullCollection(),getTuitions_id(Ljava.lang.String;),updateCandidate(ILjava.lang.String;I),CandidatesTable(),addCandidate(Ljava.lang.String;I),stmt,rst,getId(Ljava.lang.String;),getTuitions_id(I),getNameCollection(),isNameCandidate(Ljava.lang.String;),getName(I),deleteCandidate(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/CandidatesTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/CandidatesTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,198">
+      <children xsi:type="editmodel:MethodEditModel" name="CandidatesTable" id="server.event.read_data/CandidatesTable#CandidatesTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addCandidate" id="server.event.read_data/CandidatesTable#addCandidate(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteCandidate" id="server.event.read_data/CandidatesTable#deleteCandidate(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullCollection" id="server.event.read_data/CandidatesTable#getFullCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="server.event.read_data/CandidatesTable#getId(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" id="server.event.read_data/CandidatesTable#getName(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNameCollection" id="server.event.read_data/CandidatesTable#getNameCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTuitions_id" id="server.event.read_data/CandidatesTable#getTuitions_id(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTuitions_id" id="server.event.read_data/CandidatesTable#getTuitions_id(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isNameCandidate" id="server.event.read_data/CandidatesTable#isNameCandidate(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateCandidate" id="server.event.read_data/CandidatesTable#updateCandidate(ILjava.lang.String;I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CertificatesTable" location="239,788" size="148,139" id="server.event.read_data/CertificatesTable" runTimeClassModel="CertificatesTable(),createCertificate(ILjava.lang.String;I),isCertificate(I),stmt,rst">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/CertificatesTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/CertificatesTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,54">
+      <children xsi:type="editmodel:MethodEditModel" name="CertificatesTable" id="server.event.read_data/CertificatesTable#CertificatesTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createCertificate" id="server.event.read_data/CertificatesTable#createCertificate(ILjava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isCertificate" id="server.event.read_data/CertificatesTable#isCertificate(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ClassTable" location="324,50" size="192,319" id="server.event.read_data/ClassTable" runTimeClassModel="stmt,getId(Ljava.lang.String;),idCollection,deleteClass(I),getName(I),getIDCollection(I),getNameCollection(I),getFullCollection(),addClass(Ljava.lang.String;III),isClass(Ljava.lang.String;I),getCourses_id(I),rst,updateClass(ILjava.lang.String;III),ClassTable(),nameCollection">
+    <children xsi:type="editmodel:CompartmentEditModel" size="169,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="idCollection" id="server.event.read_data/ClassTable#idCollection"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nameCollection" id="server.event.read_data/ClassTable#nameCollection"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/ClassTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/ClassTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,198">
+      <children xsi:type="editmodel:MethodEditModel" name="ClassTable" id="server.event.read_data/ClassTable#ClassTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addClass" id="server.event.read_data/ClassTable#addClass(Ljava.lang.String;III)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteClass" id="server.event.read_data/ClassTable#deleteClass(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCourses_id" id="server.event.read_data/ClassTable#getCourses_id(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullCollection" id="server.event.read_data/ClassTable#getFullCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIDCollection" id="server.event.read_data/ClassTable#getIDCollection(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="server.event.read_data/ClassTable#getId(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" id="server.event.read_data/ClassTable#getName(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNameCollection" id="server.event.read_data/ClassTable#getNameCollection(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isClass" id="server.event.read_data/ClassTable#isClass(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateClass" id="server.event.read_data/ClassTable#updateClass(ILjava.lang.String;III)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CoursesTable" location="439,437" size="141,265" id="server.event.read_data/CoursesTable" runTimeClassModel="getIdCollection(),getFullCollection(),isNameCourse(Ljava.lang.String;),deleteCourse(I),stmt,rst,updateCourse(ILjava.lang.String;),getId(Ljava.lang.String;),CoursesTable(),getNameCollection(),addCourse(Ljava.lang.String;),getName(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/CoursesTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/CoursesTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,180">
+      <children xsi:type="editmodel:MethodEditModel" name="CoursesTable" id="server.event.read_data/CoursesTable#CoursesTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addCourse" id="server.event.read_data/CoursesTable#addCourse(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteCourse" id="server.event.read_data/CoursesTable#deleteCourse(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullCollection" id="server.event.read_data/CoursesTable#getFullCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="server.event.read_data/CoursesTable#getId(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIdCollection" id="server.event.read_data/CoursesTable#getIdCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" id="server.event.read_data/CoursesTable#getName(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNameCollection" id="server.event.read_data/CoursesTable#getNameCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isNameCourse" id="server.event.read_data/CoursesTable#isNameCourse(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateCourse" id="server.event.read_data/CoursesTable#updateCourse(ILjava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="PaymentsTable" location="50,788" size="139,157" id="server.event.read_data/PaymentsTable" runTimeClassModel="PaymentsTable(),enterPayment(ILjava.lang.Float;),getPaid(I),stmt,rst,addPayment(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/PaymentsTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/PaymentsTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="102,72">
+      <children xsi:type="editmodel:MethodEditModel" name="PaymentsTable" id="server.event.read_data/PaymentsTable#PaymentsTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addPayment" id="server.event.read_data/PaymentsTable#addPayment(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="enterPayment" id="server.event.read_data/PaymentsTable#enterPayment(ILjava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPaid" id="server.event.read_data/PaymentsTable#getPaid(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="RecordsTable" location="437,788" size="128,157" id="server.event.read_data/RecordsTable" runTimeClassModel="getMark(II),updateRecord(III),stmt,rst,RecordsTable(),newRecord(II)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/RecordsTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/RecordsTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="98,72">
+      <children xsi:type="editmodel:MethodEditModel" name="RecordsTable" id="server.event.read_data/RecordsTable#RecordsTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMark" id="server.event.read_data/RecordsTable#getMark(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="newRecord" id="server.event.read_data/RecordsTable#newRecord(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateRecord" id="server.event.read_data/RecordsTable#updateRecord(III)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="StudentsTable" location="50,50" size="224,337" id="server.event.read_data/StudentsTable" runTimeClassModel="getId(Ljava.lang.String;I),getAccounts_id(I),getName(Ljava.lang.String;),stmt,getIdLast(),getId(Ljava.lang.String;),getNameCollection(I),createStudent(Ljava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;IIII),getAccounts_id(Ljava.lang.String;),getEmail(Ljava.lang.String;),StudentsTable(),rst,getName_ID_CandidateId_Collection(I),getAccounts_idCollection(I),getFullData(I),updateStudent(ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;III)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/StudentsTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/StudentsTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="201,252">
+      <children xsi:type="editmodel:MethodEditModel" name="StudentsTable" id="server.event.read_data/StudentsTable#StudentsTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createStudent" id="server.event.read_data/StudentsTable#createStudent(Ljava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccounts_id" id="server.event.read_data/StudentsTable#getAccounts_id(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccounts_id" id="server.event.read_data/StudentsTable#getAccounts_id(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAccounts_idCollection" id="server.event.read_data/StudentsTable#getAccounts_idCollection(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getEmail" id="server.event.read_data/StudentsTable#getEmail(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullData" id="server.event.read_data/StudentsTable#getFullData(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="server.event.read_data/StudentsTable#getId(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="server.event.read_data/StudentsTable#getId(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIdLast" id="server.event.read_data/StudentsTable#getIdLast()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" id="server.event.read_data/StudentsTable#getName(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNameCollection" id="server.event.read_data/StudentsTable#getNameCollection(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName_ID_CandidateId_Collection" id="server.event.read_data/StudentsTable#getName_ID_CandidateId_Collection(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateStudent" id="server.event.read_data/StudentsTable#updateStudent(ILjava.lang.String;Ljava.lang.String;ILjava.lang.String;Ljava.lang.String;III)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SubjectsTable" location="630,437" size="141,229" id="server.event.read_data/SubjectsTable" runTimeClassModel="addSubject(Ljava.lang.String;I),getIDCollection(I),getNameCollection(I),isSubject(Ljava.lang.String;I),deleteSubject(I),getFullCollection(),stmt,rst,updateSubject(ILjava.lang.String;I),SubjectsTable()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/SubjectsTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/SubjectsTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,144">
+      <children xsi:type="editmodel:MethodEditModel" name="SubjectsTable" id="server.event.read_data/SubjectsTable#SubjectsTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addSubject" id="server.event.read_data/SubjectsTable#addSubject(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteSubject" id="server.event.read_data/SubjectsTable#deleteSubject(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullCollection" id="server.event.read_data/SubjectsTable#getFullCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIDCollection" id="server.event.read_data/SubjectsTable#getIDCollection(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNameCollection" id="server.event.read_data/SubjectsTable#getNameCollection(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isSubject" id="server.event.read_data/SubjectsTable#isSubject(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateSubject" id="server.event.read_data/SubjectsTable#updateSubject(ILjava.lang.String;I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TuitionsTable" location="50,437" size="155,265" id="server.event.read_data/TuitionsTable" runTimeClassModel="getIdCollection(),deleteTuition(I),getFullCollection(),isPaymentTuition(F),getId(Ljava.lang.Float;),getPayment(I),getPaymentCollection(),stmt,rst,updateTuiton(ILjava.lang.Float;),TuitionsTable(),addTuition(Ljava.lang.Float;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="rst" id="server.event.read_data/TuitionsTable#rst"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stmt" id="server.event.read_data/TuitionsTable#stmt"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="132,180">
+      <children xsi:type="editmodel:MethodEditModel" name="TuitionsTable" id="server.event.read_data/TuitionsTable#TuitionsTable()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTuition" id="server.event.read_data/TuitionsTable#addTuition(Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteTuition" id="server.event.read_data/TuitionsTable#deleteTuition(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullCollection" id="server.event.read_data/TuitionsTable#getFullCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="server.event.read_data/TuitionsTable#getId(Ljava.lang.Float;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIdCollection" id="server.event.read_data/TuitionsTable#getIdCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPayment" id="server.event.read_data/TuitionsTable#getPayment(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPaymentCollection" id="server.event.read_data/TuitionsTable#getPaymentCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isPaymentTuition" id="server.event.read_data/TuitionsTable#isPaymentTuition(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateTuiton" id="server.event.read_data/TuitionsTable#updateTuiton(ILjava.lang.Float;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Certificate</name>
-	<comment></comment>
+	<comment>@key 32303037303533312D31302043657274696669636174652F68757974685F303030 </comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -10,8 +10,15 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>com.soyatec.additional.Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>fr.obeo.dsl.viewpoint.nature.modelingproject</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.soyatec.additional.Nature</nature>
 	</natures>
 </projectDescription>

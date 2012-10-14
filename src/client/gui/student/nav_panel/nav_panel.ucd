@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="nav_panel" size="891,623" id="client.gui.student.nav_panel" metadata="uml2-1.0" initialized="true" tag="10" key="32303037303533312D3130204365727469666963617465">
+  <children xsi:type="editmodel:ClassEditModel" name="About" location="330,210" size="130,85" id="client.gui.student.nav_panel/About" runTimeClassModel="paintComponent(Ljava.awt.Graphics;),About()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,36">
+      <children xsi:type="editmodel:MethodEditModel" name="About" id="client.gui.student.nav_panel/About#About()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.student.nav_panel/About#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="HomePanel" location="556,50" size="130,103" id="client.gui.student.nav_panel/HomePanel" runTimeClassModel="paintComponent(Ljava.awt.Graphics;),setWelcome(),HomePanel()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,54">
+      <children xsi:type="editmodel:MethodEditModel" name="HomePanel" id="client.gui.student.nav_panel/HomePanel#HomePanel()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.student.nav_panel/HomePanel#paintComponent(Ljava.awt.Graphics;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setWelcome" id="client.gui.student.nav_panel/HomePanel#setWelcome()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ViewInfo" location="50,50" size="233,265" id="client.gui.student.nav_panel/ViewInfo" runTimeClassModel="lblAccountid,paintComponent(Ljava.awt.Graphics;),ViewInfo(),tableShow,panelChangeStatus,threadExecuteLoading,contentPanel,idAccount,btnCancel,lblWaitting,btnOk,cbbxChoiceStatus">
+    <children xsi:type="editmodel:CompartmentEditModel" size="210,180">
+      <children xsi:type="editmodel:AttributeEditModel" name="btnCancel" id="client.gui.student.nav_panel/ViewInfo#btnCancel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="btnOk" id="client.gui.student.nav_panel/ViewInfo#btnOk"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cbbxChoiceStatus" id="client.gui.student.nav_panel/ViewInfo#cbbxChoiceStatus"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="contentPanel" id="client.gui.student.nav_panel/ViewInfo#contentPanel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="idAccount" id="client.gui.student.nav_panel/ViewInfo#idAccount"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblAccountid" id="client.gui.student.nav_panel/ViewInfo#lblAccountid"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.student.nav_panel/ViewInfo#lblWaitting"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="panelChangeStatus" id="client.gui.student.nav_panel/ViewInfo#panelChangeStatus"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tableShow" id="client.gui.student.nav_panel/ViewInfo#tableShow"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="threadExecuteLoading" id="client.gui.student.nav_panel/ViewInfo#threadExecuteLoading"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,36">
+      <children xsi:type="editmodel:MethodEditModel" name="ViewInfo" id="client.gui.student.nav_panel/ViewInfo#ViewInfo()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.student.nav_panel/ViewInfo#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ViewMark" location="333,50" size="173,139" id="client.gui.student.nav_panel/ViewMark" runTimeClassModel="lblAccountid,paintComponent(Ljava.awt.Graphics;),ViewMark(),idAccount,lblWaitting">
+    <children xsi:type="editmodel:CompartmentEditModel" size="150,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="idAccount" id="client.gui.student.nav_panel/ViewMark#idAccount"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblAccountid" id="client.gui.student.nav_panel/ViewMark#lblAccountid"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lblWaitting" id="client.gui.student.nav_panel/ViewMark#lblWaitting"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,36">
+      <children xsi:type="editmodel:MethodEditModel" name="ViewMark" id="client.gui.student.nav_panel/ViewMark#ViewMark()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="client.gui.student.nav_panel/ViewMark#paintComponent(Ljava.awt.Graphics;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>
